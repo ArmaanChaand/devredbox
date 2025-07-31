@@ -1,0 +1,87 @@
+import BrandsShowcase from "@/components/home/brands-showcase";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import { FaStar } from "react-icons/fa6";
+
+
+export default function Home() {
+  return (
+    <>
+      <section className="flex justify-center items-center relative overflow-hidden pl-2">
+        <div className="synced-width mx-auto flex flex-col justify-center items-start sm:items-center mt-32  mb-20 sm:mb-28 gap-8">
+          <span className="text-xs flex justify-center gap-2 items-center p-2 border rounded-md bg-secondary/20"> <Badge className="rounded" >SOON</Badge>
+            Android and iOS Apps
+          </span>
+          <h1 className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center">
+            Your Vision, Our <span className=" text-primary">{"<Code />"}</span>
+            <span className="lg:hidden">, </span>
+            <span className="lg:block">
+              Real Business Impact
+            </span>
+          </h1>
+
+          <p className="text-sm sm:text-base w-full text-start text-balance sm:text-center leading-relaxed">
+            Trusted by ambitious businesses & startups, DevRedBox builds high-performance
+            {" "}
+            <span className="lg:block">
+              web applications that drive growth, and help you confidently lead your industry forward.
+            </span>
+          </p>
+
+          <div className="gap-6 flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 mr-auto sm:mr-0">
+            <Button className="sm:flex-1 sm:shrink-0 cta-btn w-52" size="lg" variant="primary" >
+              Book a Call
+            </Button>
+            <Button className="sm:flex-1 sm:shrink-0 cta-btn cta-btn-2 w-fit" size="lg" variant="outline">
+              View Project Progress
+            </Button>
+          </div>
+        </div>
+
+      </section>
+      <BrandsShowcase />
+      <section className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
+        <Image
+          src={"/about-img.jpg"}
+          alt="Know DevRedBox More"
+          className="w-full sm:w-2/3 aspect-video mx-auto md:mx-0  md:w-full  md:aspect-[4/3] object-cover p-2 border rounded-md"
+          width={1080}
+          height={1080}
+        />
+        <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
+         text-start sm:text-center md:text-start">
+          <Badge variant="outline" className="py-2 rounded-md font-medium border bg-secondary/20" >About DevRedBox</Badge>
+          <h2 className="text-balance font-bold text-4xl sm:text-5xl">
+            A Team That Builds with Purpose
+          </h2>
+          <p className="text-balance text-sm 2xl:text-base text-foreground/90">
+            At DevRedBox, we build scalable, well-designed products with long-term ownership and measurable business outcomes.
+          </p>
+          <ul className="text-sm space-y-3 text-foreground/90">
+            <li className="flex justify-start items-center gap-2">
+              <FaStar className="size-4 fill-primary" />
+              Developing softwares for businesses
+            </li>
+            <li className="flex justify-start items-center gap-2">
+              <FaStar className="size-4  fill-primary" />
+              Learning and supporting fellow developers
+            </li>
+          </ul>
+          <div className="w-full sm:w-2/3 md:w-fit grid grid-cols-2 gap-6 pl-1 mt-2">
+            <Button variant="primary"  decoration="ring"  >
+              Request a Call
+            </Button>
+            <Button variant="outline" decoration={"ring"} >
+              Know Us More
+            </Button>
+
+          </div>
+        </div>
+
+
+
+      </section>
+    </>
+  );
+}
