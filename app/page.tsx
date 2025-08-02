@@ -1,5 +1,6 @@
 import BrandsShowcase from "@/components/home/brands-showcase";
 import HowWeWork from "@/components/home/howwework-section";
+import WebFeaturesSection from "@/components/home/web-features";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -15,7 +16,7 @@ export default function Home() {
             Android and iOS Apps
           </span>
           <h1 className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center">
-            Your Vision, Our <span className=" text-primary">{"<Code />"}</span>
+            Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
             <span className="lg:hidden">, </span>
             <span className="lg:block">
               Real Business Impact
@@ -72,12 +73,17 @@ export default function Home() {
             <Button variant="outline" decoration={"ring"} >
               Know Us More
             </Button>
-
           </div>
         </div>
       </section>
 
+      {/* Here should be project showcase */}
+      {/* Real or Side project - Anything which looks authentic */}
+
       <HowWeWork />
+
+      <WebFeaturesSection />
+
 
     </>
   );

@@ -1,5 +1,7 @@
+"use client"
 import { ReactNode } from "react"
 import { Separator } from "../ui/separator"
+import { motion } from "motion/react"
 
 interface WorkProcessProps {
     icon: ReactNode,
@@ -9,13 +11,21 @@ interface WorkProcessProps {
 }
 
 export default function WorkProcess({ icon, heading, title, description }: WorkProcessProps) {
+
     return (
-        <div
-            className="w-full h-96 flex flex-col gap-3 bg-accent/30 p-5 rounded bg-radial-[at_20%_20%] from-background to-secondary to-90%"
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="w-full h-fit md:h-96 flex flex-col gap-4 p-5 sm:p-8 rounded 
+            bg-linear-to-br from-background via-secondary/20 via-65% to-background backdrop-blur-lg"
         >
-            <span className="p-2 w-fit text-muted-foreground border-2 rounded bg-muted/50">
+
+            <span className="p-2 w-fit text-muted-foreground border-2 border-muted/50 rounded bg-background relative z-10">
+                <span className="absolute inset-2 rounded-full bg-primary opacity-20 blur-lg -z-10" />
                 {icon}
             </span>
+
             <h6 className="text-xl font-bold">
                 {heading}
             </h6>
@@ -28,6 +38,6 @@ export default function WorkProcess({ icon, heading, title, description }: WorkP
                 {description}
             </p>
 
-        </div>
+        </motion.div>
     )
 }
