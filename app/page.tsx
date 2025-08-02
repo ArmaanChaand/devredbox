@@ -1,4 +1,5 @@
 import BrandsShowcase from "@/components/home/brands-showcase";
+import HowWeWork from "@/components/home/howwework-section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -21,12 +22,8 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base w-full text-start text-balance sm:text-center leading-relaxed">
-            Trusted by ambitious businesses & startups, DevRedBox builds high-performance
-            {" "}
-            <span className="lg:block">
-              web applications that drive growth, and help you confidently lead your industry forward.
-            </span>
+          <p className="text-sm sm:text-base w-full text-start text-balance sm:text-center leading-relaxed text-foreground/80">
+            Trusted by ambitious businesses & startups, DevRedBox <span className="text-foreground">custom websites</span> and powerful <span className="text-foreground">web apps</span>  that drive growth, and help you confidently lead your industry forward.
           </p>
 
           <div className="gap-6 flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 mr-auto sm:mr-0">
@@ -51,12 +48,12 @@ export default function Home() {
         />
         <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
          text-start sm:text-center md:text-start">
-          <Badge variant="outline" className="py-2 rounded-md font-medium border bg-secondary/20" >About DevRedBox</Badge>
+          <Badge variant="outline" className="section-badge" >About Dev_Red_Box</Badge>
           <h2 className="text-balance font-bold text-4xl sm:text-5xl">
             A Team That Builds with Purpose
           </h2>
-          <p className="text-balance text-sm 2xl:text-base text-foreground/90">
-            At DevRedBox, we build scalable, well-designed products with long-term ownership and measurable business outcomes.
+          <p className="sm:text-balance text-sm 2xl:text-base text-foreground/90">
+            Dev_Red_Box builds scalable, well-crafted websites and web apps with ongoing care and a deep focus on what moves your business forward
           </p>
           <ul className="text-sm space-y-3 text-foreground/90">
             <li className="flex justify-start items-center gap-2">
@@ -69,7 +66,7 @@ export default function Home() {
             </li>
           </ul>
           <div className="w-full sm:w-2/3 md:w-fit grid grid-cols-2 gap-6 pl-1 mt-2">
-            <Button variant="primary"  decoration="ring"  >
+            <Button variant="primary" decoration="ring"  >
               Request a Call
             </Button>
             <Button variant="outline" decoration={"ring"} >
@@ -78,10 +75,10 @@ export default function Home() {
 
           </div>
         </div>
-
-
-
       </section>
+
+      <HowWeWork />
+
     </>
   );
 }

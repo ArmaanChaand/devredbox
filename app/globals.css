@@ -176,3 +176,7 @@
 .cta-btn-2 {
   @apply ring-secondary
 }
+
+.section-badge {
+  @apply py-2 rounded-md font-medium border bg-secondary/20
+}

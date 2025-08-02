@@ -1,4 +1,3 @@
-"use client"
 import { FaAndroid, FaPython, FaReact, FaWix, FaWordpress, FaFlutter, FaWebflow, FaApple, FaChrome } from "react-icons/fa6";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiDjango } from "react-icons/si";
