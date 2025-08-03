@@ -1,10 +1,11 @@
+"use client"
 import { FaCalendarCheck, FaGlobe, FaHandshake, FaLock } from "react-icons/fa6";
 import { Separator } from "../ui/separator";
 import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { IoTimer } from "react-icons/io5";
 import { HiCursorClick } from "react-icons/hi";
-import MotionDiv from "../ui/motion-div";
+
 
 export default function WebFeaturesSection() {
   return (
@@ -78,12 +79,8 @@ interface SiteFeatureItemProps {
 
 export function SiteFeatureItem({ icon, iconBgColor, title, description }: SiteFeatureItemProps) {
   return (
-    <MotionDiv
+    <div
       className="w-full h-fit md:h-auto rounded-xl border p-5 flex flex-col justify-start items-start gap-5 transition-all"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true }}
     >
       <span
         className={cn(
@@ -98,6 +95,6 @@ export function SiteFeatureItem({ icon, iconBgColor, title, description }: SiteF
       <p className="text-base text-start text-balance text-foreground/80">
         {description}
       </p>
-    </MotionDiv>
+    </div>
   )
 }
