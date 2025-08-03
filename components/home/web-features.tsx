@@ -15,8 +15,10 @@ export default function WebFeaturesSection() {
 
       </h2>
       <p className=" text-base text-balance break-after-column text-foreground/90">
-        Dev_Red_Box builds scalable, well-crafted websites and web apps
-        <span className="md:block">{" "}with ongoing care and a deep focus on what moves your business forward</span>
+        Whether you&apos;re launching a startup or growing an established business, 
+        
+
+        <span className="md:block">{" "}a well-built website builds trust, attracts the right audience, and drives real, measurable growth.</span>
       </p>
       <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
         <div className="flex flex-col md:grid grid-cols-3 gap-5 w-full">
