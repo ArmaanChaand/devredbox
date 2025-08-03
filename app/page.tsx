@@ -10,6 +10,7 @@ import { FaStar } from "react-icons/fa6";
 export default function Home() {
   return (
     <>
+
       <section className="flex justify-center items-center relative overflow-hidden pl-2">
         <div className="synced-width mx-auto flex flex-col justify-center items-start sm:items-center mt-32  mb-20 sm:mb-28 gap-8">
           <span className="text-xs flex justify-center gap-2 items-center p-2 border rounded-md bg-secondary/20"> <Badge className="rounded" >SOON</Badge>
@@ -23,15 +24,15 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-sm sm:text-base w-full text-start text-balance sm:text-center leading-relaxed text-foreground/80">
+          <p className="text-base w-full text-start sm:text-balance sm:text-center leading-relaxed text-foreground/80">
             Trusted by ambitious businesses & startups, DevRedBox <span className="text-foreground">custom websites</span> and powerful <span className="text-foreground">web apps</span>  that drive growth, and help you confidently lead your industry forward.
           </p>
 
           <div className="gap-6 flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 mr-auto sm:mr-0">
-            <Button className="sm:flex-1 sm:shrink-0 cta-btn w-52" size="lg" variant="primary" >
+            <Button className="w-56 sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="primary" decoration={"ring"} >
               Book a Call
             </Button>
-            <Button className="sm:flex-1 sm:shrink-0 cta-btn cta-btn-2 w-fit" size="lg" variant="outline">
+            <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"}>
               View Project Progress
             </Button>
           </div>
@@ -53,16 +54,16 @@ export default function Home() {
           <h2 className="text-balance font-bold text-4xl sm:text-5xl">
             A Team That Builds with Purpose
           </h2>
-          <p className="sm:text-balance text-sm 2xl:text-base text-foreground/90">
+          <p className=" sm:text-balance md:text-wrap text-base text-foreground/90">
             Dev_Red_Box builds scalable, well-crafted websites and web apps with ongoing care and a deep focus on what moves your business forward
           </p>
-          <ul className="text-sm space-y-3 text-foreground/90">
+          <ul className="space-y-3 text-foreground/90 list-decimal">
             <li className="flex justify-start items-center gap-2">
               <FaStar className="size-4 fill-primary" />
               Developing softwares for businesses
             </li>
-            <li className="flex justify-start items-center gap-2">
-              <FaStar className="size-4  fill-primary" />
+            <li className="flex justify-start items-start gap-2">
+              <FaStar className="size-4 mt-1 fill-primary" />
               Learning and supporting fellow developers
             </li>
           </ul>
@@ -77,11 +78,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Here should be project showcase */}
-      {/* Real or Side project - Anything which looks authentic */}
-
+      {
+        /* 
+        Here should be project showcase.
+        Real or Side project - Anything which looks authentic 
+        */
+      }
+      
       <HowWeWork />
-
       <WebFeaturesSection />
 
 

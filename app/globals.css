@@ -169,13 +169,6 @@
   @apply text-2xl text-foreground hover:underline
 }
 
-.cta-btn {
-  @apply font-semibold ring-2 ring-primary ring-offset-3 hover:ring-offset-4 ring-offset-background
-}
-
-.cta-btn-2 {
-  @apply ring-secondary
-}
 
 .section-badge {
   @apply py-2 rounded-md font-medium border bg-secondary/20

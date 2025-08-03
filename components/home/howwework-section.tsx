@@ -22,7 +22,7 @@ export default function HowWeWork() {
                         Behind the Scenes <br /> with Dev_Red_Box
                     </h2>
 
-                    <p className="text-balance text-sm 2xl:text-base text-foreground/90">
+                    <p className="text-balance 2xl:text-base text-foreground/90">
                         From drawing you idea on paper to bringing that to reality — discover the streamlined development that makes Dev_Red_Box a trusted digital partner.
                     </p>
 
