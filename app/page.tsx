@@ -1,3 +1,4 @@
+import AgencyFAQsHome from "@/components/home/agency-faq-home";
 import BrandsShowcase from "@/components/home/brands-showcase";
 import HowWeWork from "@/components/home/howwework-section";
 import WebFeaturesSection from "@/components/home/web-features";
@@ -13,9 +14,9 @@ export default function Home() {
 
       <section className="flex justify-center items-center relative overflow-hidden pl-2">
         <div className="synced-width mx-auto flex flex-col justify-center items-start sm:items-center mt-32  mb-20 sm:mb-28 gap-8">
-          <span className="text-xs flex justify-center gap-2 items-center p-2 border rounded-md bg-secondary/20"> <Badge className="rounded" >SOON</Badge>
+          <p className="text-xs flex justify-center gap-2 items-center p-2 border rounded-md bg-secondary/20"> <Badge className="rounded" >SOON</Badge>
             Android and iOS Apps
-          </span>
+          </p>
           <h1 className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center">
             Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
             <span className="lg:hidden">, </span>
@@ -50,7 +51,11 @@ export default function Home() {
         />
         <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
          text-start sm:text-center md:text-start">
-          <Badge variant="outline" className="section-badge" >About Dev_Red_Box</Badge>
+          <Badge variant="outline" className="section-badge" asChild>
+            <p>
+              About Dev_Red_Box
+            </p>
+          </Badge>
           <h2 className="text-balance font-bold text-4xl sm:text-5xl">
             A Team That Builds with Purpose
           </h2>
@@ -84,9 +89,10 @@ export default function Home() {
         Real or Side project - Anything which looks authentic 
         */
       }
-      
+
       <HowWeWork />
       <WebFeaturesSection />
+      <AgencyFAQsHome />
 
 
     </>
