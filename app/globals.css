@@ -169,7 +169,3 @@
   @apply text-2xl text-foreground hover:underline
 }
 
-
-.section-badge {
-  @apply py-2 rounded-md font-medium border bg-secondary/20
-}

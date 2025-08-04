@@ -6,7 +6,7 @@ export default function AgencyFAQsHome() {
         <section className="mb-20 mx-auto synced-width grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div className="flex flex-col justify-start items-start gap-5">
-                <Badge variant="outline" className="section-badge" asChild>
+                <Badge variant="link" className="text-sm pl-0" asChild>
                     <h2>
                         Frequently Asked Questions
                     </h2>
@@ -28,7 +28,6 @@ export default function AgencyFAQsHome() {
                         ))}
                     </dl>
                 </div>
-
             </div>
 
 
@@ -39,6 +38,10 @@ export default function AgencyFAQsHome() {
 
 
 const AGENCY_FAQs: FAQType[] = [
+    {
+        question: "What exactly does DevRedBox do?",
+        answer: "We design and develop custom websites and web apps that help businesses grow — from simple company sites to full-scale digital platforms."
+    },
     {
         question: "What types of businesses do you work with?",
         answer: "We work with startups, small businesses, and growing companies across industries — whether you’re tech-savvy or completely new to digital solutions."

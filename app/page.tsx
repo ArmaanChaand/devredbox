@@ -1,4 +1,5 @@
 import AgencyFAQsHome from "@/components/home/agency-faq-home";
+import AgencyPricing from "@/components/home/agency-pricing";
 import BrandsShowcase from "@/components/home/brands-showcase";
 import HowWeWork from "@/components/home/howwework-section";
 import WebFeaturesSection from "@/components/home/web-features";
@@ -51,7 +52,7 @@ export default function Home() {
         />
         <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
          text-start sm:text-center md:text-start">
-          <Badge variant="outline" className="section-badge" asChild>
+          <Badge variant="link" className="text-sm" asChild>
             <p>
               About Dev_Red_Box
             </p>
@@ -93,6 +94,7 @@ export default function Home() {
       <HowWeWork />
       <WebFeaturesSection />
       <AgencyFAQsHome />
+      <AgencyPricing/>
 
 
     </>

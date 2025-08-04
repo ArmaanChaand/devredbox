@@ -26,9 +26,9 @@ export default function WorkProcess({ icon, heading, title, description }: WorkP
                 {icon}
             </span>
 
-            <h6 className="text-xl font-bold">
+            <h3 className="text-xl font-bold">
                 {heading}
-            </h6>
+            </h3>
 
             <Separator className=" mask-l-from-80% mask-r-from-80%" />
             <h5 className="text-lg font-bold text-muted-foreground">

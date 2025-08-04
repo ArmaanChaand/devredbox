@@ -16,7 +16,7 @@ export default function HowWeWork() {
                 className="mx-auto mb-20 flex flex-col md:flex-row justify-between items-center bg-accent/30 px-0 md:px-7 py-7 rounded-xl gap-10 -top-24 sm:top-24 static md:sticky z-10"
             >
                 <div className=" flex flex-col justify-start items-center md:items-start text-center md:text-start gap-6 ">
-                    <Badge variant="outline" className="section-badge" asChild><p>How it Works</p></Badge>
+                    <Badge variant="link" className="text-sm" asChild><p>How it Works</p></Badge>
 
                     <h2 className="text-balance font-bold text-3xl sm:text-5xl">
                         Behind the Scenes <br /> with Dev_Red_Box

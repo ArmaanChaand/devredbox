@@ -17,27 +17,25 @@ export default function WebFeaturesSection() {
       </h2>
       <p className=" text-base text-balance break-after-column text-foreground/90">
         Whether you&apos;re launching a startup or growing an established business, 
-        
-
         <span className="md:block">{" "}a well-built website builds trust, attracts the right audience, and drives real, measurable growth.</span>
       </p>
       <div className="w-full mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-5">
         <div className="flex flex-col md:grid grid-cols-3 gap-5 w-full">
           <SiteFeatureItem
             icon={<FaHandshake className="size-5 text-white" />}
-            iconBgColor="border-blue-950  bg-blue-900"
+            iconBgColor="border-blue-950  bg-blue-900 shadow-lg shadow-blue-900/50"
             title="Build trust from day one"
             description="Your website is often the first impression. A professional site signals credibility and confidence."
           />
           <SiteFeatureItem
             icon={<FaCalendarCheck className="size-5 text-white" />}
-            iconBgColor="border-emerald-950  bg-emerald-900"
+            iconBgColor="border-emerald-950  bg-emerald-900 shadow-lg shadow-emerald-900/50"
             title="Stay open 24/7"
             description="While you're offline, your website keeps informing, engaging, and converting potential customers — around the clock."
           />
           <SiteFeatureItem
             icon={<FaGlobe className="size-5 text-white" />}
-            iconBgColor="border-red-950  bg-red-900"
+            iconBgColor="border-red-950  bg-red-900 shadow-lg shadow-red-900/50"
             title="Take control of your brand"
             description="Social media changes. Algorithms shift. But your website is your owned space, shaped exactly how you want."
           />
@@ -46,19 +44,19 @@ export default function WebFeaturesSection() {
         <div className="flex flex-col md:grid grid-cols-3 gap-5 w-full md:h-auto">
           <SiteFeatureItem
             icon={<IoTimer className="size-5 text-white" />}
-            iconBgColor="border-yellow-950  bg-yellow-900"
+            iconBgColor="border-yellow-950  bg-yellow-900 shadow-lg shadow-yellow-900/50"
             title="Speed That Keeps Visitors Around"
             description="We use modern tech to make sure your site loads in seconds — because slow websites lose attention fast."
           />
           <SiteFeatureItem
             icon={<HiCursorClick className="size-5 text-white" />}
-            iconBgColor="border-slate-950  bg-slate-900"
+            iconBgColor="border-slate-950  bg-slate-900 shadow-lg shadow-slate-900"
             title="Search-Engine Friendly by Design"
             description="From structure to performance, your website is built to help Google understand, rank, and recommend it to the right people."
           />
           <SiteFeatureItem
             icon={<FaLock className="size-4 text-white" />}
-            iconBgColor="border-cyan-950  bg-cyan-900"
+            iconBgColor="border-cyan-950  bg-cyan-900 shadow-lg shadow-cyan-900/50"
             title="Safe, Stable, and Easy to Grow"
             description="With secure systems and scalable tools behind the scenes, your site stays protected — and ready as your business grows."
           />
@@ -90,7 +88,7 @@ export function SiteFeatureItem({ icon, iconBgColor, title, description }: SiteF
       >
         {icon}
       </span>
-      <h5 className="text-xl font-bold text-start">{title}</h5>
+      <h3 className="text-xl font-bold text-start">{title}</h3>
       <Separator className=" mask-l-from-80% mask-r-from-80%" />
       <p className="text-base text-start text-balance text-foreground/80">
         {description}
