@@ -2,7 +2,7 @@ import { FaGlobe } from "react-icons/fa6";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import PricingBox from "./pricing-box";
-import { IoDesktop } from "react-icons/io5";
+import { BiSolidCustomize } from "react-icons/bi";
 
 export default function AgencyPricing() {
     return (
@@ -38,7 +38,7 @@ export default function AgencyPricing() {
                     price="Let's Talk"
                     colorInverted
                     hidePriceDetail
-                    icon={<IoDesktop className="size-5 text-background" />}
+                    icon={<BiSolidCustomize className="size-5 text-background" />}
                     description={<>
                         <span className="text-background font-semibold">Custom Web Application {" "}</span>
                         — a customised, high-performing solution designed to integrate technologies, optimise processes, and grow with your changing business requirements.

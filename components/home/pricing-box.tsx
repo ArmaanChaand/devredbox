@@ -14,7 +14,7 @@ interface PricingBoxProps {
 
 export default function PricingBox({ className, colorInverted, label, title, price, hidePriceDetail, icon, description }: PricingBoxProps) {
     return (
-        <div className={cn("w-full rounded-lg bg-accent/50 p-5", className, colorInverted && "bg-foreground")}>
+        <div className={cn("w-full rounded-lg bg-muted/50 p-5", className, colorInverted && "bg-foreground")}>
             <span
                 className={cn("text-sm text-muted-foreground uppercase",
                     colorInverted && "text-background"

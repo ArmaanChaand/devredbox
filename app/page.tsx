@@ -94,8 +94,27 @@ export default function Home() {
       <HowWeWork />
       <WebFeaturesSection />
       <AgencyFAQsHome />
-      <AgencyPricing/>
+      <AgencyPricing />
 
+      <section className="synced-width mx-auto mb-20 flex flex-col justify-start items-center text-center gap-7 border rounded-4xl py-16 sm:py-20 bg-muted/10 relative z-0 backdrop-blur-2xl overflow-hidden">
+        <div className="w-ful h-full inset-0 absolute -z-10 shadow-2xl blur-2xl bg-gradient-to-t from-primary/10 to-black" />
+        <Badge variant="link" className="text-sm pl-0" asChild>
+          <p>
+            Join Us Now
+          </p>
+        </Badge>
+        <h2 className="text-balance font-bold text-3xl sm:text-5xl">
+          No Two Projects Are the Same
+          <span className="block text-muted-foreground">{" "}We Build for What Matters Most</span>
+        </h2>
+        <p className=" text-base text-balance break-after-column text-foreground/90">
+          Let’s talk. Whether you have a rough idea or specific goals,
+          <span className="sm:block">{" "}we’ll help you figure out what’s possible.</span>
+        </p>
+        <Button variant="default" decoration="ring" size={"lg"} className="mt-3" >
+          Book an Appointment
+        </Button>
+      </section>
 
     </>
   );
