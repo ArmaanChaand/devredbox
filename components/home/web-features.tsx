@@ -9,7 +9,7 @@ import { HiCursorClick } from "react-icons/hi";
 
 export default function WebFeaturesSection() {
   return (
-    <section className="synced-width mx-auto flex flex-col justify-start items-center text-center gap-6 mb-20">
+    <section className="synced-width mx-auto flex flex-col justify-start items-center text-start sm:text-center gap-6 mb-20">
       <h2 className="text-balance font-bold text-3xl sm:text-5xl">
         What having a
         <span className="md:block">{" "}website can get you.</span>

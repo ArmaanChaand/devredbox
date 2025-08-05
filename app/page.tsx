@@ -5,8 +5,10 @@ import HowWeWork from "@/components/home/howwework-section";
 import WebFeaturesSection from "@/components/home/web-features";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa6";
+import Link from "next/link";
+import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 
 
 export default function Home() {
@@ -97,7 +99,7 @@ export default function Home() {
       <AgencyPricing />
 
       <section className="synced-width mx-auto mb-20 flex flex-col justify-start items-center text-center gap-7 border rounded-4xl py-16 sm:py-20 bg-muted/10 relative z-0 backdrop-blur-2xl overflow-hidden">
-        <div className="w-ful h-full inset-0 absolute -z-10 shadow-2xl blur-2xl bg-gradient-to-t from-primary/10 to-black" />
+        <div className="w-ful h-full inset-0 absolute -z-10 shadow-2xl blur-2xl bg-gradient-to-t from-primary/20 to-black" />
         <Badge variant="link" className="text-sm pl-0" asChild>
           <p>
             Join Us Now
@@ -115,6 +117,71 @@ export default function Home() {
           Book an Appointment
         </Button>
       </section>
+
+      <footer className="synced-width mx-auto relative">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2">
+          <div>
+            <Link href="/" className="text-xl font-black relative">
+              Dev_Red_Box
+              <span className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background absolute -bottom-3 right-0">AGENCY</span>
+            </Link>
+            <div className="flex justify-start items-center gap-4 mt-8">
+              <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
+                <FaEarthAsia />
+              </span>
+              <p className="text-xs text-foreground/80">
+                Started in India.
+                <br />
+                Empowering ideas worldwide.
+              </p>
+            </div>
+
+            <div className="flex justify-start items-center mt-8 gap-4 bg-accent/20 px-4 py-3 w-fit rounded relative">
+              <a href="#" className="">
+                <FaYoutube className="size-5" />
+              </a>
+              <Separator orientation="vertical" className="!h-5" />
+              <a href="#" className="">
+                <FaLinkedinIn className="size-5" />
+              </a>
+              <Separator orientation="vertical" className="!h-5" />
+              <a href="#" className="">
+                <FaGithub className="size-5" />
+              </a>
+
+            </div>
+          </div>
+          <div className="grid grid-cols-2 mt-10 sm:mt-0">
+            <nav className="flex flex-col justify-start items-start gap-3">
+              <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Agency</span>
+              <Link href="">Projects</Link>
+              <Link href="">About Us</Link>
+              <Link href="">Contact Us</Link>
+            </nav>
+            <nav className="flex flex-col justify-start items-start gap-3">
+              <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>
+              <Link href="">Tools</Link>
+              <Link href="">Articles</Link>
+              <Link href="">Library</Link>
+            </nav>
+          </div>
+        </div>
+
+        <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
+          <p> Copyright &copy; 2025 DevRedBox Agency </p>
+          <p className="flex justify-between items-center gap-2">
+            <Link href="/" >
+              Privacy Policy
+            </Link>
+            &bull;
+            <Link href="/" >
+              Terms & Conditions
+            </Link>
+          </p>
+        </div>
+
+      </footer >
+
 
     </>
   );
