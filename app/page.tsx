@@ -47,7 +47,7 @@ export default function Home() {
       <BrandsShowcase />
       <section id="about" className="snap-center synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
         <Image
-          src={"/about-img.jpg"}
+          src={"/about-img.webp"}
           alt="Know DevRedBox More"
           className="w-full sm:w-2/3 aspect-video mx-auto md:mx-0  md:w-full  md:aspect-[4/3] object-cover p-2 border rounded-md"
           width={1080}
@@ -180,10 +180,7 @@ export default function Home() {
             </Link>
           </p>
         </div>
-
       </footer >
-
-
     </>
   );
 }
