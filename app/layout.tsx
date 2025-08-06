@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth snap-y">
       <body
-        className={"dark overflow-x-hidden" + grotesk.className}
+        className={"dark overflow-x-hidden " + grotesk.className}
       >
         <header className="w-screen fixed top-0 py-5 z-50 bg-background">
           <div className="flex items-center synced-width mx-auto">
