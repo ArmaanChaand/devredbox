@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth snap-y">
       <body
-        className={"dark overflow-x-hidden scroll-smooth " + grotesk.className}
+        className={"dark overflow-x-hidden" + grotesk.className}
       >
         <header className="w-screen fixed top-0 py-5 z-50 bg-background">
           <div className="flex items-center synced-width mx-auto">
@@ -34,8 +34,8 @@ export default function RootLayout({
             </Link>
 
             <nav className="ml-auto space-x-5 hidden md:block">
-              <Link className="main-nav-item" href="/pricing">Pricing</Link>
-              <Link className="main-nav-item" href="/projects">Projects</Link>
+              <Link className="main-nav-item" href="#pricing">Pricing</Link>
+              <Link className="main-nav-item" href="#about">About</Link>
               <Link className="main-nav-item" href="/blog">Blog</Link>
               <Link className="main-nav-item" href="/blog">Library</Link>
               <Link className="main-nav-item" href="/blog">Tools</Link>

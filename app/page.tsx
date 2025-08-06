@@ -6,6 +6,7 @@ import WebFeaturesSection from "@/components/home/web-features";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
@@ -44,7 +45,7 @@ export default function Home() {
 
       </section>
       <BrandsShowcase />
-      <section className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
+      <section id="about" className="snap-center synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
         <Image
           src={"/about-img.jpg"}
           alt="Know DevRedBox More"
@@ -135,28 +136,28 @@ export default function Home() {
                 Empowering ideas worldwide.
               </p>
             </div>
-
-            <div className="flex justify-start items-center mt-8 gap-4 bg-accent/20 px-4 py-3 w-fit rounded relative">
-              <a href="#" className="">
-                <FaYoutube className="size-5" />
-              </a>
-              <Separator orientation="vertical" className="!h-5" />
-              <a href="#" className="">
-                <FaLinkedinIn className="size-5" />
-              </a>
-              <Separator orientation="vertical" className="!h-5" />
-              <a href="#" className="">
-                <FaGithub className="size-5" />
-              </a>
-
+            <div className="mt-8">
+              <p className="flex justify-start items-center gap-2 text-sm mb-2 text-muted-foreground font-semibold">Our Socials <ArrowUpRight className="size-4" /> </p>
+              <div className="flex justify-start items-center gap-4 bg-accent/20 px-4 py-3 w-fit rounded relative">
+                <a href="#" target="_blank" className="" title="DevRedBox YouTube Channel">
+                  <FaYoutube className="size-5" />
+                </a>
+                <Separator orientation="vertical" className="!h-5" />
+                <a href="https://www.linkedin.com/company/devredbox/" target="_blank" className="" title="DevRedBox LinkedIn Page">
+                  <FaLinkedinIn className="size-5" />
+                </a>
+                <Separator orientation="vertical" className="!h-5" />
+                <a href="https://github.com/ArmaanChaand/devredbox" target="_blank" className="" title="Explore on GitHub">
+                  <FaGithub className="size-5" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="grid grid-cols-2 mt-10 sm:mt-0">
             <nav className="flex flex-col justify-start items-start gap-3">
               <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Agency</span>
-              <Link href="">Projects</Link>
-              <Link href="">About Us</Link>
-              <Link href="">Contact Us</Link>
+              <Link href="#about">About</Link>
+              <Link href="#pricing">Pricing</Link>
             </nav>
             <nav className="flex flex-col justify-start items-start gap-3">
               <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>

@@ -6,7 +6,7 @@ import { BiSolidCustomize } from "react-icons/bi";
 
 export default function AgencyPricing() {
     return (
-        <section className="mb-20 mx-auto synced-width grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section id="pricing" className="snap-center mb-20 mx-auto synced-width grid grid-cols-1 md:grid-cols-2 gap-10">
 
             <div className="flex flex-col justify-start items-start sm:items-center md:items-start text-start sm:text-center md:text-start gap-5">
                 <Badge variant="link" className="text-sm pl-0" asChild>

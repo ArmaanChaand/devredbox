@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevRedBox Agency Website
 
-## Getting Started
+🚧 **Under Development** 🚧
 
-First, run the development server:
+This is the official website for **DevRedBox** — a digital agency building high-performance web apps, a growing code library, and helpful resources for startups and entrepreneurs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+We’re actively working on:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🔧 Website design and content
+- 🧱 Reusable components library & code snippets
+- 📚 Blog and learning resources
+- 🧩 Open-source tools and experiments
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> Expect frequent updates as we refine and improve everything.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+### 🔗 Visit us
+Check out the live site here: [devredbox.vercel.app](https://devredbox.vercel.app) _(coming soon)_
 
-To learn more about Next.js, take a look at the following resources:
+### 📂 Tech Stack
+- Next.js
+- Tailwind CSS
+- Shadcn/UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📬 Contributions & Feedback
+While we’re not accepting outside contributions just yet, feel free to explore, star 🌟 the repo, or open an issue if you spot anything!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by the DevRedBox team.
