@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Space_Grotesk } from "next/font/google";
-import Link from "next/link";
-import { MobileMenu } from "@/components/ui/mobile-menu";
+import { Outfit } from "next/font/google";
 
-const grotesk = Space_Grotesk({
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["300", "700"]
+  weight: ["400", "700"]
 })
 
 
@@ -23,30 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth snap-y">
       <body
-        className={"dark overflow-x-hidden " + grotesk.className}
+        className={"dark overflow-x-hidden" + " " + outfit.className} // Space at the end of string is required
       >
-        <header className="w-screen fixed top-0 py-5 z-50 bg-background">
-          <div className="flex items-center synced-width mx-auto">
 
-            <Link href="/" className="text-xl font-black relative">
-              Dev_Red_Box
-              <span className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background absolute -bottom-3 right-0">AGENCY</span>
-            </Link>
-
-            <nav className="ml-auto space-x-5 hidden md:block">
-              <Link className="main-nav-item" href="#pricing">Pricing</Link>
-              <Link className="main-nav-item" href="#about">About</Link>
-              <Link className="main-nav-item" href="/blog">Blog</Link>
-              <Link className="main-nav-item" href="/blog">Library</Link>
-              <Link className="main-nav-item" href="/blog">Tools</Link>
-            </nav>
-            <MobileMenu />
-
-          </div>
-        </header>
-        <main>
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ export default function HowWeWork() {
                     <Badge variant="link" className="text-sm" asChild><p>How it Works</p></Badge>
 
                     <h2 className="text-balance font-bold text-3xl sm:text-5xl">
-                        Behind the Scenes <br /> with Dev_Red_Box
+                        Behind the Scenes <br /> with DevRedBox
                     </h2>
 
                     <p className="text-balance 2xl:text-base text-foreground/90">

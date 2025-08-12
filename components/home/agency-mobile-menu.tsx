@@ -12,7 +12,7 @@ import { X } from "lucide-react"
 import Link from "next/link"
 import { HiMenuAlt3 } from "react-icons/hi"
 
-export function MobileMenu() {
+export function AgencyMobileMenu() {
     return (
         <Sheet>
             <SheetTrigger asChild>

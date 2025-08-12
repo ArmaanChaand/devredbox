@@ -32,12 +32,17 @@ const buttonVariants = cva(
       decoration: {
         none: "",
         ring: "ring-2 ring-offset-3 hover:ring-offset-4 ring-offset-background",
+      },
+      shape: {
+        none: "",
+        sharp: "rounded-none"
       }
     },
     defaultVariants: {
       variant: "default",
       size: "default",
-      decoration: "none"
+      decoration: "none",
+      shape: "none"
     },
   }
 )
@@ -47,6 +52,7 @@ function Button({
   variant,
   size,
   decoration,
+  shape,
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
@@ -58,7 +64,7 @@ function Button({
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, decoration, className }))}
+      className={cn(buttonVariants({ variant, size, decoration, shape, className }))}
       {...props}
     />
   )

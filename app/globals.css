@@ -46,10 +46,7 @@
 /* Primary COLOR */
 /* hsl(355.53 83% 41%) */
 
-
 /* Theme Specific CSS — Start */
-
-
 
 :root {
   --radius: 0.65rem;
@@ -122,7 +119,6 @@
 
 /* Theme Specific CSS — End */
 
-
 /* Customizing TailwindCSS - START */
 
 @theme {
@@ -142,10 +138,6 @@
 
 /* Customizing TailwindCSS - END */
 
-
-
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -159,6 +151,10 @@
 
 .synced-width {
   @apply w-11/12 xl:w-10/12 2xl:w-8/12
+}
+
+.library-wrapper {
+  @apply w-11/12 mx-auto
 }
 
 .main-nav-item {
