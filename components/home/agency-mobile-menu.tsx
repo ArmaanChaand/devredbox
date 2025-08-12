@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button"
 import {
     Sheet,
@@ -10,11 +11,13 @@ import {
 } from "@/components/ui/sheet"
 import { X } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi"
 
 export function AgencyMobileMenu() {
+    const [open, setOpen] = useState(false)
     return (
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="ml-auto md:hidden" >
                     <HiMenuAlt3 className="size-5" />
@@ -29,10 +32,10 @@ export function AgencyMobileMenu() {
                     </SheetClose>
                 </SheetHeader>
                 <nav className="flex flex-col mx-auto justify-center items-center gap-5 mt-20">
-                    <Link className="main-nav-item-mb" href="/pricing">Pricing</Link>
-                    <Link className="main-nav-item-mb" href="/projects">Projects</Link>
+                    <Link onClick={() => setOpen(false)} className="main-nav-item-mb" href="#pricing">Pricing</Link>
+                    <Link onClick={() => setOpen(false)} className="main-nav-item-mb" href="#about">About</Link>
                     <Link className="main-nav-item-mb" href="/blog">Blog</Link>
-                    <Link className="main-nav-item-mb" href="/blog">Library</Link>
+                    <Link className="main-nav-item-mb" href="/library">Library</Link>
                     <Link className="main-nav-item-mb" href="/blog">Tools</Link>
                 </nav>
 
