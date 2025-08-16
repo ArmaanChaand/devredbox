@@ -160,7 +160,3 @@
 .main-nav-item {
   @apply hover:underline underline-offset-2 text-secondary-foreground transition-all
 }
-
-.main-nav-item-mb {
-  @apply text-2xl text-foreground hover:underline
-}

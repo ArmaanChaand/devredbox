@@ -13,6 +13,8 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Button } from "./button"
+import Image from "next/image"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -59,31 +61,73 @@ export default function LibraryTopNav() {
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Home</NavigationMenuTrigger>
                     <NavigationMenuContent>
-                        <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                            <li className="row-span-3">
+                        <ul className="grid gap-2 w-[500px] grid-cols-2">
+                            <li className="col-span-1">
                                 <NavigationMenuLink asChild>
                                     <Link
                                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                                         href="/"
                                     >
                                         <div className="mt-4 mb-2 text-lg font-medium">
-                                            shadcn/ui
+                                            DevRedBox Agency
                                         </div>
                                         <p className="text-muted-foreground text-sm leading-tight">
-                                            Beautifully designed components built with Tailwind CSS.
+                                            Home for businesses to get their custom websites & apps.
                                         </p>
                                     </Link>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/docs" title="Introduction">
-                                Re-usable components built using Radix UI and Tailwind CSS.
-                            </ListItem>
-                            <ListItem href="/docs/installation" title="Installation">
-                                How to install dependencies and structure your app.
-                            </ListItem>
-                            <ListItem href="/docs/primitives/typography" title="Typography">
-                                Styles for headings, paragraphs, lists...etc
-                            </ListItem>
+                            <li className="col-span-1">
+                                <NavigationMenuLink asChild>
+                                    <Link
+                                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                                        href="/"
+                                    >
+                                        <div className="mt-4 mb-2 text-lg font-medium">
+                                            DevRedBox Library
+                                        </div>
+                                        <p className="text-muted-foreground text-sm leading-tight">
+                                            Library for fellow developers to build websites with ease.
+                                        </p>
+                                    </Link>
+                                </NavigationMenuLink>
+                            </li>
+                            <div className="col-span-2 grid grid-cols-3 px-1 gap-2">
+                                <Button 
+                                    variant={"secondary"} asChild
+                                    className="cols-span-1 rounded-sm"
+                                >
+                                    <a
+                                        href="/library" target="_blank" title="DevRedBox Etsy Store"
+                                    >
+                                        <Image
+                                            src={"/etsy-icon.svg"}
+                                            alt="Etsy"
+                                            width={20}
+                                            height={20}
+                                            className="rounded-full"
+                                        />
+                                        Etsy Store
+                                    </a>
+                                </Button>
+                                <Button 
+                                    variant={"secondary"} asChild
+                                    className="cols-span-1 rounded-sm "
+                                >
+                                    <a
+                                        href="/library" target="_blank" title="DevRedBox YouTube Channel"
+                                    >
+                                        <Image
+                                            src={"/yt-icon.svg"}
+                                            alt="YouTube Channel"
+                                            width={20}
+                                            height={20}
+                                        />
+                                        YT Channel
+                                    </a>
+                                </Button>
+                                {/* Third External Link */}
+                            </div>
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
