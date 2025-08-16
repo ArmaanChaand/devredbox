@@ -15,7 +15,7 @@ export default function AgencyHeader() {
             initial={false}
             animate={{
                 height: open ? "100vh" : "5rem",
-                background: open ? "color-mix(in oklab, var(--secondary) 90%, transparent)" : "var(--background)"
+                background: open ? "var(--secondary)" : "var(--background)"
             }}
             transition={{ ease: "easeInOut" }}
         >
