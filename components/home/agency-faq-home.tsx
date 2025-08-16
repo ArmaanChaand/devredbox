@@ -30,7 +30,7 @@ export default function AgencyFAQsHome() {
                 </div>
             </div>
 
-
+            <div id="pricing" />
         </section>
     )
 }

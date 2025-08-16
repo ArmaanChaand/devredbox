@@ -7,6 +7,7 @@ export default function BrandsShowcase() {
     return (
         <section
             className="synced-width mx-auto text-muted-foreground/90 overflow-hidden mask-l-from-80% mask-r-from-80% border-y py-10"
+            id="about"
         >
             <div
                 className="flex gap-16 justify-center items-center w-max animate-showcase"

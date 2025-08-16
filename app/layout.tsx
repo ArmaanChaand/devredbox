@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth snap-y">
+    <html lang="en" className="scroll-smooth">
       <body
         className={"dark overflow-x-hidden" + " " + outfit.className} // Space at the end of string is required
       >

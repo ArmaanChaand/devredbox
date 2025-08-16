@@ -1,5 +1,6 @@
 import AgencyFAQsHome from "@/components/home/agency-faq-home";
 import AgencyHeader from "@/components/home/agency-header";
+import AgencyHero from "@/components/home/agency-hero";
 import AgencyPricing from "@/components/home/agency-pricing";
 import BrandsShowcase from "@/components/home/brands-showcase";
 import HowWeWork from "@/components/home/howwework-section";
@@ -18,37 +19,9 @@ export default function Home() {
     <>
       <AgencyHeader />
       <main>
-        <section className="flex justify-center items-center relative overflow-hidden pl-2">
-          <div className="synced-width mx-auto flex flex-col justify-center items-start sm:items-center mt-32  mb-20 sm:mb-28 gap-8">
-            <p className="text-xs flex justify-center gap-2 items-center p-2 border rounded-md bg-secondary/20">
-              <Badge className="rounded" >SOON</Badge>
-              Android and iOS Apps
-            </p>
-            <h1 className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center">
-              Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
-              <span className="lg:hidden">, </span>
-              <span className="lg:block">
-                Real Business Impact
-              </span>
-            </h1>
-
-            <p className="text-base w-full text-start sm:text-balance sm:text-center leading-relaxed text-foreground/80">
-              Trusted by ambitious businesses & startups, DevRedBox builds <span className="text-foreground">custom websites</span> and powerful <span className="text-foreground">web apps</span>  that drive growth, and help you confidently lead your industry forward.
-            </p>
-
-            <div className="gap-6 flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 mr-auto sm:mr-0">
-              <Button className="w-56 sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="primary" decoration={"ring"} >
-                Book a Call
-              </Button>
-              <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"}>
-                View Project Progress
-              </Button>
-            </div>
-          </div>
-
-        </section>
+        <AgencyHero />
         <BrandsShowcase />
-        <section id="about" className="snap-center synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
+        <section className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
             src={"/about-img.webp"}
             alt="Know DevRedBox More"
