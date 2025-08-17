@@ -1,4 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Code Library by DevRedBox for Web and Mobile Development",
+  description: "Reusable UI components, website sections, and templates to help developers and designers build modern, responsive websites & apps faster.",
+  // metadataBase: new URL("http://localhost:3000"),
+  // alternates: {
+  //   canonical: "/library"
+  // }
+}
 
 export default function LibraryPage() {
   return (
@@ -64,9 +74,8 @@ export default function LibraryPage() {
               stop reinventing <br />  the wheel.
             </span>
           </h1>
-          <p className="text-sm sm:text-base text-balance w-full xl:w-1/2 text-muted-foreground">
-            DevRedBox library brings you re-usable collection of UI Components, Blocks and Templates.
-            Also, you can find Python and JS code snippets.
+          <p className="text-sm sm:text-base text-balance w-full xl:w-2/3 text-muted-foreground">
+            DevRedBox Library provides developers and designers with reusable UI components, pre-built website sections, and professional templates to create modern, responsive websites faster.
           </p>
           <div className="w-fit flex justify-start items-center p-3 bg-secondary rounded-2xl mb-20">
             <Button>Browse Components</Button>

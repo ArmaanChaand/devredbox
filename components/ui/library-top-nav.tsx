@@ -93,7 +93,7 @@ export default function LibraryTopNav() {
                                 </NavigationMenuLink>
                             </li>
                             <div className="col-span-2 grid grid-cols-3 px-1 gap-2">
-                                <Button 
+                                <Button
                                     variant={"secondary"} asChild
                                     className="cols-span-1 rounded-sm"
                                 >
@@ -110,7 +110,7 @@ export default function LibraryTopNav() {
                                         Etsy Store
                                     </a>
                                 </Button>
-                                <Button 
+                                <Button
                                     variant={"secondary"} asChild
                                     className="cols-span-1 rounded-sm "
                                 >

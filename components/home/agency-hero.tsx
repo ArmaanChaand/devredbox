@@ -27,24 +27,41 @@ export default function AgencyHero() {
                     <Badge className="rounded" >SOON</Badge>
                     Android and iOS Apps
                 </motion.p>
-                <motion.h1
+                <h1
                     className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center"
-                    initial={{
-                        translateY: 20,
-                        opacity: 0
-                    }}
-                    whileInView={{
-                        translateY: 0,
-                        opacity: 1
-                    }}
-                    viewport={{ once: true }}
                 >
-                    Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
-                    <span className="lg:hidden">, </span>
-                    <span className="lg:block">
+                    <motion.span
+                        initial={{
+                            // translateY: 20,
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            // translateY: 0,
+                            opacity: 1
+                        }}
+                        viewport={{ once: true }}
+                    >
+                        Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
+                        <span className="lg:hidden">, </span>
+                    </motion.span>
+                    <motion.span
+                        className="lg:block"
+                        initial={{
+                            translateY: 20,
+                            opacity: 0
+                        }}
+                        whileInView={{
+                            translateY: 0,
+                            opacity: 1
+                        }}
+                        transition={{
+                            delay:0.2
+                        }}
+                        viewport={{ once: true }}
+                    >
                         Real Business Impact
-                    </span>
-                </motion.h1>
+                    </motion.span>
+                </h1>
 
                 <motion.p
                     className="text-base w-full text-start sm:text-balance sm:text-center leading-relaxed text-foreground/80"

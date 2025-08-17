@@ -1,5 +1,6 @@
+import { Metadata } from "next";
 import AgencyFAQsHome from "@/components/home/agency-faq-home";
-import AgencyHeader from "@/components/home/agency-header";
+import AgencyHeader from "@/components/ui/agency-header";
 import AgencyHero from "@/components/home/agency-hero";
 import AgencyPricing from "@/components/home/agency-pricing";
 import BrandsShowcase from "@/components/home/brands-showcase";
@@ -13,6 +14,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 
+export const metadata: Metadata = {
+  title: "DevRedBox – Web Design and Development Agency",
+  description: "Trusted by ambitious businesses & startups, DevRedBox builds custom websites and powerful web apps that drive growth, and help you confidently lead your industry forward.", // Not better.
+}
 
 export default function Home() {
   return (
