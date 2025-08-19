@@ -43,7 +43,7 @@ export default function AgencyHeader() {
                     {open ?
                         <X className="size-5" />
                         :
-                        <Menu className="size-5" />
+                        <Menu className="size-5 text-background" />
                     }
                 </Button>
                 <motion.div className="absolute bg-secondary -z-10 inset-0 md:hidden rounded"
@@ -52,7 +52,17 @@ export default function AgencyHeader() {
                         height: open ? "100vh" : 36,
                         left: "unset",
                         right: open ? "-35px" : 0,
-                        top: open ? 0 : 20
+                        top: open ? 0 : 20,
+                        background: open ? "var(--secondary)" : "var(--foreground)",
+                        transition: {
+                            default: {
+                                duration: 0.3
+                            },
+                            background: {
+                                duration: 0.2,
+                                ease: "linear"
+                            }
+                        }
                     }}
                 />
             </div>
