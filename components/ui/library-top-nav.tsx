@@ -15,6 +15,8 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "./button"
 import Image from "next/image"
+import { DevRedBoxLogo } from "./devredbox-logo"
+import { Separator } from "./separator"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -68,10 +70,9 @@ export default function LibraryTopNav() {
                                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                                         href="/"
                                     >
-                                        <div className="mt-4 mb-2 text-lg font-medium text-foreground">
-                                            DevRedBox Agency
-                                        </div>
-                                        <p className="text-muted-foreground text-sm leading-tight">
+                                        <DevRedBoxLogo variant="AGENCY" svgCn="text-foreground size-[unset]" />
+                                        <Separator className="my-2 mask-l-from-80% mask-r-from-80%" />
+                                        <p className="text-foreground text-sm leading-tight">
                                             Home for businesses to get their custom websites & apps.
                                         </p>
                                     </Link>
@@ -83,10 +84,9 @@ export default function LibraryTopNav() {
                                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                                         href="/"
                                     >
-                                        <div className="mt-4 mb-2 text-lg font-medium text-foreground">
-                                            DevRedBox Library
-                                        </div>
-                                        <p className="text-muted-foreground text-sm leading-tight">
+                                        <DevRedBoxLogo variant="LIBRARY" svgCn="text-foreground size-[unset]" />
+                                        <Separator className="my-2 mask-l-from-80% mask-r-from-80%" />
+                                        <p className="text-foreground text-sm leading-tight">
                                             Library for fellow developers to build websites with ease.
                                         </p>
                                     </Link>

@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
+import { DevRedBoxLogo } from "./devredbox-logo";
 
 const Link = motion.create(NextLink)
 
@@ -28,9 +29,8 @@ export default function AgencyHeader() {
             }}
         >
             <div className="flex items-center synced-width mx-auto py-5 relative">
-                <Link href="/" className="text-xl font-black relative">
-                    Dev_Red_Box
-                    <span className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background absolute -bottom-3 right-0">AGENCY</span>
+                <Link href="/" >
+                    <DevRedBoxLogo variant="AGENCY" />
                 </Link>
                 <nav className="ml-auto space-x-5 hidden md:block">
                     <Link className="main-nav-item" href="#pricing">Pricing</Link>

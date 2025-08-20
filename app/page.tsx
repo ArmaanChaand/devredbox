@@ -13,6 +13,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
+import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
 
 export const metadata: Metadata = {
   title: "DevRedBox – Web Design and Development Agency",
@@ -103,9 +104,8 @@ export default function Home() {
         <footer className="synced-width mx-auto relative">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2">
             <div>
-              <Link href="/" className="text-xl font-black relative">
-                Dev_Red_Box
-                <span className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background absolute -bottom-3 right-0">AGENCY</span>
+              <Link href="/" className="text-xl font-black relative w-fit block">
+                <DevRedBoxLogo variant="AGENCY" />
               </Link>
               <div className="flex justify-start items-center gap-4 mt-8">
                 <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
