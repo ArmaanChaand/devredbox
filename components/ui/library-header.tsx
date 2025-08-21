@@ -9,15 +9,15 @@ import { DevRedBoxLogo } from "./devredbox-logo";
 export default function LibraryHeader() {
 
     return (
-        <header className="z-50 h-fit fixed top-5 w-screen ">
+        <header className="z-50 h-fit fixed top-0 w-screen bg-background py-4">
             <div className="library-wrapper  flex justify-end items-center gap-4">
                 <Link href="/library" className="mr-auto">
-                    <DevRedBoxLogo variant="AGENCY" />
+                    <DevRedBoxLogo variant="LIBRARY" />
                 </Link>
                 <LibraryTopNav />
-                <Separator orientation="vertical" className="!h-5 hidden md:block" />
+                <Separator orientation="vertical" className="!h-5 hidden lg:block" />
                 <FaGithub />
-                <Separator orientation="vertical" className="!h-5 md:hidden" />
+                <Separator orientation="vertical" className="!h-5 lg:hidden" />
                 <LibraryMobileNav />
             </div>
         </header>

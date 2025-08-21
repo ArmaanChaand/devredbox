@@ -8,7 +8,9 @@ export default function LibraryLayout({
     return (
         <>
             <LibraryHeader />
-            {children}
+            <main> {/* All of the content should be inside the main — The header, content and the table of contents.  */}
+                {children}
+            </main>
         </>
     )
 }

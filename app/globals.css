@@ -164,3 +164,8 @@ Black = #111111
 .main-nav-item {
   @apply hover:underline underline-offset-2 transition-all
 }
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

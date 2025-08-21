@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function LibraryPage() {
   return (
-    <main className="">
+    <>
       <section className="w-full h-fit relative z-0 overflow-hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -89,6 +89,6 @@ export default function LibraryPage() {
 
       </div>
 
-    </main>
+    </>
   )
 }
