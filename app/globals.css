@@ -169,3 +169,6 @@ Black = #111111
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.toc-link {
+  @apply data-[onpage=true]:text-foreground hover:text-foreground transition-all
+}

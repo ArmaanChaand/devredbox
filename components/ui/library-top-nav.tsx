@@ -96,7 +96,7 @@ export default function LibraryTopNav() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/templates">Templates</Link>
+                        <Link href="/library/templates">Templates</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>

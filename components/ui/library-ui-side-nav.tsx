@@ -1,49 +1,50 @@
 import LibraryUiNavLink from "./library-ui-link";
 
-const GetStartedLinks = [
-    {
-        title: "Introduction",
-        href: "/library/ui",
-    },
-    {
-        title: "Disclaimer",
-        href: "/library/ui/disclaimer",
-    },
-    {
-        title: "GitHub",
-        href: "/library/github",
-    },
-    {
-        title: "Figma",
-        href: "/library/figma",
-    },
-]
+
+/**
+ * library/ui should list all the links to any blocks or components.
+ * It'll appear on top-header and in mobile side-nav. Not in the sidebar.
+ */
 const ComponentLinks = [
     {
         title: "Marquee Animation",
-        href: "/library/ui/marquee-animation",
+        href: "/library/ui/marquee",
+    },
+    {
+        title: "FAQ Box",
+        href: "/library/ui/faq-box",
+    },
+]
+const BlocksLinks = [
+    {
+        title: "FAQ Group",
+        href: "/library/ui/faq-group",
+    },
+    {
+        title: "Cursor Follower",
+        href: "/library/ui/cursor-follower",
     },
 ]
 
 export default function LibraryUiSideNav() {
     return (
-        <nav className="text-base lg:text-sm  space-y-2">
-            <span className="block text-muted-foreground">Get Started</span>
-            <ul className="space-y-2">
+        <nav className="text-base lg:text-sm  space-y-8">
+            <ul className="space-y-1.5">
+                <span className="block text-muted-foreground">Components</span>
                 {
-                    GetStartedLinks.map(l => (
+                    ComponentLinks.map(l => (
                         <li key={l.href + l.title}>
-                            <LibraryUiNavLink href={l.href} >
+                            <LibraryUiNavLink href={l.href}>
                                 {l.title}
                             </LibraryUiNavLink>
                         </li>
                     ))
                 }
             </ul>
-            <span className="block text-muted-foreground mt-8">Components</span>
-            <ul>
+            <ul className="space-y-1.5">
+                <span className="block text-muted-foreground">Blocks</span>
                 {
-                    ComponentLinks.map(l => (
+                    BlocksLinks.map(l => (
                         <li key={l.href + l.title}>
                             <LibraryUiNavLink href={l.href}>
                                 {l.title}

@@ -3,7 +3,6 @@ import AgencyFAQsHome from "@/components/home/agency-faq-home";
 import AgencyHeader from "@/components/ui/agency-header";
 import AgencyHero from "@/components/home/agency-hero";
 import AgencyPricing from "@/components/home/agency-pricing";
-import BrandsShowcase from "@/components/home/brands-showcase";
 import HowWeWork from "@/components/home/howwework-section";
 import WebFeaturesSection from "@/components/home/web-features";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +25,6 @@ export default function Home() {
       <AgencyHeader />
       <main>
         <AgencyHero />
-        <BrandsShowcase />
         <section className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
             src={"/about-img.webp"}

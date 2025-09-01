@@ -9,7 +9,7 @@ export default function LibraryUiNavLink({ className, href, ...props }: React.Co
     return (
         <Link
             href={href}
-            className={cn(className, "text-xl lg:text-base transition-all duration-200 hover:text-primary/90 hover:underline", {
+            className={cn(className, "text-xl lg:text-base transition-all duration-200 hover:text-primary/90 hover:underline font-medium", {
                 "text-primary": isActive
             })}
             {...props}

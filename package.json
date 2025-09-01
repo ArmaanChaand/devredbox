@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,6 +18,9 @@
     "@radix-ui/react-tooltip": "^1.2.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "fumadocs-core": "^15.7.1",
+    "fumadocs-mdx": "^11.8.0",
+    "fumadocs-ui": "^15.7.1",
     "lucide-react": "^0.507.0",
     "motion": "^12.23.11",
     "next": "15.3.2",

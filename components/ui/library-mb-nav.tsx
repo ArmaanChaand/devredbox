@@ -47,17 +47,17 @@ export default function LibraryMobileNav() {
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/library"} >
+                                <LibraryUiNavLink href={"/"} >
                                     Agency
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/library"} >
+                                <LibraryUiNavLink href={"/blog"} >
                                     Articles
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/library"} >
+                                <LibraryUiNavLink href={"/templates"} >
                                     Templates
                                 </LibraryUiNavLink>
                             </li>
