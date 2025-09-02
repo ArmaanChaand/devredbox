@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "lib/contents/**/*.mdx"
-  ],
+, "contents/blog/sample-blog.mdx"  ],
   "exclude": [
     "node_modules"
   ]

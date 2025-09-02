@@ -1,4 +1,6 @@
+"use client";
 import LibraryUiNavLink from "./library-ui-link";
+import type { source } from "@/lib/source"
 
 
 /**
@@ -26,10 +28,33 @@ const BlocksLinks = [
     },
 ]
 
-export default function LibraryUiSideNav() {
+export default function LibraryUiSideNav({ tree }: { tree: typeof source.pageTree }) {
+    const u = tree.children[0]
+    if (u.type === "folder") {
+        const p = u.children[0]
+        if (p.type == "page") {
+            console.log(p)
+        }
+    }
     return (
         <nav className="text-base lg:text-sm  space-y-8">
-            <ul className="space-y-1.5">
+
+            {tree.children.map(item => item.$id == "ui" && item.type == "folder" && (
+                <ul className="space-y-1.5" key={item.$id}>
+                    <span className="block text-muted-foreground">Components</span>
+                    {
+                        item.children.map(l => l.type === "page" && (
+                            <li key={l.$id}>
+                                <LibraryUiNavLink href={l.url}>
+                                    {l.name}
+                                </LibraryUiNavLink>
+                            </li>
+                        ))
+                    }
+                </ul>
+            ))
+            }
+            <ul className="space-y-1.5" id="">
                 <span className="block text-muted-foreground">Components</span>
                 {
                     ComponentLinks.map(l => (
@@ -53,6 +78,6 @@ export default function LibraryUiSideNav() {
                     ))
                 }
             </ul>
-        </nav>
+        </nav >
     )
 }

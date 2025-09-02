@@ -5,7 +5,9 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react"
 import LibraryUiSideNav from "./library-ui-side-nav";
 import LibraryUiNavLink from "./library-ui-link";
-export default function LibraryMobileNav() {
+import type { source } from "@/lib/source";
+
+export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof source.pageTree }) {
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
@@ -63,7 +65,7 @@ export default function LibraryMobileNav() {
                             </li>
                         </ul>
                     </nav>
-                    <LibraryUiSideNav />
+                    <LibraryUiSideNav tree={mdxPageTree} />
                 </div>
 
             </motion.div >
