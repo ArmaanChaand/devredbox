@@ -1,12 +1,7 @@
-import { defineDocs, defineConfig, frontmatterSchema } from 'fumadocs-mdx/config';
-import { z } from "zod"
+import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
+
 export const docs = defineDocs({
-  dir: 'contents',
-  docs: {
-    schema: frontmatterSchema.extend({
-      doctype: z.string().optional()
-    })
-  }
+  dir: 'contents'
 });
 
 export default defineConfig();

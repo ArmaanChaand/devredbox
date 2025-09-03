@@ -5,10 +5,13 @@ import { mdxComponents } from "@/mdx-components"
 import { notFound } from "next/navigation"
 
 export function generateStaticParams() {
-    const params = source.generateParams()
-    return params.map(p => ({
-        slug: p.slug[1] // The first item is "ui". No need to add this in url again.
-    }))
+    const sourceParams = source.generateParams()
+
+    const params = sourceParams.filter(p => p.slug[0] === "ui").map(p => ({
+        slug: p.slug[1]
+    })) // Only generating SSG for mdx in "ui" folder.
+
+    return params
 }
 
 
