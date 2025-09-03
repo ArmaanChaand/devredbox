@@ -91,7 +91,7 @@ export default function LibraryTopNav() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-                        <Link href="/blog">Articles</Link>
+                        <Link href="/articles">Articles</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>

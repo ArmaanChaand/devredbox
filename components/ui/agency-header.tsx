@@ -35,7 +35,7 @@ export default function AgencyHeader() {
                 <nav className="ml-auto space-x-5 hidden md:block">
                     <Link className="main-nav-item" href="#pricing">Pricing</Link>
                     <Link className="main-nav-item" href="#about">About</Link>
-                    <Link className="main-nav-item" href="/blog">Blog</Link>
+                    <Link className="main-nav-item" href="/articles">Articles</Link>
                     <Link className="main-nav-item" href="/library">Library</Link>
                     <Link className="main-nav-item" href="/blog">Tools</Link>
                 </nav>
@@ -105,7 +105,7 @@ export default function AgencyHeader() {
                     }}
                 >About</Link>
                 <Link
-                    className="text-xl" href="/blog"
+                    className="text-xl" href="/articles"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,

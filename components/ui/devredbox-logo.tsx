@@ -12,7 +12,7 @@ export function DevRedBoxLogoRaw({ className }: { className?: string }) {
     )
 }
 export function DevRedBoxLogo({ className, svgCn, variant, ...props }: React.ComponentProps<"div"> & {
-    variant: "LIBRARY" | "AGENCY",
+    variant?: "LIBRARY" | "AGENCY",
     svgCn?: string
 }) {
     return (
@@ -21,10 +21,12 @@ export function DevRedBoxLogo({ className, svgCn, variant, ...props }: React.Com
             {...props}
         >
             <DevRedBoxLogoRaw className={svgCn} />
-            <span
-                className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background ml-auto">
-                {variant}
-            </span>
+            {variant &&
+                <span
+                    className="text-[0.5rem] font-semibold p-0.5 rounded bg-foreground text-background ml-auto">
+                    {variant}
+                </span>
+            }
         </div>
     )
 }

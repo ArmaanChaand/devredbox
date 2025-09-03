@@ -6,17 +6,20 @@ import { motion } from "motion/react"
 import LibraryUiSideNav from "./library-ui-side-nav";
 import LibraryUiNavLink from "./library-ui-link";
 import type { source } from "@/lib/source";
+import { usePathname } from "next/navigation";
 
 export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof source.pageTree }) {
     const [open, setOpen] = useState(false)
-
+    const pathname = usePathname()
     useEffect(() => {
         document.body.style.overflowY = open ? "hidden" : "auto"
         return () => {
             document.body.style.overflowY = "auto"
         }
     }, [open])
-
+    useEffect(() => {
+        setOpen(false)
+    }, [pathname])
     return (
         <>
             <Button size={"icon"} className="lg:hidden" onClick={() => setOpen(v => !v)}>
@@ -54,12 +57,12 @@ export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof 
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/blog"} >
+                                <LibraryUiNavLink href={"/articles"} >
                                     Articles
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/templates"} >
+                                <LibraryUiNavLink href={"/library/templates"} >
                                     Templates
                                 </LibraryUiNavLink>
                             </li>
