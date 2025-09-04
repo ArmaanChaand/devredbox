@@ -25,7 +25,7 @@ export default function Home() {
       <AgencyHeader />
       <main>
         <AgencyHero />
-        <section className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
+        <section id="about" className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
             src={"/about-img.webp"}
             alt="Know DevRedBox More"
