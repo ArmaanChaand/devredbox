@@ -103,7 +103,7 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2">
             <div>
               <Link href="/" className="text-xl font-black relative w-fit block">
-                <DevRedBoxLogo variant="AGENCY" />
+                <DevRedBoxLogo variant="AGENCY" svgCn="w-32"  />
               </Link>
               <div className="flex justify-start items-center gap-4 mt-8">
                 <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
