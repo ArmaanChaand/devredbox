@@ -1,10 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { motion } from "motion/react"
 
-export default function AgencyHero() {
+
+export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
 
     return (
         <section className="flex justify-center items-center relative overflow-hidden pl-2">
@@ -55,7 +57,7 @@ export default function AgencyHero() {
                             opacity: 1
                         }}
                         transition={{
-                            delay:0.2
+                            delay: 0.2
                         }}
                         viewport={{ once: true }}
                     >
@@ -93,10 +95,14 @@ export default function AgencyHero() {
                     viewport={{ once: true }}
                 >
                     <Button className="w-56 sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="primary" decoration={"ring"} >
-                        Book a Call
+                        <a href={meetingLink} target="_blank">
+                            Book a Call
+                        </a>
                     </Button>
                     <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"}>
-                        View Project Progress
+                        <Link href="/contact">
+                            See Contact Details
+                        </Link>
                     </Button>
                 </motion.div>
             </div>

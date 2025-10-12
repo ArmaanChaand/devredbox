@@ -1,14 +1,28 @@
 import { Button } from "@/components/ui/button";
+import { DEVREDBOX_META_IMAGE } from "@/lib/info";
 import { Metadata } from "next";
 
+const META_TITLE = "Code Library by DevRedBox for Web and Mobile Development"
+const META_DESCRIPTION = "Reusable UI components, website sections, and templates to help developers and designers build modern, responsive websites & apps faster."
+
 export const metadata: Metadata = {
-  title: "Code Library by DevRedBox for Web and Mobile Development",
-  description: "Reusable UI components, website sections, and templates to help developers and designers build modern, responsive websites & apps faster.",
-  // metadataBase: new URL("http://localhost:3000"),
-  // alternates: {
-  //   canonical: "/library"
-  // }
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  keywords: ["DevRedBox", "Library", "NextJs UI Components", "NextJs Templates"],
+  openGraph: {
+    locale: "en_US",
+    siteName: "DevRedBox Agency",
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+    type: "website",
+    url: "/library",
+    images: [DEVREDBOX_META_IMAGE],
+  },
+  alternates: {
+    canonical: "/library"
+  }
 }
+
 
 export default function LibraryPage() {
   return (

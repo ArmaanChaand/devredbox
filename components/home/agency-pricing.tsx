@@ -3,6 +3,7 @@ import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import PricingBox from "./pricing-box";
 import { BiSolidCustomize } from "react-icons/bi";
+import { MEETING_LINK } from "@/lib/info";
 
 export default function AgencyPricing() {
     return (
@@ -17,8 +18,10 @@ export default function AgencyPricing() {
                 <p className="text-balance font-bold text-4xl sm:text-5xl">
                     Tailored, Transparent & Flexible Packages
                 </p>
-                <Button variant="default" decoration="ring" size={"lg"} className="mt-3" >
-                    Request a Quote
+                <Button variant="default" decoration="ring" size={"lg"} className="mt-3" asChild>
+                    <a href={MEETING_LINK} target="_blank">
+                        Request a Quote
+                    </a>
                 </Button>
             </div>
             <div className="w-full flex flex-col gap-5">

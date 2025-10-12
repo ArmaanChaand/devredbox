@@ -13,10 +13,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
+import { DEVREDBOX_META_IMAGE, MEETING_LINK } from "@/lib/info";
+
+const META_TITLE = "DevRedBox – Web Design and Development Agency"
+const META_DESCRIPTION = "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide."
 
 export const metadata: Metadata = {
-  title: "DevRedBox – Web Design and Development Agency",
-  description: "Trusted by ambitious businesses & startups, DevRedBox builds custom websites and powerful web apps that drive growth, and help you confidently lead your industry forward.", // Not better.
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  keywords: ["DevRedBox agency", "DevRedBox web design and development agency", "web app development"],
+  openGraph: {
+    locale: "en_US",
+    siteName: "DevRedBox Agency",
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+    type: "website",
+    url: "/",
+    images: [DEVREDBOX_META_IMAGE],
+  },
+  alternates: {
+    canonical: "/"
+  }
 }
 
 export default function Home() {
@@ -24,7 +41,7 @@ export default function Home() {
     <>
       <AgencyHeader />
       <main>
-        <AgencyHero />
+        <AgencyHero meetingLink={MEETING_LINK} />
         <section id="about" className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
             src={"/about-img.webp"}
@@ -44,7 +61,7 @@ export default function Home() {
               A Team That Builds with Purpose
             </h2>
             <p className=" sm:text-balance md:text-wrap text-base text-foreground/90">
-              Dev_Red_Box builds scalable, well-crafted websites and web apps with ongoing care and a deep focus on what moves your business forward
+              DevRedBox builds scalable, well-crafted websites and web apps with ongoing care and a deep focus on what moves your business forward
             </p>
             <ul className="space-y-3 text-foreground/90 list-decimal">
               <li className="flex justify-start items-center gap-2">
@@ -57,22 +74,14 @@ export default function Home() {
               </li>
             </ul>
             <div className="w-full sm:w-2/3 md:w-fit grid grid-cols-2 gap-6 pl-1 mt-2">
-              <Button variant="primary" decoration="ring"  >
-                Request a Call
-              </Button>
-              <Button variant="outline" decoration={"ring"} >
-                Know Us More
+              <Button decoration={"ring"} >
+                <Link href="/library" >
+                  Visit our Library
+                </Link>
               </Button>
             </div>
           </div>
         </section>
-
-        {
-          /* 
-          Here should be project showcase.
-          Real or Side project - Anything which looks authentic 
-          */
-        }
 
         <HowWeWork />
         <WebFeaturesSection />
@@ -94,8 +103,10 @@ export default function Home() {
             Let’s talk. Whether you have a rough idea or specific goals,
             <span className="sm:block">{" "}we’ll help you figure out what’s possible.</span>
           </p>
-          <Button variant="default" decoration="ring" size={"lg"} className="mt-3" >
-            Book an Appointment
+          <Button variant="default" decoration="ring" size={"lg"} className="mt-3" asChild>
+            <a href={MEETING_LINK} target="_blank">
+              Book an Appointment
+            </a>
           </Button>
         </section>
 
@@ -103,7 +114,7 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2">
             <div>
               <Link href="/" className="text-xl font-black relative w-fit block">
-                <DevRedBoxLogo variant="AGENCY" svgCn="w-32"  />
+                <DevRedBoxLogo variant="AGENCY" svgCn="w-32" />
               </Link>
               <div className="flex justify-start items-center gap-4 mt-8">
                 <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">

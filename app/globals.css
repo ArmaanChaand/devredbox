@@ -46,9 +46,8 @@
 }
 
 /* 
-Primary COLOR = hsl(355.53 83% 41%) 
-
-White =  oklch(94.669% 0.03098 75.171) 
+Primary COLOR (Shade of Red) = #c1121f 
+White =  #faebd7
 Black = #111111
  */
 
@@ -148,7 +147,7 @@ Black = #111111
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground selection:bg-primary/30 selection:text-[#faebd7];
   }
 
 }

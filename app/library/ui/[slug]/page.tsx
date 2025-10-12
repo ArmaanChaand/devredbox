@@ -4,6 +4,13 @@ import { absoluteUrl } from "@/lib/utils"
 import { mdxComponents } from "@/mdx-components"
 import { notFound } from "next/navigation"
 
+/**
+ Check type=article for the article page.
+ And necessary fields like — author, published time 
+ 
+ */
+
+
 export function generateStaticParams() {
     const sourceParams = source.generateParams()
 

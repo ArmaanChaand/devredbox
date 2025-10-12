@@ -5,7 +5,7 @@ import ScrollHijackedDiv from "./scroll-hijacked-div";
 import WorkProcess from "./work-process-section";
 import { AiFillCode } from "react-icons/ai";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
-
+import { MEETING_LINK } from "@/lib/info";
 
 export default function HowWeWork() {
 
@@ -23,11 +23,13 @@ export default function HowWeWork() {
                     </h2>
 
                     <p className="text-balance 2xl:text-base text-foreground/90">
-                        From drawing you idea on paper to bringing that to reality — discover the streamlined development that makes Dev_Red_Box a trusted digital partner.
+                        From drawing you idea on paper to bringing that to reality — discover the streamlined development that makes DevRedBox a trusted digital partner.
                     </p>
 
-                    <Button variant="primary" decoration="ring" className="hidden md:inline-flex w-56"  >
-                        Book a Call
+                    <Button variant="primary" decoration="ring" className="hidden md:inline-flex w-56" asChild>
+                        <a href={MEETING_LINK} target="_blank">
+                            Book a Call
+                        </a>
                     </Button>
 
                 </div>
