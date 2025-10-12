@@ -36,8 +36,8 @@ export default function Home() {
             <AgencyHeader />
             <main>
                 <section className="h-fit mt-20 synced-width mx-auto mb-10">
-                    <h1 className="text-8xl font-black">Contact Us</h1>
-                    <p className="pl-2 mt-2 w-10/12 text-muted-foreground">
+                    <h1 className="text-6xl sm:text-8xl font-black">Contact Us</h1>
+                    <p className="text-sm sm:text-base pl-2 mt-2 text-muted-foreground lg:w-10/12">
                         You can easily book 
                         {"  "}
                         <a href={MEETING_LINK} target="_blank" className="underline">an online appointment</a>
@@ -49,7 +49,7 @@ export default function Home() {
                         If you’d prefer, you can also reach out to us directly — whether you’d like more information, want to discuss a project idea, or simply wish to leave a message. Use the contact links provided below to get in touch, and we’ll get back to you as soon as possible.</p>
                 </section>
                 <section className="synced-width mx-auto mb-20">
-                    <div className="w-full grid grid-cols-2 gap-5">
+                    <div className="w-full grid sm:grid-cols-2 gap-5">
                         <div className="bg-secondary p-5 rounded">
                             <h2 className="text-sm mb-3">Our Socials</h2>
                             <div className="flex justify-start items-center gap-4 bg-accent/20 w-fit rounded relative">
@@ -79,7 +79,7 @@ export default function Home() {
                             </span>
                         </div>
                     </div>
-                    <div className="w-full grid grid-cols-3 mt-5 gap-5">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
                         <a href="https://www.youtube.com/@DevRedBox" target="_blank" className="p-5 rounded relative border">
                             <ArrowUpRight className="absolute top-2 right-2 text-muted-foreground" />
                             <FaYoutube className="size-8 text-primary" />
