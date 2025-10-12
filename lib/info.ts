@@ -1,3 +1,4 @@
+export const GAID = process.env.GAID || ""
 export const MEETING_LINK = process.env.MEETING_LINK || ""
 export const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.devredbox.in"
 export const DEVREDBOX_LOGO_URL = SITE_ORIGIN + "/devredbox.png"

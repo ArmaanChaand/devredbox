@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import { SITE_ORIGIN } from "@/lib/info";
+import { GAID, SITE_ORIGIN } from "@/lib/info";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -85,6 +86,7 @@ export default function RootLayout({
 
         {children}
       </body>
+      <GoogleAnalytics gaId={GAID} />
     </html>
   );
 }

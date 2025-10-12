@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   keywords: ["DevRedBox agency", "DevRedBox web design and development agency", "web app development"],
   openGraph: {
     locale: "en_US",
-    siteName: "DevRedBox Agency",
+    siteName: "DevRedBox",
     title: META_TITLE,
     description: META_DESCRIPTION,
     type: "website",
