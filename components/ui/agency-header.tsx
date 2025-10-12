@@ -14,27 +14,29 @@ export default function AgencyHeader() {
 
     return (
         <motion.header
-            className="w-screen fixed top-0 z-50 bg-background overflow-hidden h-24 opacity-0"
+            className="w-screen fixed top-0 z-50 bg-background overflow-hidden h-24"
             initial={false}
             animate={{
                 height: open ? "100vh" : "5rem",
                 // background: open ? "var(--secondary)" : "var(--background)"
             }}
             transition={{ ease: "easeInOut" }}
-            whileInView={{
-                opacity: 1,
-                transition: {
-                    delay: 1
-                }
-            }}
         >
-            <div className="flex items-center synced-width mx-auto py-5 relative">
+            <motion.div
+                className="flex items-center synced-width mx-auto py-5 relative opacity-0"
+                animate={{
+                    opacity: 1,
+                    transition: {
+                        delay: 0.5
+                    }
+                }}
+
+            >
                 <Link href="/" >
                     <DevRedBoxLogo variant="AGENCY" />
                 </Link>
                 <nav className="ml-auto space-x-5 hidden md:block">
-                    <Link className="main-nav-item" href="#pricing">Pricing</Link>
-                    <Link className="main-nav-item" href="#about">About</Link>
+                    <Link className="main-nav-item" href="/contact">Contact</Link>
                     <Link className="main-nav-item" href="/articles">Articles</Link>
                     <Link className="main-nav-item" href="/library">Library</Link>
                     <Link className="main-nav-item" href="/blog">Tools</Link>
@@ -65,7 +67,7 @@ export default function AgencyHeader() {
                         }
                     }}
                 />
-            </div>
+            </motion.div>
             <nav className="mt-10 flex flex-col justify-start items-start synced-width mx-auto gap-1">
                 <motion.span
                     className="text-sm font-semibold text-muted-foreground"
@@ -94,7 +96,7 @@ export default function AgencyHeader() {
                     Pricing
                 </Link>
                 <Link
-                    onClick={() => setOpen(false)} className="text-xl" href="#about"
+                    onClick={() => setOpen(false)} className="text-xl" href="/contact"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,
@@ -103,7 +105,7 @@ export default function AgencyHeader() {
                         }
 
                     }}
-                >About</Link>
+                >Contact</Link>
                 <Link
                     className="text-xl" href="/articles"
                     animate={{
@@ -211,7 +213,7 @@ export default function AgencyHeader() {
                         asChild
                     >
                         <a
-                            href="/library" target="_blank" title="DevRedBox YouTube Channel"
+                            href="https://www.youtube.com/@DevRedBox" target="_blank" title="DevRedBox YouTube Channel"
                         >
                             <Image
                                 src={"/yt-icon.svg"}

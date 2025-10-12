@@ -17,7 +17,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                         opacity: 0,
                         translateX: 5
                     }}
-                    whileInView={{
+                    animate={{
                         opacity: 1,
                         translateX: 0
                     }}
@@ -37,7 +37,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                             // translateY: 20,
                             opacity: 0
                         }}
-                        whileInView={{
+                        animate={{
                             // translateY: 0,
                             opacity: 1
                         }}
@@ -52,7 +52,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                             translateY: 20,
                             opacity: 0
                         }}
-                        whileInView={{
+                        animate={{
                             translateY: 0,
                             opacity: 1
                         }}
@@ -70,7 +70,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                     initial={{
                         opacity: 0,
                     }}
-                    whileInView={{
+                    animate={{
                         opacity: 1
                     }}
                     transition={{
@@ -86,7 +86,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                     initial={{
                         opacity: 0,
                     }}
-                    whileInView={{
+                    animate={{
                         opacity: 1
                     }}
                     transition={{

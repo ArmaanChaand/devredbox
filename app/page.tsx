@@ -129,7 +129,7 @@ export default function Home() {
               <div className="mt-8">
                 <p className="flex justify-start items-center gap-2 text-sm mb-2 text-muted-foreground font-semibold">Our Socials <ArrowUpRight className="size-4" /> </p>
                 <div className="flex justify-start items-center gap-4 bg-accent/20 px-4 py-3 w-fit rounded relative">
-                  <a href="#" target="_blank" className="" title="DevRedBox YouTube Channel">
+                  <a href="https://www.youtube.com/@DevRedBox" target="_blank" className="" title="DevRedBox YouTube Channel">
                     <FaYoutube className="size-5" />
                   </a>
                   <Separator orientation="vertical" className="!h-5" />
@@ -148,6 +148,7 @@ export default function Home() {
                 <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Agency</span>
                 <Link href="#about">About</Link>
                 <Link href="#pricing">Pricing</Link>
+                <Link href="/contact">Contact</Link>
               </nav>
               <nav className="flex flex-col justify-start items-start gap-3">
                 <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>
