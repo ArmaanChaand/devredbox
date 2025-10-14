@@ -17,7 +17,7 @@ import { DEVREDBOX_META_IMAGE, MEETING_LINK } from "@/lib/info";
 
 const META_TITLE = "DevRedBox – Web Design and Development Agency"
 const META_DESCRIPTION = "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide."
-
+const PAGE_PATH = "/"
 export const metadata: Metadata = {
   title: META_TITLE,
   description: META_DESCRIPTION,
@@ -28,11 +28,14 @@ export const metadata: Metadata = {
     title: META_TITLE,
     description: META_DESCRIPTION,
     type: "website",
-    url: "/",
+    url: PAGE_PATH,
     images: [DEVREDBOX_META_IMAGE],
+    // // If type="article" —
+    // publishedTime: new Date("April 29, 2003 23:00:00").toISOString(),
+    // authors: AUTHOR_DEVREDBOX
   },
   alternates: {
-    canonical: "/"
+    canonical: PAGE_PATH
   }
 }
 

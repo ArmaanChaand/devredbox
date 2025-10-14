@@ -3,7 +3,7 @@ import { DEVREDBOX_META_IMAGE } from "@/lib/info";
 import { Metadata } from "next";
 
 const META_TITLE = "Code Library by DevRedBox for Web and Mobile Development"
-const META_DESCRIPTION = "Reusable UI components, website sections, and templates to help developers and designers build modern, responsive websites & apps faster."
+const META_DESCRIPTION = "Reusable UI components, website sections, and templates to help developers and designers build modern, responsive websites & apps faster. Built by devs at DevRedBox"
 
 export const metadata: Metadata = {
   title: META_TITLE,
