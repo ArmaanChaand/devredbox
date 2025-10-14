@@ -48,7 +48,7 @@ export default function UIPage() {
           </section>
         </div>
         <div className="w-60 shrink-0 sticky top-20 hidden xl:block h-fit">
-          
+
 
           <div className="text-sm text-muted-foreground flex flex-col justify-start items-start gap-2">
             <p>On this page</p>
