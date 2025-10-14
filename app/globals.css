@@ -99,7 +99,8 @@ Muted Foreground Dark = #C2BCBB
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.7998 0.0069 28.84); /* #C2BCBB */
+  --muted-foreground: oklch(0.7998 0.0069 28.84);
+  /* #C2BCBB */
   --accent: oklch(0.274 0.006 286.033);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
@@ -169,6 +170,12 @@ Muted Foreground Dark = #C2BCBB
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .toc-link {
   @apply data-[onpage=true]:text-foreground hover:text-foreground transition-all
+}
+
+/* paragraph */
+.p-content {
+  @apply text-muted-foreground text-base tracking-wide text-pretty
 }
