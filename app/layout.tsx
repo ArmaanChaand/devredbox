@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Outfit } from "next/font/google";
-import { GAID, JSON_LD_ORG, SITE_ORIGIN } from "@/lib/info";
+import { GAID, JSON_LD_MAIN, SITE_ORIGIN } from "@/lib/info";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { JsonLd } from "@/components/ui/json-ld";
 
@@ -127,9 +127,8 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         <JsonLd
-          jsonString={JSON.stringify(JSON_LD_ORG)}
+          jsonString={JSON.stringify(JSON_LD_MAIN)}
         />
-
       </head>
       <body
         className={"dark overflow-x-hidden" + " " + outfit.className} // Space at the end of string is required
