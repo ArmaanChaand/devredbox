@@ -46,8 +46,8 @@ export default function Home() {
         <AgencyHero meetingLink={MEETING_LINK} />
         <section id="about" className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
-            src={"/about-img.webp"}
-            alt="Know DevRedBox More"
+            src={"/devredbox.png"}
+            alt="DevRedBox"
             className="w-full sm:w-2/3 aspect-video mx-auto md:mx-0  md:w-full  md:aspect-[4/3] object-cover p-2 border rounded-md"
             width={1080}
             height={1080}
@@ -75,7 +75,7 @@ export default function Home() {
                 Learning and supporting fellow developers
               </li>
             </ul>
-            <div className="w-full sm:w-2/3 md:w-fit grid grid-cols-2 gap-6 pl-1 mt-2">
+            <div className="w-full sm:w-2/3 md:w-fit grid gap-6 pl-1 mt-2">
               <Button decoration={"ring"} >
                 <Link href="/library" >
                   Visit our Library
