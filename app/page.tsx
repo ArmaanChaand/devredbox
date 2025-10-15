@@ -14,7 +14,6 @@ import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
 import { DEVREDBOX_META_IMAGE, MEETING_LINK } from "@/lib/info";
-
 const META_TITLE = "DevRedBox – Web Design and Development Agency"
 const META_DESCRIPTION = "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide."
 const PAGE_PATH = "/"
