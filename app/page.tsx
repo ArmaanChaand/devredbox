@@ -13,30 +13,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
-import { DEVREDBOX_META_IMAGE, MEETING_LINK } from "@/lib/info";
-const META_TITLE = "DevRedBox – Web Design and Development Agency"
-const META_DESCRIPTION = "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide."
-const PAGE_PATH = "/"
-export const metadata: Metadata = {
-  title: META_TITLE,
-  description: META_DESCRIPTION,
-  keywords: ["DevRedBox agency", "DevRedBox web design and development agency", "web app development"],
-  openGraph: {
-    locale: "en_US",
-    siteName: "DevRedBox",
-    title: META_TITLE,
-    description: META_DESCRIPTION,
-    type: "website",
-    url: PAGE_PATH,
-    images: [DEVREDBOX_META_IMAGE],
-    // // If type="article" —
-    // publishedTime: new Date("April 29, 2003 23:00:00").toISOString(),
-    // authors: AUTHOR_DEVREDBOX
-  },
-  alternates: {
-    canonical: PAGE_PATH
-  }
-}
+import { MEETING_LINK } from "@/lib/info";
+import generateStaticMetadata from "@/lib/static-metadata";
+
+export const metadata: Metadata = generateStaticMetadata({
+  title: "DevRedBox – Web Design and Development Agency",
+  description: "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
+  pagePath: "/",
+  keywords: ["devredbox", "devredbox agency", "web design", "web development"]
+})
 
 export default function Home() {
   return (
@@ -154,9 +139,9 @@ export default function Home() {
               </nav>
               <nav className="flex flex-col justify-start items-start gap-3">
                 <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>
-                <Link href="">Tools</Link>
-                <Link href="">Articles</Link>
-                <Link href="">Library</Link>
+                <Link href="/library">Library</Link>
+                <Link href="/articles">Articles</Link>
+                <Link href="/library/templates">Templates</Link>
               </nav>
             </div>
           </div>

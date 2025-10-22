@@ -31,9 +31,9 @@ export default function WorkProcess({ icon, heading, title, description }: WorkP
             </h3>
 
             <Separator className=" mask-l-from-80% mask-r-from-80%" />
-            <h5 className="text-lg font-bold text-muted-foreground">
+            <p className="text-lg font-bold text-muted-foreground">
                 {title}
-            </h5>
+            </p>
             <p className="text-base text-muted-foreground ">
                 {description}
             </p>

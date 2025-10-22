@@ -17,7 +17,7 @@ export default function AgencyFAQsHome() {
             </div>
             <div className="w-full flex flex-col justify-start items-start gap-5">
                 <div className="w-full">
-                    <h3 className="text-sm uppercase text-muted-foreground mb-3">General</h3>
+                    <span className="text-sm uppercase text-muted-foreground mb-3">General</span>
                     <dl className="w-full divide-y">
                         {AGENCY_FAQs.map(({ question, answer }) => (
                             <FAQBox

@@ -1,12 +1,15 @@
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
+import generateStaticMetadata from "@/lib/static-metadata";
 import { Metadata } from "next";
 import Link from "next/link";
 
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateStaticMetadata({
     title: "Articles and Case Studies by DevRedBox",
     description: "Useful dev articles and case studies of projects will be posted here.", // Not better.
-}
+    pagePath: "/articles",
+    keywords: ["articles by devredbox", "devredbox project case studies"]
+})
 
 
 

@@ -1,32 +1,16 @@
-import { AUTHOR_DEVREDBOX, DEVREDBOX_META_IMAGE } from "@/lib/info";
+
+import generateStaticMetadata from "@/lib/static-metadata";
 import { Metadata } from "next";
 import Link from "next/link";
 
-
-const META_TITLE = "UI Components Blocks and Sections — NextJs TailwindCSS and HTML/CSS"
-const META_DESCRIPTION = "DevRedBox library for customizable UI components, website blocks and sections built with ReactJs, Tailwind CSS and HTML/CSS — with more to be added soon."
-const PAGE_PATH = "library/ui"
-
-export const metadata: Metadata = {
-  title: META_TITLE,
-  description: META_DESCRIPTION,
+export const metadata: Metadata = generateStaticMetadata({ // Not making this page as article
+  
+  title: "UI Components Blocks and Sections — NextJs TailwindCSS and HTML/CSS",
+  description: "DevRedBox library for customizable UI components, website blocks and sections built with ReactJs, Tailwind CSS and HTML/CSS — with more to be added soon.",
+  pagePath: "/library/ui",
   keywords: ["UI", "Components", "Blocks", "Website Sections", "NextJs Components", "TailwindCSS"],
-  openGraph: {
-    locale: "en_US",
-    siteName: "DevRedBox",
-    title: META_TITLE,
-    description: META_DESCRIPTION,
-    type: "article",
-    url: PAGE_PATH,
-    images: [DEVREDBOX_META_IMAGE],
-    // If type="article" —
-    publishedTime: new Date("October 14, 2025 19:00:00").toISOString(),
-    authors: AUTHOR_DEVREDBOX
-  },
-  alternates: {
-    canonical: PAGE_PATH
-  }
-}
+
+})
 
 export default function UIPage() {
 

@@ -39,15 +39,18 @@ export async function generateMetadata({
     if (!doc.title || !doc.description) {
         notFound()
     }
+    const pagePath = absoluteUrl( "/library" + mdxPage.url)
 
     return {
         title: doc.title,
         description: doc.description,
         openGraph: {
+            locale: "en_US",
+            siteName: "DevRedBox",
             title: doc.title,
             description: doc.description,
             type: "article",
-            url: absoluteUrl(mdxPage.url),
+            url: pagePath,
             images: [
                 {
                     url: `/og?title=${encodeURIComponent(
@@ -69,6 +72,9 @@ export async function generateMetadata({
             ],
             creator: "@devredbox",
         },
+        alternates: {
+            canonical: pagePath
+        }
     }
 }
 

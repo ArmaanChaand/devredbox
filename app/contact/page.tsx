@@ -4,31 +4,19 @@ import Link from "next/link";
 import { FaEarthAsia, FaEtsy, FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
-import { DEVREDBOX_META_IMAGE, MEETING_LINK } from "@/lib/info";
+import { MEETING_LINK } from "@/lib/info";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
 import { SiFramer } from "react-icons/si";
+import generateStaticMetadata from "@/lib/static-metadata";
 
-const META_TITLE = "Contact DevRedBox – Get in Touch with Our Web Development Team"
-const META_DESCRIPTION = "Contact DevRedBox to discuss your website or app project. Our team is here to help you with modern, scalable, and high-performance web solutions"
 
-export const metadata: Metadata = {
-    title: META_TITLE,
-    description: META_DESCRIPTION,
+export const metadata: Metadata = generateStaticMetadata({
+    title: "Contact DevRedBox – Get in Touch with Our Web Development Team",
+    description: "Contact DevRedBox to discuss your website or app project. Our team is here to help you with modern, scalable, and high-performance web solutions",
+    pagePath: "/contact",
     keywords: ["Contact DevRedBox", "DevRedBox web design and development agency"],
-    openGraph: {
-        locale: "en_US",
-        siteName: "DevRedBox",
-        title: META_TITLE,
-        description: META_DESCRIPTION,
-        type: "website",
-        url: "/contact",
-        images: [DEVREDBOX_META_IMAGE],
-    },
-    alternates: {
-        canonical: "/contact"
-    }
-}
+})
 
 export default function Home() {
     return (
@@ -38,7 +26,7 @@ export default function Home() {
                 <section className="h-fit mt-20 synced-width mx-auto mb-10">
                     <h1 className="text-6xl sm:text-8xl font-black">Contact Us</h1>
                     <p className="text-sm sm:text-base pl-2 mt-2 text-muted-foreground lg:w-10/12">
-                        You can easily book 
+                        You can easily book
                         {"  "}
                         <a href={MEETING_LINK} target="_blank" className="underline">an online appointment</a>
                         {" "}

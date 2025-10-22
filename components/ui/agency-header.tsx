@@ -39,7 +39,7 @@ export default function AgencyHeader() {
                     <Link className="main-nav-item" href="/contact">Contact</Link>
                     <Link className="main-nav-item" href="/articles">Articles</Link>
                     <Link className="main-nav-item" href="/library">Library</Link>
-                    <Link className="main-nav-item" href="/blog">Tools</Link>
+                    <Link className="main-nav-item" href="/library/templates">Templates</Link>
                 </nav>
                 <Button onClick={() => setOpen(v => !v)} variant="ghost" size="icon" className="ml-auto md:hidden relative z-0" >
                     {open ?
@@ -139,7 +139,7 @@ export default function AgencyHeader() {
                     }}
                 >Library Home</Link>
                 <Link
-                    className="text-xl" href="/library"
+                    className="text-xl" href="/library/templates"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,
@@ -149,7 +149,7 @@ export default function AgencyHeader() {
                     }}
                 >Templates</Link>
                 <Link
-                    className="text-xl" href="/library"
+                    className="text-xl" href="/library/ui"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,
@@ -159,7 +159,7 @@ export default function AgencyHeader() {
                     }}
                 >Components</Link>
                 <Link
-                    className="text-xl" href="/library"
+                    className="text-xl" href="/library/ui"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,

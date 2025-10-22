@@ -1,9 +1,13 @@
+import generateStaticMetadata from "@/lib/static-metadata"
 import { Metadata } from "next"
 
-export const metadata: Metadata = {
-    title: "Templates of NextJs, React, Framer, Webflow and Wordpress",
-    description: "Useful dev articles and case studies of projects will be posted here.", // Not better.
-}
+export const metadata: Metadata = generateStaticMetadata({
+    title: "Website Templates by DevRedBox",
+    description: "Templates of NextJs, React, Framer, Webflow and Wordpress", // Not better.
+    keywords: ["templates", "devredbox"], // Not Better
+    pagePath: "/library/templates"
+
+})
 
 export default function TemplatesPage() {
     return (
