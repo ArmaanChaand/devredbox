@@ -1,13 +1,17 @@
 import { SITE_ORIGIN } from '@/lib/info'
 import type { MetadataRoute } from 'next'
 
+
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
             url: SITE_ORIGIN,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: "weekly",
             priority: 1,
+            images: [
+                SITE_ORIGIN + "/devredbox.png"
+            ]
         },
         {
             url: SITE_ORIGIN + "/library",
