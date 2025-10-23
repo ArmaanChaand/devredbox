@@ -30,8 +30,8 @@ export const JSON_LD_MAIN = {
     "@type": "WebSite",
     "@id": JSON_LD_MAIN_WEB_ID,
     "url": SITE_ORIGIN,
-    "name": "DevRedBox — Web Design and Development Agency",
-    "description": "Professional web design and development services for businesses and startups.",
+    "name": "DevRedBox",
+    "description": "Professional web design and development services for businesses and startups. Also provide Code Library and development tools",
     "publisher": {
         "@type": "Organization",
         "@id": JSON_LD_ORG_ID,
