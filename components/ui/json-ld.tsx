@@ -1,4 +1,3 @@
-
 export function JsonLd({ jsonString }: { jsonString: string }) {
     return (
         <script

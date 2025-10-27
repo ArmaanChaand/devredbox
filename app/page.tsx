@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
-import { MEETING_LINK } from "@/lib/info";
+import { JSON_LD_WEBSITE, MEETING_LINK, WebSiteSchema } from "@/lib/info";
 import generateStaticMetadata from "@/lib/static-metadata";
 
 export const metadata: Metadata = generateStaticMetadata({
@@ -160,6 +160,34 @@ export default function Home() {
           </div>
         </footer >
       </main>
+      <WebSiteMicrodata schema={JSON_LD_WEBSITE} />
     </>
+  );
+}
+
+// TSX Component
+interface WebSiteMicrodataProps {
+  schema: WebSiteSchema;
+}
+
+function WebSiteMicrodata({ schema }: WebSiteMicrodataProps) {
+  return (
+    <div
+      itemScope
+      itemType="https://schema.org/WebSite"
+      itemID={schema["@id"]}
+    >
+      <meta itemProp="name" content={schema.name} />
+      <link itemProp="url" href={schema.url} />
+      <meta itemProp="description" content={schema.description} />
+
+      <div
+        itemProp="publisher"
+        itemScope
+        itemType="https://schema.org/Organization"
+        itemID={schema.publisher["@id"]}
+      >
+      </div>
+    </div>
   );
 }

@@ -21,11 +21,49 @@ export const DEVREDBOX_META_IMAGE = {
 
 
 // Json Ld Schema Informations
-export const JSON_LD_ORG_ID = SITE_ORIGIN + "/#organization"
-export const JSON_LD_MAIN_WEB_ID = SITE_ORIGIN + "/#website"
+const JSON_LD_ORG_ID = SITE_ORIGIN + "/#organization"
+const JSON_LD_MAIN_WEB_ID = SITE_ORIGIN + "/#website"
 
-// Main Schema
-export const JSON_LD_MAIN = {
+// Only on the app/layout.
+export const JSON_LD_ORGANIZATION = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": JSON_LD_ORG_ID,
+    "name": "DevRedBox",
+    "url": SITE_ORIGIN,
+    "logo": {
+        "@type": "ImageObject",
+        "url": DEVREDBOX_LOGO_URL
+    },
+    "sameAs": [
+        DEVREDBOX_LINKEDIN,
+        DEVREDBOX_TWITTER,
+        DEVREDBOX_IG,
+        DEVREDBOX_YT
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": DEVREDBOX_CONTACT_EMAIL,
+        "availableLanguage": ["English"]
+    }
+}
+
+export interface WebSiteSchema {
+    "@context": string;
+    "@type": string;
+    "@id": string;
+    url: string;
+    name: string;
+    description: string;
+    publisher: {
+        "@type": string;
+        "@id": string;
+    };
+}
+
+// Only for the Homepage
+export const JSON_LD_WEBSITE: WebSiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": JSON_LD_MAIN_WEB_ID,
@@ -34,26 +72,6 @@ export const JSON_LD_MAIN = {
     "description": "Professional web design and development services for businesses and startups. Also provide Code Library and development tools",
     "publisher": {
         "@type": "Organization",
-        "@id": JSON_LD_ORG_ID,
-        "name": "DevRedBox",
-        "url": SITE_ORIGIN,
-        "logo": {
-            "@type": "ImageObject",
-            "url": DEVREDBOX_LOGO_URL
-        },
-        "sameAs": [
-            DEVREDBOX_LINKEDIN, DEVREDBOX_TWITTER, DEVREDBOX_IG, DEVREDBOX_YT
-        ],
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": DEVREDBOX_CONTACT_EMAIL,
-            "availableLanguage": ["English"]
-        }
-    },
-    // "potentialAction": {
-    //     "@type": "SearchAction",
-    //     "target": "https://www.devredbox.in/search?q={search_term_string}",
-    //     "query-input": "required name=search_term_string"
-    // }
+        "@id": JSON_LD_ORG_ID
+    }
 }
