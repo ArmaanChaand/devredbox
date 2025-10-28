@@ -5,6 +5,7 @@ import { FaGithub } from "react-icons/fa6";
 import LibraryMobileNav from "./library-mb-nav";
 import { DevRedBoxLogo } from "./devredbox-logo";
 import type { source } from "@/lib/source"
+import { DEVREDBOX_GITHUB } from "@/lib/info";
 
 export default function LibraryHeader({ mdxPageTree }: { mdxPageTree: typeof source.pageTree }) {
 
@@ -16,7 +17,15 @@ export default function LibraryHeader({ mdxPageTree }: { mdxPageTree: typeof sou
                 </Link>
                 <LibraryTopNav />
                 <Separator orientation="vertical" className="!h-5 hidden lg:block" />
-                <FaGithub />
+                <a
+                    href={DEVREDBOX_GITHUB}
+                    target="_blank"
+                    title="DevRedBox GitHub Page"
+                    rel="noopener noreferrer"
+                    aria-label="Open DevRedBox GitHub in new tab"
+                >
+                    <FaGithub />
+                </a>
                 <Separator orientation="vertical" className="!h-5 lg:hidden" />
                 <LibraryMobileNav mdxPageTree={mdxPageTree} />
             </div>

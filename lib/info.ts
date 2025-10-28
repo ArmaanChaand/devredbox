@@ -9,6 +9,7 @@ export const DEVREDBOX_LINKEDIN = process.env.DEVREDBOX_LINKEDIN || "https://www
 export const DEVREDBOX_TWITTER = process.env.DEVREDBOX_TWITTER || "https://x.com/devredbox"
 export const DEVREDBOX_IG = process.env.DEVREDBOX_IG || "https://www.instagram.com/devredbox.india/"
 export const DEVREDBOX_YT = process.env.DEVREDBOX_YT || "https://www.youtube.com/@DevRedBox"
+export const DEVREDBOX_GITHUB = process.env.DEVREDBOX_GITHUB || "https://github.com/ArmaanChaand/devredbox"
 
 // Metadata Informations
 export const AUTHOR_DEVREDBOX = process.env.DEVREDBOX_LINKEDIN || SITE_ORIGIN
@@ -39,7 +40,8 @@ export const JSON_LD_ORGANIZATION = {
         DEVREDBOX_LINKEDIN,
         DEVREDBOX_TWITTER,
         DEVREDBOX_IG,
-        DEVREDBOX_YT
+        DEVREDBOX_YT,
+        DEVREDBOX_GITHUB
     ],
     "contactPoint": {
         "@type": "ContactPoint",

@@ -70,7 +70,6 @@ export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof 
                     </nav>
                     <LibraryUiSideNav tree={mdxPageTree} />
                 </div>
-
             </motion.div >
 
         </>

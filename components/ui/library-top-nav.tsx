@@ -56,7 +56,11 @@ export default function LibraryTopNav() {
                                     className="cols-span-1 rounded-sm"
                                 >
                                     <a
-                                        href="/library" target="_blank" title="DevRedBox Etsy Store"
+                                        href="/library"
+                                        target="_blank"
+                                        title="DevRedBox Etsy Store"
+                                        rel="noopener noreferrer"
+                                        aria-label="Open in new tab"
                                     >
                                         <Image
                                             src={"/etsy-icon.svg"}
@@ -73,7 +77,11 @@ export default function LibraryTopNav() {
                                     className="cols-span-1 rounded-sm "
                                 >
                                     <a
-                                        href="/library" target="_blank" title="DevRedBox YouTube Channel"
+                                        href="/library"
+                                        target="_blank"
+                                        title="DevRedBox YouTube Channel"
+                                        rel="noopener noreferrer"
+                                        aria-label="Open in new tab"
                                     >
                                         <Image
                                             src={"/yt-icon.svg"}
