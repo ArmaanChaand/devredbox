@@ -3,7 +3,7 @@ export const GAID = process.env.GAID || ""
 export const MEETING_LINK = process.env.MEETING_LINK || ""
 
 export const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.devredbox.in"
-export const DEVREDBOX_LOGO_URL = process.env.DEVREDBOX_LOGO_URL || "https://www.devredbox.in/devredbox.png"
+export const DEVREDBOX_LOGO_URL = process.env.DEVREDBOX_LOGO_URL || "https://www.devredbox.in/devredbox.webp"
 export const DEVREDBOX_CONTACT_EMAIL = process.env.DEVREDBOX_CONTACT_EMAIL || "contact@devredbox.in"
 export const DEVREDBOX_LINKEDIN = process.env.DEVREDBOX_LINKEDIN || "https://www.linkedin.com/company/devredbox/"
 export const DEVREDBOX_TWITTER = process.env.DEVREDBOX_TWITTER || "https://x.com/devredbox"

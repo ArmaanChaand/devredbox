@@ -31,11 +31,12 @@ export default function Home() {
         <AgencyHero meetingLink={MEETING_LINK} />
         <section id="about" className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
           <Image
-            src={"/devredbox.png"}
+            src={"/devredbox.webp"}
             alt="DevRedBox"
             className="w-full sm:w-2/3 aspect-video mx-auto md:mx-0  md:w-full  md:aspect-[4/3] object-cover p-2 border rounded-md"
-            width={1080}
-            height={1080}
+            width={2160}
+            height={2160}
+            loading="lazy"
           />
           <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
          text-start sm:text-center md:text-start">
