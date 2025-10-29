@@ -1,5 +1,4 @@
 import LibraryHeader from "@/components/ui/library-header";
-import { source } from "@/lib/source"
 
 export default function LibraryLayout({
     children,
@@ -8,7 +7,7 @@ export default function LibraryLayout({
 }>) {
     return (
         <>
-            <LibraryHeader mdxPageTree={source.pageTree}  />
+            <LibraryHeader />
             <main> {/* All of the content should be inside the main — The header, content and the table of contents.  */}
                 {children}
             </main>

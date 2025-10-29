@@ -1,8 +1,15 @@
 import MDXTableOfContents from "@/components/ui/library-table-of-contents"
+import LibraryUiSidenavMb from "@/components/ui/library-ui-sidenav-mb"
 import { source } from "@/lib/source"
 import { absoluteUrl } from "@/lib/utils"
 import { mdxComponents } from "@/mdx-components"
 import { notFound } from "next/navigation"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
 
 /**
  Check type=article for the article page.
@@ -39,7 +46,7 @@ export async function generateMetadata({
     if (!doc.title || !doc.description) {
         notFound()
     }
-    const pagePath = absoluteUrl( "/library" + mdxPage.url)
+    const pagePath = absoluteUrl("/library" + mdxPage.url)
 
     return {
         title: doc.title,
@@ -97,11 +104,26 @@ export default async function UiItemPage({
     return (
         <div className="w-full flex justify-start items-start gap-10">
             <div className="w-full min-h-screen">
+                <div className="flex items-start gap-4 w-full xl:hidden">
+                    <LibraryUiSidenavMb />
+                    <Accordion
+                        type="single"
+                        collapsible
+                        className="w-full"
+                    >
+                        <AccordionItem value="item-1" className="bg-foreground/5 px-5 rounded mb-8 border">
+                            <AccordionTrigger>On This Page</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-2 text-muted-foreground">
+                                <MDXTableOfContents toc={MDXData.toc} />
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
                 {/* Page Content inside this div */}
-
                 <MDXBody components={mdxComponents} />
             </div>
             <div className="w-60 shrink-0 sticky top-20 hidden xl:block h-fit">
+                <p className="text-sm text-muted-foreground mb-3">On This Page</p>
                 <MDXTableOfContents toc={MDXData.toc} />
                 <div>
                     {/* Here can be Ads */}

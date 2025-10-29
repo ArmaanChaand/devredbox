@@ -4,10 +4,9 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import LibraryMobileNav from "./library-mb-nav";
 import { DevRedBoxLogo } from "./devredbox-logo";
-import type { source } from "@/lib/source"
 import { DEVREDBOX_GITHUB } from "@/lib/info";
 
-export default function LibraryHeader({ mdxPageTree }: { mdxPageTree: typeof source.pageTree }) {
+export default function LibraryHeader() {
 
     return (
         <header className="z-50 h-fit fixed top-0 w-screen bg-background py-4">
@@ -27,7 +26,7 @@ export default function LibraryHeader({ mdxPageTree }: { mdxPageTree: typeof sou
                     <FaGithub />
                 </a>
                 <Separator orientation="vertical" className="!h-5 lg:hidden" />
-                <LibraryMobileNav mdxPageTree={mdxPageTree} />
+                <LibraryMobileNav />
             </div>
         </header>
     )

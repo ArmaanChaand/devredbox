@@ -3,12 +3,10 @@ import { Button } from "./button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "motion/react"
-import LibraryUiSideNav from "./library-ui-side-nav";
 import LibraryUiNavLink from "./library-ui-link";
-import type { source } from "@/lib/source";
 import { usePathname } from "next/navigation";
 
-export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof source.pageTree }) {
+export default function LibraryMobileNav() {
     const [open, setOpen] = useState(false)
     const pathname = usePathname()
     useEffect(() => {
@@ -52,8 +50,13 @@ export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof 
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/"} >
-                                    Agency
+                                <LibraryUiNavLink href={"/library/ui"} >
+                                    Components
+                                </LibraryUiNavLink>
+                            </li>
+                            <li>
+                                <LibraryUiNavLink href={"/library/templates"} >
+                                    Templates
                                 </LibraryUiNavLink>
                             </li>
                             <li>
@@ -62,13 +65,12 @@ export default function LibraryMobileNav({ mdxPageTree }: { mdxPageTree: typeof 
                                 </LibraryUiNavLink>
                             </li>
                             <li>
-                                <LibraryUiNavLink href={"/library/templates"} >
-                                    Templates
+                                <LibraryUiNavLink href={"/"} >
+                                    Agency
                                 </LibraryUiNavLink>
                             </li>
                         </ul>
                     </nav>
-                    <LibraryUiSideNav tree={mdxPageTree} />
                 </div>
             </motion.div >
 

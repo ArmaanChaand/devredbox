@@ -6,8 +6,9 @@ export default function LibraryUiSideNav({ tree }: { tree: typeof source.pageTre
 
     return (
         <nav className="text-base lg:text-sm  space-y-8">
-            <ul className="hidden md:block">
-                <li className="" >
+            <ul className="space-y-1.5">
+                <span className="block text-muted-foreground">Get Started</span>
+                <li>
                     <LibraryUiNavLink href="/library/ui">
                         Introduction
                     </LibraryUiNavLink>

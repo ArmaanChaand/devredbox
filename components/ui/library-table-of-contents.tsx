@@ -19,7 +19,6 @@ export default function MDXTableOfContents({ toc }: MDXTableOfContentsProps) {
     const activeHeading = useActiveItem(itemIds)
     return (
         <div className="text-sm text-muted-foreground flex flex-col justify-start items-start gap-2">
-            <p>On this page</p>
             {
                 toc.map(t => (
                     <Link

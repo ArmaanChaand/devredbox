@@ -4,6 +4,7 @@ import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
+        // Agency
         {
             url: SITE_ORIGIN,
             lastModified: new Date(),
@@ -14,16 +15,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ]
         },
         {
+            url: SITE_ORIGIN + "/contact",
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        // Library
+        {
             url: SITE_ORIGIN + "/library",
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
-            url: SITE_ORIGIN + "/contact",
+            url: SITE_ORIGIN + "/library/ui",
             lastModified: new Date(),
             changeFrequency: 'weekly',
-            priority: 0.8,
+            priority: 0.9,
         },
     ]
 }

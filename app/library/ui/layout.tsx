@@ -1,4 +1,4 @@
-import LibraryUiSideNav from "@/components/ui/library-ui-side-nav";
+import LibraryUiSideNav from "@/components/ui/library-ui-sidenav";
 import { source } from "@/lib/source";
 
 
