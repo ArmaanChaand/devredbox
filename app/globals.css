@@ -122,6 +122,15 @@ Muted Foreground Dark = #C2BCBB
   --sidebar-ring: oklch(0.5161 0.2019 25.94);
 }
 
+@utility hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /* Theme Specific CSS — End */
 
 /* Customizing TailwindCSS - START */
@@ -166,11 +175,6 @@ Muted Foreground Dark = #C2BCBB
   @apply hover:underline underline-offset-2 transition-all
 }
 
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
 .toc-link {
   @apply data-[onpage=true]:text-foreground hover:text-foreground transition-all
 }
@@ -178,4 +182,8 @@ Muted Foreground Dark = #C2BCBB
 /* paragraph */
 .p-content {
   @apply text-muted-foreground text-base tracking-wide text-pretty
+}
+
+.line > span {
+  @apply text-[var(--shiki-light)]  dark:text-[var(--shiki-dark)]
 }

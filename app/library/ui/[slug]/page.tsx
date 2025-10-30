@@ -43,18 +43,18 @@ export async function generateMetadata({
 
     const doc = mdxPage.data
 
-    if (!doc.title || !doc.description) {
+    if (!doc.title || !doc.metatitle || !doc.description) {
         notFound()
     }
     const pagePath = absoluteUrl("/library" + mdxPage.url)
 
     return {
-        title: doc.title,
+        title: doc.metatitle,
         description: doc.description,
         openGraph: {
             locale: "en_US",
             siteName: "DevRedBox",
-            title: doc.title,
+            title: doc.metatitle,
             description: doc.description,
             type: "article",
             url: pagePath,

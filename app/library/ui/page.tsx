@@ -51,10 +51,10 @@ export default function UIPage() {
           </div>
           {/* Page contents below this */}
           <section>
-            <h1 className="text-2xl sm:text-3xl font-extrabold">
+            <h1 className="text-2xl sm:text-3xl font-extrabold mb-2">
               UI Components, Website Blocks & Sections — and More
             </h1>
-            <p className="mt-4 p-content">
+            <p className="mt-2 p-content">
               This UI library helps speed up frontend development with ready-to-use and fully customizable components, website blocks, and sections, independent of any frontend framework.
             </p>
             <p className="mt-2 p-content">
@@ -62,12 +62,12 @@ export default function UIPage() {
             </p>
 
             <h2
-              className="text-lg font-semibold sm:text-xl mt-8"
+              className="text-lg font-semibold sm:text-xl mt-8 mb-2"
               id="frameworks"
             >
               Frontend Framework Independency
             </h2>
-            <p className="mt-4 p-content">
+            <p className="mt-2 p-content">
               All components and website sections are available in React (JSX/TSX), Tailwind CSS, and plain HTML/CSS. This means every element can be used across different frontend frameworks after making a few simple code changes.
             </p>
             <p className="mt-2 p-content">

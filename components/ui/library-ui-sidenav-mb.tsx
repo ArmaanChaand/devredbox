@@ -14,7 +14,7 @@ import LibraryUiSideNav from "./library-ui-sidenav"
 export default function LibraryUiSidenavMb() {
     return (
         <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger asChild className="lg:hidden">
                 <Button className="h-[3.25rem] aspect-square" variant="outline">
                     <Menu />
                 </Button>
