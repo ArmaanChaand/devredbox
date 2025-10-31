@@ -33,7 +33,7 @@ export default function UIPage() {
   return (
     <>
       <div className="w-full flex justify-start items-start gap-10">
-        <div className="w-full min-h-screen">
+        <div className="w-full min-h-screen min-w-0">
           <div className="flex items-start gap-4 w-full xl:hidden">
             <LibraryUiSidenavMb />
             <Accordion
@@ -129,6 +129,9 @@ export default function UIPage() {
             <p className="mt-2 p-content">
               This goes without saying that each of the sections or blocks will be responsive.
             </p>
+          </section>
+          <section className="w-[10000px]">
+
           </section>
           <footer className="mb-20">
 

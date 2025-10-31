@@ -103,7 +103,7 @@ export default async function UiItemPage({
 
     return (
         <div className="w-full flex justify-start items-start gap-10">
-            <div className="w-full min-h-screen">
+            <div className="w-full min-h-screen min-w-0">
                 <div className="flex items-start gap-4 w-full xl:hidden">
                     <LibraryUiSidenavMb />
                     <Accordion

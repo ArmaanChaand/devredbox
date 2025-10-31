@@ -22,8 +22,8 @@ export const DEVREDBOX_META_IMAGE = {
 
 
 // Json Ld Schema Informations
-const JSON_LD_ORG_ID = SITE_ORIGIN + "/#organization"
-const JSON_LD_MAIN_WEB_ID = SITE_ORIGIN + "/#website"
+export const JSON_LD_ORG_ID = SITE_ORIGIN + "/#organization"
+export const JSON_LD_MAIN_WEB_ID = SITE_ORIGIN + "/#website"
 
 // Only on the app/layout.
 export const JSON_LD_ORGANIZATION = {
@@ -48,32 +48,5 @@ export const JSON_LD_ORGANIZATION = {
         "contactType": "customer service",
         "email": DEVREDBOX_CONTACT_EMAIL,
         "availableLanguage": ["English"]
-    }
-}
-
-export interface WebSiteSchema {
-    "@context": string;
-    "@type": string;
-    "@id": string;
-    url: string;
-    name: string;
-    description: string;
-    publisher: {
-        "@type": string;
-        "@id": string;
-    };
-}
-
-// Only for the Homepage
-export const JSON_LD_WEBSITE: WebSiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": JSON_LD_MAIN_WEB_ID,
-    "url": SITE_ORIGIN,
-    "name": "DevRedBox",
-    "description": "Professional web design and development services for businesses and startups. Also provide Code Library and development tools",
-    "publisher": {
-        "@type": "Organization",
-        "@id": JSON_LD_ORG_ID
     }
 }

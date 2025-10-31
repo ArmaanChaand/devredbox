@@ -15,7 +15,7 @@ export default function UIPageLayout({
                     <LibraryUiSideNav tree={source.pageTree} />
                 </div>
             </div>
-            <div className="w-full h-auto mt-20">
+            <div className="w-full h-auto mt-20 min-w-0">
                 {children}
             </div>
         </div>

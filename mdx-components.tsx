@@ -1,5 +1,14 @@
 import { CopyButton } from "./components/ui/button-utils";
 import { cn } from "./lib/utils";
+import {
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+} from "@/components/ui/tabs"
+import { Eye } from "lucide-react"
+import { FaReact } from "react-icons/fa6"
+import CodePreview from "./components/ui/code-preview";
 
 export const mdxComponents = {
     h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
@@ -52,7 +61,7 @@ export const mdxComponents = {
         return (
             <pre
                 className={cn(
-                    "hide-scrollbar min-w-0 overflow-auto px-4 py-3.5 outline-none max-h-96 relative overflow-x-auto rounded-lg bg-transparent p-4 my-6 border border-foreground/20",
+                    "min-w-0 w-full overflow-x-auto px-4 py-3.5 hide-scrollbar outline-none relative bg-secondary/20 p-4 mb-6",
                     className
                 )}
                 {...props}
@@ -65,4 +74,11 @@ export const mdxComponents = {
             </pre>
         )
     },
+    Tabs,
+    TabsContent,
+    TabsList,
+    TabsTrigger,
+    Eye,
+    FaReact,
+    CodePreview,
 }

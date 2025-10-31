@@ -85,7 +85,8 @@ export default function LibraryPage() {
         </div>
 
       </section>
-
+      <div className="w-10/12 mx-auto">
+      </div>
       <div className="h-[190vh]">
 
       </div>
