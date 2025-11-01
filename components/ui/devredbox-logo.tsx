@@ -21,7 +21,7 @@ export function DevRedBoxLogoRaw({ className }: { className?: string }) {
     )
 }
 export function DevRedBoxLogo({ className, svgCn, variant, ...props }: React.ComponentProps<"div"> & {
-    variant?: "LIBRARY" | "AGENCY",
+    variant?: "LIBRARY" | "STUDIO",
     svgCn?: string
 }) {
     return (

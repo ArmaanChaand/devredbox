@@ -10,7 +10,6 @@ export function WebSiteMicrodata() {
         >
             <meta itemProp="name" content="DevRedBox" />
             <link itemProp="url" href={SITE_ORIGIN} />
-            <meta itemProp="description" content="Professional web design and development services for businesses and startups. Also provide Code Library and development tools" />
             <div
                 itemScope
                 itemProp="publisher"

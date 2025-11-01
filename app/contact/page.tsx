@@ -15,7 +15,7 @@ export const metadata: Metadata = generateStaticMetadata({
     title: "Contact DevRedBox – Get in Touch with Our Web Development Team",
     description: "Contact DevRedBox to discuss your website or app project. Our team is here to help you with modern, scalable, and high-performance web solutions",
     pagePath: "/contact",
-    keywords: ["Contact DevRedBox", "DevRedBox web design and development agency"],
+    keywords: ["Contact DevRedBox", "DevRedBox web design and development studio"],
 })
 
 export default function Home() {
@@ -107,7 +107,7 @@ export default function Home() {
                     <div className="w-full grid grid-cols-1 sm:grid-cols-2">
                         <div>
                             <Link href="/" className="text-xl font-black relative w-fit block">
-                                <DevRedBoxLogo variant="AGENCY" svgCn="w-32" />
+                                <DevRedBoxLogo variant="STUDIO" svgCn="w-32" />
                             </Link>
                             <div className="flex justify-start items-center gap-4 mt-8">
                                 <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
@@ -122,9 +122,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-                        <p> Copyright &copy; 2025 DevRedBox Agency </p>
-                        <p className="flex justify-between items-center gap-2">
+                    <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-center items-center text-sm text-muted-foreground">
+                        <p> Copyright &copy; 2025 DevRedBox</p>
+                        <p className="flex justify-between items-center gap-2" hidden>
                             <Link href="/" >
                                 Privacy Policy
                             </Link>

@@ -18,10 +18,10 @@ import generateStaticMetadata from "@/lib/static-metadata";
 import { WebSiteMicrodata } from "@/lib/info-tsx";
 
 export const metadata: Metadata = generateStaticMetadata({
-  title: "DevRedBox – Web Design and Development Agency",
-  description: "DevRedBox is a web design and development agency building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
+  title: "DevRedBox Studio – Web Design and Development ",
+  description: "DevRedBox is a web design and development studio building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
   pagePath: "/",
-  keywords: ["devredbox", "devredbox agency", "web design", "web development"]
+  keywords: ["devredbox", "devredbox studio", "web design", "web development"]
 })
 
 export default function Home() {
@@ -103,7 +103,7 @@ export default function Home() {
           <div className="w-full grid grid-cols-1 sm:grid-cols-2">
             <div>
               <Link href="/" className="text-xl font-black relative w-fit block">
-                <DevRedBoxLogo variant="AGENCY" svgCn="w-32" />
+                <DevRedBoxLogo variant="STUDIO" svgCn="w-32" />
               </Link>
               <div className="flex justify-start items-center gap-4 mt-8">
                 <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
@@ -134,7 +134,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 mt-10 sm:mt-0">
               <nav className="flex flex-col justify-start items-start gap-3">
-                <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Agency</span>
+                <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Studio</span>
                 <Link href="#about">About</Link>
                 <Link href="#pricing">Pricing</Link>
                 <Link href="/contact">Contact</Link>
@@ -148,9 +148,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p> Copyright &copy; 2025 DevRedBox Agency </p>
-            <p className="flex justify-between items-center gap-2">
+          <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-center items-center text-sm text-muted-foreground">
+            <p> Copyright &copy; 2025 DevRedBox</p>
+            <p className="flex justify-between items-center gap-2" hidden>
               <Link href="/" >
                 Privacy Policy
               </Link>

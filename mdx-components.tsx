@@ -7,8 +7,9 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import { Eye } from "lucide-react"
-import { FaReact } from "react-icons/fa6"
+import { FaHtml5, FaReact } from "react-icons/fa6"
 import CodePreview from "./components/ui/code-preview";
+import ComponentPreview from "./components/library/component-preview";
 
 export const mdxComponents = {
     h1: ({ className, ...props }: React.ComponentProps<"h1">) => (
@@ -80,5 +81,7 @@ export const mdxComponents = {
     TabsTrigger,
     Eye,
     FaReact,
+    FaHtml5,
     CodePreview,
+    ComponentPreview
 }

@@ -4,7 +4,7 @@ import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
-        // Agency
+        // Studio
         {
             url: SITE_ORIGIN,
             lastModified: new Date(),
@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'weekly',
             priority: 0.8,
         },
+        
         // Library
         {
             url: SITE_ORIGIN + "/library",
@@ -29,6 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
         {
             url: SITE_ORIGIN + "/library/ui",
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+
+        // Make this dynamic 
+        {
+            url: SITE_ORIGIN + "/library/ui/marquee-animation",
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,

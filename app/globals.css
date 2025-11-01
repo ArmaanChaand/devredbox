@@ -136,14 +136,15 @@ Muted Foreground Dark = #C2BCBB
 /* Customizing TailwindCSS - START */
 
 @theme {
-  --animate-showcase: showcase 20s linear infinite;
 
-  @keyframes showcase {
-    0% {
+  --animate-marquee: marquee 10s linear infinite;
+
+  @keyframes marquee {
+    from {
       transform: translateX(0)
     }
 
-    100% {
+    to {
       transform: translateX(calc(-50% - 2rem))
     }
   }

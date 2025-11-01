@@ -28,7 +28,7 @@ export default function LibraryTopNav() {
                                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                                         href="/"
                                     >
-                                        <DevRedBoxLogo variant="AGENCY" svgCn="text-foreground size-[unset]" />
+                                        <DevRedBoxLogo variant="STUDIO" svgCn="text-foreground size-[unset]" />
                                         <Separator className="my-2 mask-l-from-80% mask-r-from-80%" />
                                         <p className="text-foreground text-sm leading-tight">
                                             Home for businesses to get their custom websites & apps.
@@ -61,6 +61,7 @@ export default function LibraryTopNav() {
                                         title="DevRedBox Etsy Store"
                                         rel="noopener noreferrer"
                                         aria-label="Open in new tab"
+                                        hidden
                                     >
                                         <Image
                                             src={"/etsy-icon.svg"}

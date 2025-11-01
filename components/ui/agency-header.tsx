@@ -6,6 +6,9 @@ import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { DevRedBoxLogo } from "./devredbox-logo";
+import { FaGithub } from "react-icons/fa6";
+import { DEVREDBOX_GITHUB } from "@/lib/info";
+import { Separator } from "./separator";
 
 const Link = motion.create(NextLink)
 
@@ -33,13 +36,23 @@ export default function AgencyHeader() {
 
             >
                 <Link href="/" >
-                    <DevRedBoxLogo variant="AGENCY" />
+                    <DevRedBoxLogo variant="STUDIO" />
                 </Link>
-                <nav className="ml-auto space-x-5 hidden md:block">
+                <nav className="ml-auto hidden md:flex justify-center items-center gap-5 ">
                     <Link className="main-nav-item" href="/contact">Contact</Link>
                     <Link className="main-nav-item" href="/articles">Articles</Link>
                     <Link className="main-nav-item" href="/library">Library</Link>
                     <Link className="main-nav-item" href="/library/templates">Templates</Link>
+                    <Separator orientation="vertical" className="!h-4 hidden lg:block" />
+                    <a
+                        href={DEVREDBOX_GITHUB}
+                        target="_blank"
+                        title="DevRedBox GitHub Page"
+                        rel="noopener noreferrer"
+                        aria-label="Open DevRedBox GitHub in new tab"
+                    >
+                        <FaGithub />
+                    </a>
                 </nav>
                 <Button onClick={() => setOpen(v => !v)} variant="ghost" size="icon" className="ml-auto md:hidden relative z-0" >
                     {open ?
@@ -80,7 +93,7 @@ export default function AgencyHeader() {
                         }
                     }}
                 >
-                    Agency
+                    Studio
                 </motion.span>
 
                 <Link
@@ -194,6 +207,7 @@ export default function AgencyHeader() {
                     <Button
                         className="cols-span-1 rounded-sm"
                         asChild
+                        hidden
                     >
                         <a
                             href="/library" target="_blank" title="DevRedBox Etsy Store"

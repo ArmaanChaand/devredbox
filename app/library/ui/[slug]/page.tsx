@@ -11,6 +11,7 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
+
 /**
  Check type=article for the article page.
  And necessary fields like — author, published time 
@@ -121,6 +122,7 @@ export default async function UiItemPage({
                 </div>
                 {/* Page Content inside this div */}
                 <MDXBody components={mdxComponents} />
+                <hr className="mask-l-from-80% mask-r-from-80% my-8" />
             </div>
             <div className="w-60 shrink-0 sticky top-20 hidden xl:block h-fit">
                 <p className="text-sm text-muted-foreground mb-3">On This Page</p>

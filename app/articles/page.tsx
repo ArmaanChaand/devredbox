@@ -24,7 +24,7 @@ export default function ArticlesPage() {
                         <DevRedBoxLogo />
                     </Link>
                     <nav className="ml-auto space-x-5 block">
-                        <Link className="main-nav-item" href="/">Agency</Link>
+                        <Link className="main-nav-item" href="/">Studio</Link>
                         <Link className="main-nav-item" href="/library">Library</Link>
                     </nav>
                 </div>
