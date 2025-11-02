@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: SITE_ORIGIN,
             images: [
-                SITE_ORIGIN + "/devredbox.png"
+                SITE_ORIGIN + "/devredbox.webp"
             ]
         },
         {
