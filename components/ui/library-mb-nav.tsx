@@ -66,7 +66,7 @@ export default function LibraryMobileNav() {
                             </li>
                             <li>
                                 <LibraryUiNavLink href={"/"} >
-                                    Agency
+                                    Studio
                                 </LibraryUiNavLink>
                             </li>
                         </ul>
