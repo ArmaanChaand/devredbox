@@ -1,6 +1,6 @@
 import { MarqueeAnimationOne } from "@/components/library/public/components/marquee-animation";
 import { Button } from "@/components/ui/button";
-import { DEVREDBOX_GITHUB } from "@/lib/info";
+import { DEVREDBOX_GITHUB, DEVREDBOX_LIBRARY_BANNER } from "@/lib/info";
 import generateStaticMetadata from "@/lib/static-metadata";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -12,6 +12,7 @@ export const metadata: Metadata = generateStaticMetadata({
   description: "This code library by DevRedBox provides ui components, website blocks, website templates, web dev tools and code snippets",
   keywords: ["DevRedBox", "Library", "NextJs UI Components", "NextJs Templates"],
   pagePath: "/library",
+  og_image: DEVREDBOX_LIBRARY_BANNER
 })
 
 
