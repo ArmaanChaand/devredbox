@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
-import { MEETING_LINK } from "@/lib/info";
+import { DEVREDBOX_BANNER, MEETING_LINK } from "@/lib/info";
 import generateStaticMetadata from "@/lib/static-metadata";
 import { WebSiteMicrodata } from "@/lib/info-tsx";
 
@@ -21,7 +21,8 @@ export const metadata: Metadata = generateStaticMetadata({
   title: "DevRedBox Studio – Web Design and Development ",
   description: "DevRedBox is a web design and development studio building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
   pagePath: "/",
-  keywords: ["devredbox", "devredbox studio", "web design", "web development"]
+  keywords: ["devredbox", "devredbox studio", "web design", "web development"],
+  og_image: DEVREDBOX_BANNER
 })
 
 export default function Home() {

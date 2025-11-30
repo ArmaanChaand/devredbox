@@ -1,13 +1,11 @@
 import { Metadata } from "next"
-import { DEVREDBOX_META_IMAGE } from "./info"
-
-
 
 interface StaticMetadataProps {
     title: string
     description: string
     pagePath: string
     keywords: string[]
+    og_image?: string
 }
 
 /**
@@ -18,7 +16,7 @@ interface StaticMetadataProps {
  * @param keywords Releant meta keywords in array of string
  * @returns 
  */
-export default function generateStaticMetadata({ title, description, pagePath, keywords }: StaticMetadataProps): Metadata {
+export default function generateStaticMetadata({ title, description, pagePath, keywords, og_image }: StaticMetadataProps): Metadata {
 
     return {
         title: title,
@@ -34,7 +32,7 @@ export default function generateStaticMetadata({ title, description, pagePath, k
             title: title,
             description: description,
             url: pagePath,
-            images: [DEVREDBOX_META_IMAGE],
+            ...(og_image && { images: [og_image] })
         },
         alternates: {
             canonical: pagePath
