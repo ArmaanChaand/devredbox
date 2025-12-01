@@ -4,21 +4,21 @@ import AgencyHeader from "@/components/ui/agency-header";
 import AgencyHero from "@/components/home/agency-hero";
 import AgencyPricing from "@/components/home/agency-pricing";
 import HowWeWork from "@/components/home/howwework-section";
-import WebFeaturesSection from "@/components/home/web-features";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { FaEarthAsia, FaGithub, FaLinkedinIn, FaStar, FaYoutube } from "react-icons/fa6";
+import { FaEarthAsia, FaGithub, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
 import { DEVREDBOX_BANNER, MEETING_LINK } from "@/lib/info";
 import generateStaticMetadata from "@/lib/static-metadata";
 import { WebSiteMicrodata } from "@/lib/info-tsx";
+import TheProblem from "@/components/home/the-problems-section";
+import ForWhoSection from "@/components/home/for-who-section";
 
 export const metadata: Metadata = generateStaticMetadata({
-  title: "DevRedBox Studio – Web Design and Development ",
+  title: "DevRedBox – Web Development Studio",
   description: "DevRedBox is a web design and development studio building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
   pagePath: "/",
   keywords: ["devredbox", "devredbox studio", "web design", "web development"],
@@ -31,52 +31,12 @@ export default function Home() {
       <AgencyHeader />
       <main>
         <AgencyHero meetingLink={MEETING_LINK} />
-        <section id="about" className="synced-width mx-auto flex flex-col-reverse md:grid grid-cols-2 my-20 gap-10 2xl:gap-16">
-          <Image
-            src={"/devredbox.webp"}
-            alt="DevRedBox"
-            className="w-full sm:w-2/3 aspect-video mx-auto md:mx-0  md:w-full  md:aspect-[4/3] object-cover p-2 border rounded-md"
-            width={2160}
-            height={2160}
-            loading="lazy"
-          />
-          <div className="flex flex-col justify-start items-start sm:items-center md:items-start gap-6 
-         text-start sm:text-center md:text-start">
-            <Badge variant="link" className="text-sm" asChild>
-              <p>
-                About DevRedBox
-              </p>
-            </Badge>
-            <h2 className="text-balance font-bold text-4xl sm:text-5xl">
-              A Team That Builds with Purpose
-            </h2>
-            <p className=" sm:text-balance md:text-wrap text-base text-foreground/90">
-              DevRedBox builds scalable, well-crafted websites and web apps with ongoing care and a deep focus on what moves your business forward
-            </p>
-            <ul className="space-y-3 text-foreground/90 list-decimal">
-              <li className="flex justify-start items-center gap-2">
-                <FaStar className="size-4 fill-primary" />
-                Developing softwares for businesses
-              </li>
-              <li className="flex justify-start items-start gap-2">
-                <FaStar className="size-4 mt-1 fill-primary" />
-                Learning and supporting fellow developers
-              </li>
-            </ul>
-            <div className="w-full sm:w-2/3 md:w-fit grid gap-6 pl-1 mt-2">
-              <Button decoration={"ring"} >
-                <Link href="/library" >
-                  Visit our Library
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-
+        <TheProblem />
         <HowWeWork />
-        <WebFeaturesSection />
-        <AgencyFAQsHome />
+        <ForWhoSection />
+        
         <AgencyPricing />
+        <AgencyFAQsHome />
 
         <section className="synced-width mx-auto mb-20 flex flex-col justify-start items-center text-center gap-7 border rounded-4xl py-16 sm:py-20 bg-muted/10 relative z-0 backdrop-blur-2xl overflow-hidden">
           <div className="w-ful h-full inset-0 absolute -z-10 shadow-2xl blur-2xl bg-gradient-to-t from-primary/20 to-black" />

@@ -18,7 +18,7 @@ export default function WorkProcess({ icon, heading, title, description }: WorkP
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{once: true}}
-            className="w-full h-fit md:h-96 flex flex-col gap-4 p-5 sm:p-8 rounded-2xl bg-background"
+            className="w-full h-fit md:h-fit flex flex-col gap-4 p-5 sm:p-8 rounded-2xl bg-background"
         >
 
             <span className="p-2 w-fit text-muted-foreground border-1 border-secondary rounded bg-black relative z-10">
@@ -31,12 +31,12 @@ export default function WorkProcess({ icon, heading, title, description }: WorkP
             </h3>
 
             <Separator className=" mask-l-from-80% mask-r-from-80%" />
-            <p className="text-lg font-bold text-muted-foreground">
+            <h4 className="text-lg font-bold text-muted-foreground">
                 {title}
-            </p>
-            <p className="text-base text-muted-foreground ">
+            </h4>
+            <div className="text-base text-muted-foreground ">
                 {description}
-            </p>
+            </div>
 
         </motion.div>
     )

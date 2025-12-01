@@ -12,7 +12,7 @@ export default function ScrollHijackedDiv({ ...props }: React.ComponentProps<typ
 
 
 
-    const cardYmotion = useTransform(scrollY, [CARD_Y_PRCNT_START, CARD_Y_PRCNT_END], ["0", "-70%"])
+    const cardYmotion = useTransform(scrollY, [CARD_Y_PRCNT_START, CARD_Y_PRCNT_END], ["0", "-80%"])
 
     return (
         <motion.div

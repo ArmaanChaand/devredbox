@@ -153,6 +153,10 @@ Muted Foreground Dark = #C2BCBB
 
 /* Customizing TailwindCSS - END */
 
+@utility dual-col-p {
+  @apply text-muted-foreground [&_span]:text-foreground
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -185,6 +189,6 @@ Muted Foreground Dark = #C2BCBB
   @apply text-muted-foreground text-base tracking-wide text-pretty
 }
 
-.line > span {
-  @apply text-[var(--shiki-light)]  dark:text-[var(--shiki-dark)]
+.line>span {
+  @apply text-[var(--shiki-light)] dark:text-[var(--shiki-dark)]
 }

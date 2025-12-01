@@ -1,56 +1,72 @@
-import { FaGlobe } from "react-icons/fa6";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import PricingBox from "./pricing-box";
-import { BiSolidCustomize } from "react-icons/bi";
+import PricingBox, { PricingBoxProps } from "./pricing-box";
 import { MEETING_LINK } from "@/lib/info";
+
+const PRICES: PricingBoxProps[] = [
+    {
+        label: "Simple MVP",
+        title: "Perfect for: Testing a single core feature",
+        price: "$5K",
+        features: ["Landing page + signup flow", "2-3 core features", "Basic user authentication", "Admin panel for management", "6-8 week timeline", "Full documentation"
+        ],
+        example: "Example: A productivity tool with one unique workflow"
+    },
+    {
+        label: "Standard MVP",
+        title: "Perfect for: Market-ready SaaS product",
+        price: "$8K - $12K",
+        features: ["Everything in Simple MVP, plus:", "4-6 core features", "Payment/subscription integration (Stripe or other)", "Email notifications", "User dashboard", "8-10 week timeline"
+        ],
+        example: "Example: A B2B SaaS tool with user roles, billing, and reporting"
+    },
+    {
+        label: "Simple MVP",
+        title: "Perfect for: Complex workflows or integrations",
+        price: "$15K+",
+        features: ["Everything in Standard MVP, plus: + 7-10 features", "Third-party API integrations", "Advanced logic/automation", "Multi-user/team features", "10-12 week timeline"
+        ],
+        example: "Example: A marketplace or platform with multiple user types"
+    },
+]
 
 export default function AgencyPricing() {
     return (
-        <section className="mb-20 mx-auto synced-width grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section className="mt-24 mx-auto synced-width flex flex-col justify-start items-center text-center gap-5">
 
-            <div className="flex flex-col justify-start items-start sm:items-center md:items-start text-start sm:text-center md:text-start gap-5">
-                <Badge variant="link" className="text-sm pl-0" asChild>
-                    <h2>
-                        Pricing and Fees
-                    </h2>
-                </Badge>
-                <p className="text-balance font-bold text-4xl sm:text-5xl">
-                    Tailored, Transparent & Flexible Packages
-                </p>
-                <Button variant="default" decoration="ring" size={"lg"} className="mt-3" asChild>
+            <Badge variant="link" className="text-sm pl-0" asChild>
+                <h2>
+                    Transparent Pricing
+                </h2>
+            </Badge>
+            <p className="text-balance font-bold text-3xl">
+                Every project is unique, but here&apos;s what to expect.
+            </p>
+            <div className="w-full grid grid-cols-3 gap-5 mt-8">
+                {
+                    PRICES.map(price => (
+                        <PricingBox
+                            key={price.title}
+                            label={price.label}
+                            title={price.title}
+                            price={price.price}
+                            features={price.features}
+                            example={price.example}
+                        />
+                    ))
+                }
+            </div>
+            <p className="text-muted-foreground tracking-wide">
+                Not sure which fits?
+                {" "}
+                <Button variant="link" className="px-0 text-foreground underline underline-offset-2" asChild>
                     <a href={MEETING_LINK} target="_blank">
-                        Request a Quote
+                        Book a free 30-min consultation
                     </a>
                 </Button>
-            </div>
-            <div className="w-full flex flex-col gap-5">
-                <PricingBox
-                    label="Starter"
-                    title="For small businesses or personal brands."
-                    price="$800 - 1000"
-                    icon={<FaGlobe className="size-5" />}
-                    description={<>
-                        <span className="text-foreground">Essential Business Website {" "}</span>
-                        — a polished, mobile-friendly site to establish your presence, connect with visitors, and support your business from day one.
-                    </>}
-                />
-                <PricingBox
-                    label="Custom"
-                    title="For growing startups or service-based businesses."
-                    price="Let's Talk"
-                    colorInverted
-                    hidePriceDetail
-                    icon={<BiSolidCustomize className="size-5 text-background" />}
-                    description={<>
-                        <span className="text-background font-semibold">Custom Web Application {" "}</span>
-                        — a customised, high-performing solution designed to integrate technologies, optimise processes, and grow with your changing business requirements.
-                    </>}
-                />
-
-            </div>
-
-
+                {" "}
+                and we&apos;ll scope it together.
+            </p>
         </section>
     )
 }

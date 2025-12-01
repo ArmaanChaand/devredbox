@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { motion } from "motion/react"
+import { ArrowDown } from "lucide-react";
 
 
 export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
@@ -26,11 +26,10 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                     }}
                     viewport={{ once: true }}
                 >
-                    <Badge className="rounded" >SOON</Badge>
-                    Android and iOS Apps
+                    For Non-Tech Founders
                 </motion.p>
                 <h1
-                    className="text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold font-mono text-start sm:text-center"
+                    className="text-4xl md:text-6xl 2xl:text-8xl font-bold font-mono text-start sm:text-center"
                 >
                     <motion.span
                         initial={{
@@ -43,9 +42,9 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                         }}
                         viewport={{ once: true }}
                     >
-                        Your Vision, Our <span className="bg-clip-text text-transparent bg-linear-to-r from-amber-900 from-5% to-primary to-90% ">{"<Code />"}</span>
-                        <span className="lg:hidden">, </span>
+                        Launch Your SaaS MVP
                     </motion.span>
+                    {" "}
                     <motion.span
                         className="lg:block"
                         initial={{
@@ -61,12 +60,12 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                         }}
                         viewport={{ once: true }}
                     >
-                        Real Business Impact
+                        Without a Technical Co-Founder
                     </motion.span>
                 </h1>
 
                 <motion.p
-                    className="text-base w-full text-start sm:text-balance sm:text-center leading-relaxed text-foreground/80"
+                    className="text-lg md:text-xl w-full max-w-2xl text-start sm:text-balance sm:text-center leading-relaxed text-muted-foreground [&_span]:text-foreground"
                     initial={{
                         opacity: 0,
                     }}
@@ -78,11 +77,12 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                     }}
                     viewport={{ once: true }}
                 >
-                    Trusted by ambitious businesses & startups, DevRedBox builds <span className="text-foreground">custom websites</span> and powerful <span className="text-foreground">web apps</span>  that drive growth, and help you confidently lead your industry forward.
+                    We help <span>founders</span> turn ideas into market-ready products in <span>8-12 weeks</span>.
+                    From feature scoping to live deployment. Built for validation, not perfection.
                 </motion.p>
 
                 <motion.div
-                    className="gap-6 flex flex-col sm:grid grid-cols-1 sm:grid-cols-2 mr-auto sm:mr-0"
+                    className="w-full sm:w-fit grid sm:grid-cols-2 gap-5 mt-4"
                     initial={{
                         opacity: 0,
                     }}
@@ -94,17 +94,33 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                     }}
                     viewport={{ once: true }}
                 >
-                    <Button className="w-56 sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="primary" decoration={"ring"} >
+                    <Button className="w-56 sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="primary" decoration={"ring"} asChild>
                         <a href={meetingLink} target="_blank">
-                            Book a Call
+                            Book Free Consultation
                         </a>
                     </Button>
-                    <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"}>
+                    <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"} asChild>
                         <Link href="/contact">
-                            See Contact Details
+                            See How It Works <ArrowDown className="size-4" />
                         </Link>
                     </Button>
                 </motion.div>
+
+                <motion.p
+                    className="text-sm w-full max-w-lg text-start sm:text-balance sm:text-center leading-relaxed text-muted-foreground/50"
+                    initial={{
+                        opacity: 0,
+                    }}
+                    animate={{
+                        opacity: 1
+                    }}
+                    transition={{
+                        delay: 0.5
+                    }}
+                    viewport={{ once: true }}
+                >
+                    Projects start at $5K • Built with Next.js • Based in Delhi, serving founders globally
+                </motion.p>
             </div>
 
         </section>

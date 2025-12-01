@@ -1,48 +1,56 @@
-import { cn } from "@/lib/utils"
-import { ReactNode } from "react"
+import { Check } from "lucide-react"
+import { Separator } from "../ui/separator"
 
-interface PricingBoxProps {
-    label: ReactNode
-    title: ReactNode
-    price: ReactNode
-    icon: ReactNode
-    description: ReactNode
-    hidePriceDetail?: boolean
-    className?: string
-    colorInverted?: boolean
+
+export interface PricingBoxProps {
+    label: string
+    title: string
+    price: string
+    features: string[]
+    example: string
 }
 
-export default function PricingBox({ className, colorInverted, label, title, price, hidePriceDetail, icon, description }: PricingBoxProps) {
+export default function PricingBox({ label, title, price, features, example }: PricingBoxProps) {
     return (
-        <div className={cn("w-full rounded-lg bg-muted/50 p-5", className, colorInverted && "bg-foreground")}>
-            <span
-                className={cn("text-sm text-muted-foreground uppercase",
-                    colorInverted && "text-background"
-                )}
-            >{label}</span>
-
-            <p className={cn("mt-2", colorInverted && "text-background")}>
-                {title}
-            </p>
-            <div className="flex justify-start items-center gap-1 mt-3">
-                <span className={cn("text-4xl font-bold", colorInverted && "text-background")}>
+        <div className="border text-start p-5 rounded-lg">
+            <h4 className="text-lg font-semibold">
+                {label}
+            </h4>
+            <p className="text-muted-foreground">{title}</p>
+            <p className="w-full border border-primary/20 bg-primary/10 my-4 p-5 rounded-lg">
+                <span className="text-xl font-black">
                     {price}
                 </span>
-                <span
-                    className="text-sm text-muted-foreground"
-                    style={{ display: hidePriceDetail ? "none" : "inline" }}
-                >
-                    / split one-time payment
+                <span className="block text-sm text-muted-foreground">
+                    Starting Price. In USD
                 </span>
-            </div>
-            <div className="flex justify-start items-start gap-4 mt-5   ">
-                <span className={cn("p-2 border border-dashed bg-accent/20 mt-1", colorInverted && "bg-secondary/20 border-secondary/70")}>
-                    {icon}
-                </span>
-                <p className={cn("text-sm text-foreground/80", colorInverted && "text-background")}>
-                    {description}
-                </p>
-            </div>
+            </p>
+            <ul className="text-sm divide-y text-muted-foreground">
+                <span className="font-semibold text-foreground">What&apos;s included:</span>
+                {
+                    features.map(f => (
+                        <ListItem key={f}>
+                            {f}
+                        </ListItem>
+                    ))
+                }
+            </ul>
+            <Separator className="mb-3" />
+            <p className="text-muted-foreground text-sm">
+                {example}
+            </p>
         </div>
+    )
+}
+
+function ListItem({ children, ...props }: React.ComponentProps<'li'>) {
+    return (
+        <li className="w-full flex justify-start items-start gap-2 py-3" {...props}>
+            <Check className="size-3 mt-1 shrink-0" />
+            <p>
+                {children}
+            </p>
+        </li>
+
     )
 }
