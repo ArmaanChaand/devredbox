@@ -6,7 +6,7 @@ import { MEETING_LINK } from "@/lib/info";
 const PRICES: PricingBoxProps[] = [
     {
         label: "Simple MVP",
-        title: "Perfect for: Testing a single core feature",
+        title: "Testing a single core feature",
         price: "$5K",
         features: ["Landing page + signup flow", "2-3 core features", "Basic user authentication", "Admin panel for management", "6-8 week timeline", "Full documentation"
         ],
@@ -14,7 +14,7 @@ const PRICES: PricingBoxProps[] = [
     },
     {
         label: "Standard MVP",
-        title: "Perfect for: Market-ready SaaS product",
+        title: "Market-ready SaaS product",
         price: "$8K - $12K",
         features: ["Everything in Simple MVP, plus:", "4-6 core features", "Payment/subscription integration (Stripe or other)", "Email notifications", "User dashboard", "8-10 week timeline"
         ],
@@ -22,7 +22,7 @@ const PRICES: PricingBoxProps[] = [
     },
     {
         label: "Simple MVP",
-        title: "Perfect for: Complex workflows or integrations",
+        title: "Complex workflows or integrations",
         price: "$15K+",
         features: ["Everything in Standard MVP, plus: + 7-10 features", "Third-party API integrations", "Advanced logic/automation", "Multi-user/team features", "10-12 week timeline"
         ],
@@ -39,10 +39,10 @@ export default function AgencyPricing() {
                     Transparent Pricing
                 </h2>
             </Badge>
-            <p className="text-balance font-bold text-3xl">
+            <p className="text-balance font-bold text-2xl sm:text-3xl">
                 Every project is unique, but here&apos;s what to expect.
             </p>
-            <div className="w-full grid grid-cols-3 gap-5 mt-8">
+            <div className="w-full grid sm:grid-cols-3 gap-5 mt-3 sm:mt-8">
                 {
                     PRICES.map(price => (
                         <PricingBox
@@ -59,7 +59,7 @@ export default function AgencyPricing() {
             <p className="text-muted-foreground tracking-wide">
                 Not sure which fits?
                 {" "}
-                <Button variant="link" className="px-0 text-foreground underline underline-offset-2" asChild>
+                <Button variant="link" className="px-0 !h-fit py-0 text-foreground underline underline-offset-2" asChild>
                     <a href={MEETING_LINK} target="_blank">
                         Book a free 30-min consultation
                     </a>

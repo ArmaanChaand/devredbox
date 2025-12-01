@@ -25,8 +25,8 @@ export default function PricingBox({ label, title, price, features, example }: P
                     Starting Price. In USD
                 </span>
             </p>
-            <ul className="text-sm divide-y text-muted-foreground">
-                <span className="font-semibold text-foreground">What&apos;s included:</span>
+            <ul className="text-sm space-y-2 text-muted-foreground">
+                <span className="font-semibold text-foreground block">What&apos;s included:</span>
                 {
                     features.map(f => (
                         <ListItem key={f}>
@@ -35,7 +35,7 @@ export default function PricingBox({ label, title, price, features, example }: P
                     ))
                 }
             </ul>
-            <Separator className="mb-3" />
+            <Separator className="my-3 mask-l-from-80% mask-r-from-80%" />
             <p className="text-muted-foreground text-sm">
                 {example}
             </p>
@@ -45,7 +45,7 @@ export default function PricingBox({ label, title, price, features, example }: P
 
 function ListItem({ children, ...props }: React.ComponentProps<'li'>) {
     return (
-        <li className="w-full flex justify-start items-start gap-2 py-3" {...props}>
+        <li className="w-full flex justify-start items-start gap-2" {...props}>
             <Check className="size-3 mt-1 shrink-0" />
             <p>
                 {children}
