@@ -39,10 +39,9 @@ export default function AgencyHeader() {
                     <DevRedBoxLogo variant="STUDIO" />
                 </Link>
                 <nav className="ml-auto hidden md:flex justify-center items-center gap-5 ">
+                    <Link className="main-nav-item" href="/#pricing">Pricing</Link>
                     <Link className="main-nav-item" href="/contact">Contact</Link>
-                    <Link className="main-nav-item" href="/articles">Articles</Link>
-                    <Link className="main-nav-item" href="/library">Library</Link>
-                    <Link className="main-nav-item" href="/library/templates">Templates</Link>
+                    <Link className="main-nav-item" href="/#faq">FAQs</Link>
                     <Separator orientation="vertical" className="!h-4 hidden lg:block" />
                     <a
                         href={DEVREDBOX_GITHUB}
@@ -97,7 +96,7 @@ export default function AgencyHeader() {
                 </motion.span>
 
                 <Link
-                    onClick={() => setOpen(false)} className="text-xl" href="#pricing"
+                    onClick={() => setOpen(false)} className="text-xl" href="/#pricing"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,
@@ -120,7 +119,8 @@ export default function AgencyHeader() {
                     }}
                 >Contact</Link>
                 <Link
-                    className="text-xl" href="/articles"
+                    onClick={() => setOpen(false)}
+                    className="text-xl" href="/#faq"
                     animate={{
                         translateY: open ? 0 : 20,
                         opacity: open ? 1 : 0,
@@ -128,7 +128,7 @@ export default function AgencyHeader() {
                             delay: 0.2
                         }
                     }}
-                >Articles</Link>
+                >FAQs</Link>
 
                 <motion.span
                     className="text-sm font-semibold text-muted-foreground mt-5"

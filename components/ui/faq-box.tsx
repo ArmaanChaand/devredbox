@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import { GoTriangleDown } from "react-icons/go";
 
 export interface FAQType {
-    question: string
-    answer: string
+    question: ReactNode
+    answer: ReactNode
 }
 
 export default function FAQBox({ question, answer }: FAQType) {

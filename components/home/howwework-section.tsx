@@ -3,13 +3,13 @@ import ScrollHijackedDiv from "./scroll-hijacked-div";
 import WorkProcess from "./work-process-section";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import { ArrowRightCircle, CheckCircle2, TargetIcon, Zap } from "lucide-react";
-import { ReactNode } from "react";
+import { ListItem } from "../ui/lists";
 
 export default function HowWeWork() {
 
 
     return (
-        <div className="synced-width mx-auto md:h-[500vh] relative mt-20">
+        <div className="synced-width mx-auto md:h-[500vh] relative mt-20" id="how-it-works">
             <section
                 className="mx-auto flex flex-col md:flex-row justify-between items-center bg-accent/30 px-0 md:px-7 py-7 rounded-xl gap-10 -top-24 sm:top-24 static md:sticky z-10"
             >
@@ -40,16 +40,16 @@ export default function HowWeWork() {
                                         In our discovery call, we:
                                     </span>
                                     <ul className="list-disc list-inside divide-y">
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Understand your target user and their problem
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Identify your riskiest assumption to test
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Decide which 3-5 features make the cut for v1
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Map out a realistic timeline and budget
                                         </ListItem>
                                     </ul>
@@ -72,16 +72,16 @@ export default function HowWeWork() {
                                         What you get:
                                     </span>
                                     <ul className="list-disc list-inside divide-y">
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />} >
                                             Clean, modern interface users will actually enjoy
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Core features that work (authentication, payments, data handling)
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Weekly check-ins so you see progress in real-time
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             No technical jargon—just clear updates on what&apos;s done and what&apos;s next
                                         </ListItem>
                                     </ul>
@@ -101,13 +101,13 @@ export default function HowWeWork() {
                                         We help you:
                                     </span>
                                     <ul className="list-disc list-inside divide-y">
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Deploy to production (live on your domain)
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Test with real users to catch any issues
                                         </ListItem>
-                                        <ListItem>
+                                        <ListItem point={<CheckCircle2 />}>
                                             Understand the codebase (full documentation included)
                                         </ListItem>
                                     </ul>
@@ -115,10 +115,10 @@ export default function HowWeWork() {
                                         After launch, you can:
                                     </span>
                                     <ul className="list-disc list-inside divide-y">
-                                        <ListItem point={<ArrowRightCircle className="size-4 mt-1 shrink-0" />} >
+                                        <ListItem point={<ArrowRightCircle />} >
                                             Hire in-house and hand over the code, OR
                                         </ListItem>
-                                        <ListItem point={<ArrowRightCircle className="size-4 mt-1 shrink-0" />}>
+                                        <ListItem point={<ArrowRightCircle />}>
                                             Keep working with us for updates and new features
                                         </ListItem>
                                     </ul>
@@ -133,18 +133,5 @@ export default function HowWeWork() {
                 </div>
             </section>
         </div>
-    )
-}
-
-
-function ListItem({ point, children, ...props }: React.ComponentProps<'li'> & { point?: ReactNode }) {
-    return (
-        <li className="w-full flex justify-start items-start gap-2 py-3" {...props}>
-            {point ? point : <CheckCircle2 className="size-4 mt-1 shrink-0" />}
-            <p>
-                {children}
-            </p>
-        </li>
-
     )
 }

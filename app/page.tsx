@@ -4,8 +4,6 @@ import AgencyHeader from "@/components/ui/agency-header";
 import AgencyHero from "@/components/home/agency-hero";
 import AgencyPricing from "@/components/home/agency-pricing";
 import HowWeWork from "@/components/home/howwework-section";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -16,14 +14,17 @@ import generateStaticMetadata from "@/lib/static-metadata";
 import { WebSiteMicrodata } from "@/lib/info-tsx";
 import TheProblem from "@/components/home/the-problems-section";
 import ForWhoSection from "@/components/home/for-who-section";
+import WhyDevRedBox from "@/components/home/why-devredbox";
+import FooterCTA from "@/components/home/footer-cta";
 
 export const metadata: Metadata = generateStaticMetadata({
-  title: "DevRedBox – Web Development Studio",
-  description: "DevRedBox is a web design and development studio building modern, responsive, and scalable websites and web apps for startups and businesses worldwide.",
+  title: "DevRedBox – SaaS MVP Development for Non-Tech Founders",
+  description: "We help non-tech founders launch SaaS MVPs in 8-12 weeks. From idea to market-ready product—built with Next.js, starting at $5K. Based in Delhi, serving founders globally.",
+  keywords: ["saas mvp development", "build saas mvp", "non-tech founder", "mvp development india", "nextjs development", "saas startup development", "devredbox"],
   pagePath: "/",
-  keywords: ["devredbox", "devredbox studio", "web design", "web development"],
   og_image: DEVREDBOX_BANNER
 })
+
 
 export default function Home() {
   return (
@@ -34,33 +35,12 @@ export default function Home() {
         <TheProblem />
         <HowWeWork />
         <ForWhoSection />
-        
         <AgencyPricing />
+        <WhyDevRedBox />
         <AgencyFAQsHome />
+        <FooterCTA />
 
-        <section className="synced-width mx-auto mb-20 flex flex-col justify-start items-center text-center gap-7 border rounded-4xl py-16 sm:py-20 bg-muted/10 relative z-0 backdrop-blur-2xl overflow-hidden">
-          <div className="w-ful h-full inset-0 absolute -z-10 shadow-2xl blur-2xl bg-gradient-to-t from-primary/20 to-black" />
-          <Badge variant="link" className="text-sm pl-0" asChild>
-            <p>
-              Join Us Now
-            </p>
-          </Badge>
-          <h2 className="text-balance font-bold text-3xl sm:text-5xl">
-            No Two Projects Are the Same
-            <span className="block text-muted-foreground">{" "}We Build for What Matters Most</span>
-          </h2>
-          <p className=" text-base text-balance break-after-column text-foreground/90">
-            Let’s talk. Whether you have a rough idea or specific goals,
-            <span className="sm:block">{" "}we’ll help you figure out what’s possible.</span>
-          </p>
-          <Button variant="default" decoration="ring" size={"lg"} className="mt-3" asChild>
-            <a href={MEETING_LINK} target="_blank">
-              Book an Appointment
-            </a>
-          </Button>
-        </section>
-
-        <footer className="synced-width mx-auto relative">
+        <footer className="synced-width mx-auto relative mt-20">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2">
             <div>
               <Link href="/" className="text-xl font-black relative w-fit block">
@@ -96,9 +76,12 @@ export default function Home() {
             <div className="grid grid-cols-2 mt-10 sm:mt-0">
               <nav className="flex flex-col justify-start items-start gap-3">
                 <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Studio</span>
-                <Link href="#about">About</Link>
                 <Link href="#pricing">Pricing</Link>
-                <Link href="/contact">Contact</Link>
+                <Link href="#faq">FAQ</Link>
+                <Link href="#how-it-works">How it works</Link>
+                <a href={MEETING_LINK} target="_blank">
+                  Book a Call
+                </a>
               </nav>
               <nav className="flex flex-col justify-start items-start gap-3">
                 <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>

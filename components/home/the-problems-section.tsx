@@ -1,3 +1,5 @@
+import { ListItem } from "../ui/lists"
+
 export default function TheProblem() {
 
 
@@ -15,16 +17,16 @@ export default function TheProblem() {
                         </span>
                     </p>
                     <ul className="divide-y">
-                        <ListItem >
+                        <ListItem point={<X/>} >
                             Can&apos;t afford a $50K agency
                         </ListItem>
-                        <ListItem >
+                        <ListItem point={<X/>} >
                             Don&apos;t want to give 30% equity to a technical co-founder
                         </ListItem>
-                        <ListItem >
+                        <ListItem point={<X/>} >
                             Tried freelancers on Upwork — got burned
                         </ListItem>
-                        <ListItem >
+                        <ListItem point={<X/>} >
                             Don&apos;t know what features actually matter for v1
                         </ListItem>
                     </ul>
@@ -40,16 +42,16 @@ export default function TheProblem() {
                                 We&apos;re not a traditional dev agency. We specialize in ONE thing: SaaS MVPs for validation.
                             </p>
                             <ul className="divide-y">
-                                <ListItem solution>
+                                <ListItem point={<Check />}>
                                     We help you scope ruthlessly (3-5 core features, not 20)
                                 </ListItem>
-                                <ListItem solution>
+                                <ListItem point={<Check />}>
                                     We build in Next.js for speed and scalability
                                 </ListItem>
-                                <ListItem solution>
+                                <ListItem point={<Check />}>
                                     We deliver in 8-12 weeks, not 6 months
                                 </ListItem>
-                                <ListItem solution>
+                                <ListItem point={<Check />}>
                                     We explain everything in founder language, not tech jargon
                                 </ListItem>
                             </ul>
@@ -64,52 +66,50 @@ export default function TheProblem() {
     )
 }
 
-function ListItem({ solution, children, ...props }: React.ComponentProps<'li'> & { solution?: boolean }) {
-    return (
-        <li className="w-full flex justify-start items-start gap-5 py-3" {...props}>
-            {
-                solution ? (
-                    <svg
-                        data-v-15b35c9e=""
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={24}
-                        height={24}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="size-4 mt-1.5 shrink-0"
-                    >
-                        <circle cx={12} cy={12} r={10} className="fill-green-700 stroke-green-700" />
-                        <path d="m12 16 4-4-4-4" className="stroke-foreground" />
-                        <path d="M8 12h8" className="stroke-foreground" />
-                    </svg>
-                ) : (
-                    <svg
-                        data-v-15b35c9e=""
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={'100%'}
-                        height={'100%'}
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="size-4 mt-1.5 shrink-0"
-                    >
-                        <circle cx={12} cy={12} r={10} className="fill-destructive stroke-destructive" />
-                        <path d="m15 9-6 6" className="stroke-foreground" />
-                        <path d="m9 9 6 6" className="stroke-foreground" />
-                    </svg>
-                )
-            }
-            <p>
-                {children}
-            </p>
-        </li>
 
+
+function Check({ ...props }: React.ComponentProps<'svg'>) {
+    return (
+
+        <svg
+            data-v-15b35c9e=""
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+           {...props}
+        >
+            <circle cx={12} cy={12} r={10} className="fill-green-700 stroke-green-700" />
+            <path d="m12 16 4-4-4-4" className="stroke-foreground" />
+            <path d="M8 12h8" className="stroke-foreground" />
+        </svg>
     )
 }
+
+function X({ ...props }: React.ComponentProps<'svg'>) {
+    return (
+        <svg
+            data-v-15b35c9e=""
+            xmlns="http://www.w3.org/2000/svg"
+            width={'100%'}
+            height={'100%'}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            {...props}
+        >
+            <circle cx={12} cy={12} r={10} className="fill-destructive stroke-destructive" />
+            <path d="m15 9-6 6" className="stroke-foreground" />
+            <path d="m9 9 6 6" className="stroke-foreground" />
+        </svg>
+    )
+}
+

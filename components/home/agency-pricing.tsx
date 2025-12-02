@@ -21,10 +21,10 @@ const PRICES: PricingBoxProps[] = [
         example: "Example: A B2B SaaS tool with user roles, billing, and reporting"
     },
     {
-        label: "Simple MVP",
+        label: "Advanced MVP",
         title: "Complex workflows or integrations",
         price: "$15K+",
-        features: ["Everything in Standard MVP, plus: + 7-10 features", "Third-party API integrations", "Advanced logic/automation", "Multi-user/team features", "10-12 week timeline"
+        features: ["Everything in Standard MVP, plus:", "7-10 features", "Third-party API integrations", "Advanced logic/automation", "Multi-user/team features", "10-12 week timeline"
         ],
         example: "Example: A marketplace or platform with multiple user types"
     },
@@ -32,7 +32,7 @@ const PRICES: PricingBoxProps[] = [
 
 export default function AgencyPricing() {
     return (
-        <section className="mt-24 mx-auto synced-width flex flex-col justify-start items-center text-center gap-5">
+        <section className="mt-24 mx-auto synced-width flex flex-col justify-start items-center text-center gap-5" id="pricing">
 
             <Badge variant="link" className="text-sm pl-0" asChild>
                 <h2>

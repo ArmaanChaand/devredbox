@@ -20,7 +20,7 @@ export default function ForWhoSection() {
                 />
                 <SectionCard
                     title={<>Want Speed Over Perfection</>}
-                    description={<>Youd rather launch in 10 weeks with 5 features than wait 6 months for 20 features nobody asked for.</>}
+                    description={<>You&apos;d rather launch in 10 weeks with 5 features than wait 6 months for 20 features nobody asked for.</>}
                 />
             </div>
             <div className="space-y-5 ml-auto w-fit">

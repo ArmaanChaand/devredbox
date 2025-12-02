@@ -100,7 +100,7 @@ export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
                         </a>
                     </Button>
                     <Button className="w-fit sm:w-auto sm:flex-1 sm:shrink-0" size="lg" variant="outline" decoration={"ring"} asChild>
-                        <Link href="/contact">
+                        <Link href="#how-it-works">
                             See How It Works <ArrowDown className="size-4" />
                         </Link>
                     </Button>
