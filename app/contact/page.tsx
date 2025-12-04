@@ -1,14 +1,12 @@
 import { Metadata } from "next";
-import AgencyHeader from "@/components/ui/agency-header";
 import Link from "next/link";
-import { FaEarthAsia, FaEtsy, FaGithub, FaInstagram, FaLinkedinIn, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { IoMdCall } from "react-icons/io";
-import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
 import { MEETING_LINK } from "@/lib/info";
 import { Separator } from "@/components/ui/separator";
-import { ArrowUpRight } from "lucide-react";
-import { SiFramer } from "react-icons/si";
+import { ArrowUpRight, Phone } from "lucide-react";
 import generateStaticMetadata from "@/lib/static-metadata";
+import { IconGitHub, IconInstagram, IconLinkedIn, IconTwitter, IconYouTube } from "@/components/ui/icons";
+import StudioHeader from "@/components/studio/studio-header";
+import FooterStudio from "@/components/studio/studio-footer";
 
 
 export const metadata: Metadata = generateStaticMetadata({
@@ -21,7 +19,7 @@ export const metadata: Metadata = generateStaticMetadata({
 export default function Home() {
     return (
         <>
-            <AgencyHeader />
+            <StudioHeader />
             <main>
                 <section className="h-fit mt-20 synced-width mx-auto mb-10">
                     <h1 className="text-6xl sm:text-8xl font-black">Contact Us</h1>
@@ -42,15 +40,15 @@ export default function Home() {
                             <h2 className="text-sm mb-3">Our Socials</h2>
                             <div className="flex justify-start items-center gap-4 bg-accent/20 w-fit rounded relative">
                                 <a href="https://www.linkedin.com/company/devredbox/" target="_blank" className="" title="DevRedBox LinkedIn Page">
-                                    <FaLinkedinIn className="size-5" />
+                                    <IconLinkedIn className="size-5" />
                                 </a>
                                 <Separator orientation="vertical" className="!h-3" />
                                 <a href="https://www.x.com/devredbox" target="_blank" className="" title="DevRedBox Twitter Page">
-                                    <FaXTwitter className="size-5" />
+                                    <IconTwitter className="size-5" />
                                 </a>
                                 <Separator orientation="vertical" className="!h-3" />
-                                <a href="https://www.instagram.com/devredbox.india" target="_blank" className="" title="DevRedBox at Instagram">
-                                    <FaInstagram className="size-5" />
+                                <a href="https://www.instagram.com/devredbox.studio" target="_blank" className="" title="DevRedBox at Instagram">
+                                    <IconInstagram className="size-5" />
                                 </a>
 
                             </div>
@@ -70,72 +68,26 @@ export default function Home() {
                     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
                         <a href="https://www.youtube.com/@DevRedBox" target="_blank" className="p-5 rounded relative border">
                             <ArrowUpRight className="absolute top-2 right-2 text-muted-foreground" />
-                            <FaYoutube className="size-8 text-primary" />
+                            <IconYouTube className="size-8 text-primary" />
                             <span>DevRedBox on YouTube</span>
                         </a>
-                        <div className="p-5 rounded border">
-                            <h2 className="mb-3 text-sm">Template Marketplaces</h2>
-
-                            <div className="flex justify-start items-center gap-4 w-fit rounded relative">
-                                <a href="#" target="_blank" className="flex gap-2" title="DevRedBox LinkedIn Page">
-                                    <FaEtsy className="size-5" />
-                                    Etsy Store
-                                </a>
-                                <Separator orientation="vertical" className="!h-3" />
-                                <a href="#" target="_blank" className="flex gap-2" title="DevRedBox LinkedIn Page">
-                                    <SiFramer className="size-5" />
-                                    Framer
-                                </a>
-                            </div>
-                        </div>
                         <div className="p-5 rounded border">
                             <h2 className="mb-3 text-sm">Additional Links</h2>
 
                             <div className="flex justify-start items-center gap-4 w-fit rounded relative">
                                 <a href="https://github.com/ArmaanChaand/devredbox" target="_blank" className="" title="Explore on GitHub">
-                                    <FaGithub className="size-5" />
+                                    <IconGitHub className="size-5" />
                                 </a>
                                 <Separator orientation="vertical" className="!h-3" />
                                 <a href={MEETING_LINK} target="_blank" className="" title="Book an appointment">
-                                    <IoMdCall className="size-5" />
+                                    <Phone className="size-5" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section>
-                <footer className="synced-width mx-auto relative">
-                    <div className="w-full grid grid-cols-1 sm:grid-cols-2">
-                        <div>
-                            <Link href="/" className="text-xl font-black relative w-fit block">
-                                <DevRedBoxLogo variant="STUDIO" svgCn="w-32" />
-                            </Link>
-                            <div className="flex justify-start items-center gap-4 mt-8">
-                                <span className="p-2 border border-dashed bg-accent/20 mt-1 border-secondary/70">
-                                    <FaEarthAsia />
-                                </span>
-                                <p className="text-xs text-foreground/80">
-                                    Started in India.
-                                    <br />
-                                    Empowering ideas worldwide.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="mt-20 mb-10 flex flex-col sm:flex-row justify-center items-center text-sm text-muted-foreground">
-                        <p> Copyright &copy; 2025 DevRedBox</p>
-                        <p className="flex justify-between items-center gap-2" hidden>
-                            <Link href="/" >
-                                Privacy Policy
-                            </Link>
-                            &bull;
-                            <Link href="/" >
-                                Terms & Conditions
-                            </Link>
-                        </p>
-                    </div>
-                </footer >
             </main >
+            <FooterStudio />
         </>
     );
 }

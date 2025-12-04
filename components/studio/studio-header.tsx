@@ -1,18 +1,18 @@
 "use client";
 import NextLink from "next/link";
 import { motion } from "motion/react";
-import { Button } from "../ui/button";
 import { useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Image from "next/image";
-import { DevRedBoxLogo } from "./devredbox-logo";
-import { FaGithub } from "react-icons/fa6";
 import { DEVREDBOX_GITHUB } from "@/lib/info";
-import { Separator } from "./separator";
+import { DevRedBoxLogo } from "../ui/devredbox-logo";
+import { Separator } from "../ui/separator";
+import { IconGitHub } from "../ui/icons";
+import { Button } from "../ui/button";
 
 const Link = motion.create(NextLink)
 
-export default function AgencyHeader() {
+export default function StudioHeader() {
     const [open, setOpen] = useState(false)
 
     return (
@@ -50,7 +50,7 @@ export default function AgencyHeader() {
                         rel="noopener noreferrer"
                         aria-label="Open DevRedBox GitHub in new tab"
                     >
-                        <FaGithub />
+                         <IconGitHub className="size-5" />
                     </a>
                 </nav>
                 <Button onClick={() => setOpen(v => !v)} variant="ghost" size="icon" className="ml-auto md:hidden relative z-0" >

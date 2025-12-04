@@ -1,8 +1,7 @@
 import { Badge } from "../ui/badge";
 import ScrollHijackedDiv from "./scroll-hijacked-div";
 import WorkProcess from "./work-process-section";
-import { HiMiniRocketLaunch } from "react-icons/hi2";
-import { ArrowRightCircle, CheckCircle2, TargetIcon, Zap } from "lucide-react";
+import { ArrowRightCircle, CheckCircle2, RocketIcon, TargetIcon, Zap } from "lucide-react";
 import { ListItem } from "../ui/lists";
 
 export default function HowWeWork() {
@@ -92,7 +91,7 @@ export default function HowWeWork() {
                             }
                         />
                         <WorkProcess
-                            icon={<HiMiniRocketLaunch className="size-5" />}
+                            icon={<RocketIcon className="size-5" />}
                             heading="Launch & Handoff (Weeks 11-12)"
                             title="Once built, we don't disappear."
                             description={

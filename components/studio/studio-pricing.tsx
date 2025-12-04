@@ -1,6 +1,6 @@
-import { Badge } from "../ui/badge";
-import { Button } from "../ui/button";
-import PricingBox, { PricingBoxProps } from "./pricing-box";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {PricingBox, PricingBoxProps } from "@/components/studio/pricing-box";
 import { MEETING_LINK } from "@/lib/info";
 
 const PRICES: PricingBoxProps[] = [
@@ -30,7 +30,7 @@ const PRICES: PricingBoxProps[] = [
     },
 ]
 
-export default function AgencyPricing() {
+export default function StudioPricing() {
     return (
         <section className="mt-24 mx-auto synced-width flex flex-col justify-start items-center text-center gap-5" id="pricing">
 

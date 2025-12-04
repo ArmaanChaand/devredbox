@@ -1,10 +1,20 @@
 "use client";
-import { Copy } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 import { Button } from "./button";
+import { useEffect, useState } from "react";
 
 
 
 export function CopyButton({ content }: { content: string }) {
+    const [copied, setCopied] = useState(false)
+
+    useEffect(() => {
+        if (copied) {
+            setTimeout(() => {
+                setCopied(false)
+            }, 2000)
+        }
+    }, [copied])
 
     async function handleClick() {
         try {
@@ -16,15 +26,20 @@ export function CopyButton({ content }: { content: string }) {
         } catch (error) {
             console.error('Failed to copy to clipboard:', error);
             // Optional: show error feedback to user
+        } finally {
+            setCopied(true)
         }
     }
 
     return (
         <Button
             onClick={handleClick}
-            className="absolute right-4 top-4" variant={"default"}
+            variant={"ghost"}
+            size={"sm"}
+            className="!px-2 !h-fit py-2"
         >
-            <Copy />
+            {copied ? <Check /> : <Copy />}
         </Button>
     )
 }
+

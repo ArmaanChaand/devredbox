@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 import { ArrowDown } from "lucide-react";
 
 
-export default function AgencyHero({ meetingLink }: { meetingLink: string }) {
+export default function HeroStudio({ meetingLink }: { meetingLink: string }) {
 
     return (
         <section className="flex justify-center items-center relative overflow-hidden pl-2">

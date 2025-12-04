@@ -10,7 +10,7 @@ export interface PricingBoxProps {
     example: string
 }
 
-export default function PricingBox({ label, title, price, features, example }: PricingBoxProps) {
+export function PricingBox({ label, title, price, features, example }: PricingBoxProps) {
     return (
         <div className="border text-start p-5 rounded-lg">
             <h4 className="text-lg font-semibold">

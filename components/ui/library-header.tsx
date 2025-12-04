@@ -1,10 +1,10 @@
 import LibraryTopNav from "@/components/ui/library-top-nav";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa6";
 import LibraryMobileNav from "./library-mb-nav";
 import { DevRedBoxLogo } from "./devredbox-logo";
 import { DEVREDBOX_GITHUB } from "@/lib/info";
+import { IconGitHub } from "./icons";
 
 export default function LibraryHeader() {
 
@@ -23,7 +23,7 @@ export default function LibraryHeader() {
                     rel="noopener noreferrer"
                     aria-label="Open DevRedBox GitHub in new tab"
                 >
-                    <FaGithub />
+                    <IconGitHub />
                 </a>
                 <Separator orientation="vertical" className="!h-5 lg:hidden" />
                 <LibraryMobileNav />

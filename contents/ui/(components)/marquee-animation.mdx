@@ -14,21 +14,16 @@ Each version of this marquee animation has its own trade-offs as described in ea
 
 ## Simple Horizontal Marquee — No JavaScript
 
-<CodePreview 
-  triggers={
-    <>
-    <TabsTrigger value="preview"> <Eye/> Preview </TabsTrigger>
-    <TabsTrigger value="tsx"> <FaReact/> TSX </TabsTrigger>
-    <TabsTrigger value="html"> <FaHtml5/> HTML </TabsTrigger>
-    </>
-  }
+<CodePreviewDisplay 
+preview html tsx
 > 
-<TabsContent value="preview" className="w-full">
+<TabsContent value="preview" className="w-full h-96">
   <ComponentPreview item="marquee-animation" />
 </TabsContent>
-<TabsContent value="tsx" className="w-full">
+<TabsContent value="tsx" className="w-full relative">
  ```css
- /* Tailwind v4 — Customize theme for Animation */ 
+ /* # Tailwind v4 # */ 
+ /* Customize theme for Animation */ 
 
 @theme {
 
@@ -46,7 +41,8 @@ Each version of this marquee animation has its own trade-offs as described in ea
 }
 ```
 ```tsx
-// TSX with Tailwind Classes
+// # TSX #
+// with Tailwind Classes 
 export function MarqueeAnimationOne() {
 
     return (
@@ -144,7 +140,7 @@ const MARQUEE_ITEMS = (<>
 </TabsContent>
 <TabsContent value="html" className="w-full">
  ```html
- <!-- HTML -->
+ <!-- # HTML # -->
 <section class="marquee_wrapper">
    <div id="marqueeParent" class="marquee_parent">
        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="shrink-0 size-8"
@@ -238,7 +234,7 @@ const MARQUEE_ITEMS = (<>
 ```
 
 ```css
-/* CSS */
+/*# CSS #*/
 .marquee_wrapper {
     width: 100%;
     overflow: hidden;
@@ -275,7 +271,7 @@ const MARQUEE_ITEMS = (<>
 
 </TabsContent>
 
-</CodePreview>
+</CodePreviewDisplay>
 
 
 This infinite horizontal scrolling animation is built with pure CSS or Tailwind CSS utility classes. No JavaScript is used, making it lightweight and performant.

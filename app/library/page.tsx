@@ -1,10 +1,11 @@
 import { MarqueeAnimationOne } from "@/components/library/public/components/marquee-animation";
 import { Button } from "@/components/ui/button";
+import { IconGitHub } from "@/components/ui/icons";
 import { DEVREDBOX_GITHUB, DEVREDBOX_LIBRARY_BANNER } from "@/lib/info";
 import generateStaticMetadata from "@/lib/static-metadata";
 import { Metadata } from "next";
 import Link from "next/link";
-import { FaGithub } from "react-icons/fa6";
+
 
 
 export const metadata: Metadata = generateStaticMetadata({
@@ -96,7 +97,7 @@ export default function LibraryPage() {
                 rel="noopener noreferrer"
                 aria-label="Open DevRedBox GitHub in new tab"
               >
-                <FaGithub />
+                <IconGitHub />
                 Visit GitHub
               </a>
             </Button>
