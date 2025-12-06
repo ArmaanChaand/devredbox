@@ -50,7 +50,7 @@ export default function LibraryTopNav() {
                                     </Link>
                                 </NavigationMenuLink>
                             </li>
-                            <div className="col-span-2 grid grid-cols-3 px-1 gap-2">
+                            <div className="col-span-2 grid grid-cols-3 px-1 gap-2" hidden>
                                 <Button
                                     variant={"secondary"} asChild
                                     className="cols-span-1 rounded-sm"
