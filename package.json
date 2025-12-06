@@ -27,9 +27,9 @@
     "fumadocs-ui": "^15.7.1",
     "lucide-react": "^0.507.0",
     "motion": "^12.23.11",
-    "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next": "^16.0.7",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "tailwind-merge": "^3.2.0",
     "zod": "^4.1.12"
   },

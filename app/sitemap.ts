@@ -26,5 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: SITE_ORIGIN + "/library/ui/marquee-animation",
         },
+        {
+            url: SITE_ORIGIN + "/library/ui/pricing-card",
+        },
     ]
 }
