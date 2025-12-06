@@ -1,0 +1,183 @@
+---
+title: Pricing Card
+metatitle: Pricing Card Component - React & Next.js | Tailwind CSS & shadcn/ui
+description: "Pricing card component with TypeScript for React and Next.js. Two implementations: pure Tailwind CSS or shadcn/ui components. Copy-paste ready with full source code."
+metakeywords: sdf
+---
+
+# Pricing Card Component — Two Versions
+
+A pricing card component available in two implementations: a standalone version using pure Tailwind CSS, and an enhanced version built with shadcn/ui components. Both are provided in TypeScript with full source code for React and Next.js projects.
+
+## Pricing Card – Standalone Version
+
+<CodePreviewDisplay 
+preview tsx_jsx
+> 
+<TabsContent value="preview" className="w-full h-96">
+  <ComponentPreview item="price-card" />
+</TabsContent>
+<TabsContent value="tsx" className="w-full relative">
+
+```tsx
+// # TSX or JSX #
+// with Tailwind Classes 
+
+const features = [
+    "Access to 120+ premium components",
+    "All shadcn/ui styles pre-built",
+    "Copy – paste & ready-to-use examples",
+    "Lifetime updates",
+    "Basic documentation",
+]
+
+export function PriceCard() {
+    return (
+        <div
+            className="border text-start p-5 rounded-lg w-full sm:max-w-sm border-neutral-300 bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-300  dark:border-neutral-800"
+        >
+            <h3 className="text-lg font-semibold">
+                Starter
+            </h3>
+            <p className="text-neutral-700 dark:text-neutral-400">For individual developers</p>
+            <div className="w-full border border-red-600/40 bg-red-600/20 my-4 p-5 rounded-lg">
+                <p className="text-xl font-black">
+                    $79
+                </p>
+                <p className="block text-sm text-neutral-700 dark:text-neutral-400">
+                    Starting Price. In USD
+                </p>
+            </div>
+            <button
+                className="w-full h-9 px-4 py-2 flex items-center justify-center gap-2 text-sm font-medium whitespace-nowrap rounded-md bg-neutral-900 text-neutral-300 hover:bg-neutral-900/90 dark:bg-neutral-100 dark:text-neutral-800 dark:hover:bg-neutral-100/90 outline-none focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:border-ring disabled:pointer-events-none disabled:opacity-50 transition-all my-4"
+            >
+                Get Started
+            </button>
+            <div className="text-sm space-y-2">
+                <p className="font-semibold">What&apos;s included:</p>
+                <ul className="space-y-2 text-neutral-700 dark:text-neutral-400">
+                    {
+                        features.map(feature => (
+                            <li key={feature} className="w-full flex justify-start items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4 mt-1 shrink-0"><path d="M20 6 9 17l-5-5" /></svg>
+                                <span>
+                                    {feature}
+                                </span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+            <hr className="w-full bg-muted my-3 mask-l-from-80% mask-r-from-80%" />
+            <p className="text-sm text-neutral-700 dark:text-neutral-400">
+                Example: Solo developers building dashboards or SaaS apps.
+            </p>
+        </div>
+    )
+}
+```
+</TabsContent>
+</CodePreviewDisplay>
+
+This version uses only Tailwind CSS utility classes—no external component dependencies. Works in any React or Next.js project with Tailwind configured. The TypeScript implementation includes proper typing for all props.
+
+If you prefer shadcn/ui components, see the shadcn/ui version below.
+
+## Pricing Card – shadcn/ui version
+
+
+<CodePreviewDisplay 
+preview tsx_jsx
+> 
+<TabsContent value="preview" className="w-full h-96">
+  <ComponentPreview item="price-card-cn" />
+</TabsContent>
+<TabsContent value="tsx" className="w-full relative">
+
+```tsx
+// # TSX or JSX #
+// with Tailwind Classes (shadcn/ui configuration required)
+
+import { Check } from "lucide-react"
+import { Separator } from "@/components/ui/separator"
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+
+const features = [
+    "Access to 120+ premium components",
+    "All shadcn/ui styles pre-built",
+    "Copy – paste & ready-to-use examples",
+    "Lifetime updates",
+    "Basic documentation",
+]
+
+export function PriceCardCn() {
+    
+    return (
+        <Card className="border text-start rounded-lg max-w-sm">
+            <CardHeader>
+                <CardTitle>
+                    <h4 className="text-lg font-semibold">
+                        Starter
+                    </h4>
+                </CardTitle>
+                <CardDescription>
+                    <p className="text-muted-foreground">For individual developers</p>
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                <p className="w-full border border-primary/20 bg-primary/10 p-5 rounded-lg">
+                    <span className="text-xl font-black">
+                        $79
+                    </span>
+                    <span className="block text-sm text-muted-foreground">
+                        Starting Price. In USD
+                    </span>
+                </p>
+                <Button className="w-full my-5">
+                    Get Started
+                </Button>
+                <ul className="text-sm space-y-2 text-muted-foreground">
+                    <span className="font-semibold text-foreground block">What&apos;s included:</span>
+                    {
+                        features.map(feature => (
+                            <li className="w-full flex justify-start items-start gap-2" key={feature}>
+                                <Check className="size-3 mt-1 shrink-0" />
+                                <p>
+                                    {feature}
+                                </p>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </CardContent>
+            <Separator className="mask-l-from-80% mask-r-from-80%" />
+            <CardFooter>
+                <p className="text-muted-foreground text-sm">
+                    Example: Solo developers building dashboards or SaaS apps.
+                </p>
+            </CardFooter>
+        </Card>
+    )
+}
+```
+</TabsContent>
+</CodePreviewDisplay>
+
+This implementation leverages shadcn/ui's component primitives for enhanced accessibility and interaction patterns. Requires shadcn/ui installation in your project.
+
+**shadcn/ui components and packages used:**
+
+| Component | Package | URL |
+| :---------------- | :--- | :-- |
+| Card | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/card) |
+| Button | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/button) |
+| Separator | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/separator) |
+| Check | lucide-react | [Docs](https://lucide.dev/guide/packages/lucide-react) |

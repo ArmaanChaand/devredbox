@@ -57,6 +57,48 @@ export const mdxComponents = {
             {...props}
         />
     ),
+    table: ({ className, ...props }: React.ComponentProps<"table">) => (
+        <div className="no-scrollbar mt-4 mb-2 w-full overflow-y-auto rounded-lg border">
+            <table
+                className={cn(
+                    "relative w-full overflow-hidden border-none text-sm [&_tbody_tr:last-child]:border-b-0",
+                    className
+                )}
+                {...props}
+            />
+        </div>
+    ),
+    tr: ({ className, ...props }: React.ComponentProps<"tr">) => (
+        <tr className={cn("m-0 border-b", className)} {...props} />
+    ),
+    th: ({ className, ...props }: React.ComponentProps<"th">) => (
+        <th
+            className={cn(
+                "px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+                className
+            )}
+            {...props}
+        />
+    ),
+    td: ({ className, ...props }: React.ComponentProps<"td">) => (
+        <td
+            className={cn(
+                "px-4 py-2 text-left whitespace-nowrap [&[align=center]]:text-center [&[align=right]]:text-right",
+                className
+            )}
+            {...props}
+        />
+    ),
+    a: ({ className, ...props }: React.ComponentProps<"a">) => (
+        <a
+            className={cn(
+                "hover:underline font-medium text-muted-foreground after:content-['_↗'] after:no-underline",
+                className
+            )}
+            target="_blank"
+            {...props}
+        />
+    ),
     pre: ({ className, children, __raw__, ...props }: React.ComponentProps<"pre"> & { __raw__: string }) => {
         const processed = extractHashSections(__raw__)
         return (
@@ -68,7 +110,7 @@ export const mdxComponents = {
                 {...props}
             >
 
-                <div className="sticky top-3 w-full bg-background border flex justify-start gap-5 items-center text-muted-foreground px-5 mb-2 shadow">
+                <div className="sticky top-3 left-0 w-full bg-background border flex justify-start gap-5 items-center text-muted-foreground px-5 mb-2 shadow">
                     <span>{processed.extracted}</span>
                     <Separator orientation="vertical" className="!h-4" />
                     <CopyButton

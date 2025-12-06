@@ -22,7 +22,7 @@
 export function MarqueeAnimationOne() {
 
     return (
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden bg-[#11111]">
             <div className="w-max h-28 flex justify-start items-center gap-16 [&_svg]:size-10 animate-marquee">
                 {MARQUEE_ITEMS}
                 {MARQUEE_ITEMS}

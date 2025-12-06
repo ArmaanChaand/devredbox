@@ -6,7 +6,8 @@ var docs = defineDocs({
   dir: "contents",
   docs: {
     schema: frontmatterSchema.extend({
-      metatitle: z.string()
+      metatitle: z.string(),
+      metakeywords: z.string()
     })
   }
 });

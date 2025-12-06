@@ -52,60 +52,38 @@ export default function UIPage() {
           {/* Page contents below this */}
           <section>
             <h1 className="text-2xl sm:text-3xl font-extrabold mb-2">
-              UI Components, Website Blocks & Sections — and More
+              React UI Components & Website Blocks — Ready to Use
             </h1>
             <p className="mt-2 p-content">
-              This UI library helps speed up frontend development with ready-to-use and fully customizable components, website blocks, and sections, independent of any frontend framework.
+             This UI library provides everything you need to build modern websites faster — from small, reusable React UI components to complete website sections and blocks. Each element is production-ready and fully customizable to match your project&apos;s design requirements.
             </p>
             <p className="mt-2 p-content">
-              Every component and block comes with JSX, HTML/CSS, Tailwind CSS, and other source code, making it easy to integrate into your projects.
+             Components and blocks are available in multiple formats including TSX, JSX, and HTML/CSS, with complete source code provided for easy integration into your React, Next.js projects, or any other frontend framework.
             </p>
 
             <h2
               className="text-lg font-semibold sm:text-xl mt-8 mb-2"
               id="frameworks"
             >
-              Frontend Framework Independency
+               Multiple Code Formats for Maximum Flexibility
             </h2>
             <p className="mt-2 p-content">
-              All components and website sections are available in React (JSX/TSX), Tailwind CSS, and plain HTML/CSS. This means every element can be used across different frontend frameworks after making a few simple code changes.
+             Every component and website block in this library is carefully crafted to work across different development environments. Some elements are available in all three formats—TSX, JSX, and HTML/CSS — giving you complete flexibility in how you build.
             </p>
             <p className="mt-2 p-content">
-              Frameworks that require more than a few code changes will be added soon.
+              While our most popular React UI components and Next.js website sections come in all three formats, some specialized components are currently available in a single format. We&apos;re continuously expanding format availability based on community needs.
             </p>
             <h2
               className="text-lg font-semibold sm:text-xl mt-8"
               id="components"
             >
-              UI Components
+              React UI Components
             </h2>
             <p className="mt-4 p-content">
-              Essential UI elements like buttons, dialogs, input fields, etc. All components are reusable and include multiple style variations, making it easy to maintain consistency across projects while adapting to specific design requirements.
+              Build consistent, professional interfaces with our collection of essential React UI components. From buttons and input fields to dialogs and cards, every component is reusable and comes with multiple style variations to maintain design consistency while adapting to your specific needs.
             </p>
             <p className="mt-2 p-content">
-              Beyond the basics, the library includes interactive and advanced components such as marquee animations, animated modals, cursor trackers, etc., as well as enhanced versions of components from popular UI libraries like
-              {" "}
-              <a
-                href="https://ui.shadcn.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open in new tab"
-                className="underline underline-offset-1"
-              >
-                ShadCN
-              </a>
-              {" "}
-              and
-              {" "}
-              <a
-                href="https://flowbite.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open in new tab"
-                className="underline underline-offset-1"
-              >
-                Flowbite.
-              </a>
+             Beyond the basics, explore our advanced React components including marquee animations, animated modals, cursor trackers, and interactive elements that add polish to any project. These React UI components are designed for modern web applications, work seamlessly with Next.js, and are optimized for performance.
             </p>
             <ul className="mt-4">
               <li>
@@ -121,18 +99,31 @@ export default function UIPage() {
               className="text-lg font-semibold sm:text-xl mt-8"
               id="blocks"
             >
-              Website Blocks and Sections
+              React Website Sections & Blocks
             </h2>
             <p className="mt-4 p-content">
-              Pre-built page sections ready to drop into any project, including hero banners, feature showcases, testimonial grids, pricing tables, footer layouts, and more. Each block is designed with flexibility in mind, offering different layout options and styling approaches to match various design aesthetics and source codes.
+              Skip the repetitive work with pre-built React website sections ready to drop into any project. Our library includes hero sections, feature showcases, testimonial grids, pricing tables, footer layouts, contact forms, and more—each designed as a complete, responsive React website block.
             </p>
             <p className="mt-2 p-content">
-              This goes without saying that each of the sections or blocks will be responsive.
+             Every website section offers flexible layout options and multiple styling approaches, allowing you to match various design aesthetics while maintaining clean, maintainable code. These React website blocks are perfect for landing pages, marketing sites, SaaS applications, portfolios, and Next.js projects.
+            </p>
+            <h2
+              className="text-lg font-semibold sm:text-xl mt-8"
+              id="blocks"
+            >
+             ShadCN UI Blocks
+            </h2>
+            <p className="mt-4 p-content">
+             For developers using the ShadCN UI component library, we offer specially designed website blocks built entirely with ShadCN components. These ShadCN UI blocks combine the power of ShadCN&apos;s accessible components with beautiful, production-ready layouts.
+            </p>
+            <p className="mt-2 p-content">
+            Our ShadCN UI blocks include hero sections, feature grids, pricing tables, and more — all built following ShadCN&apos;s design principles and easily customizable using Tailwind CSS. Perfect for quickly building modern React and Next.js applications with consistent, accessible UI patterns.
+            </p>
+            <p className="mt-2 p-content">
+          All React website sections, Next.js blocks, and ShadCN UI blocks are fully responsive and optimized for performance across devices.
             </p>
           </section>
-          <section className="w-[10000px]">
-
-          </section>
+         
           <footer className="mb-20">
 
           </footer>

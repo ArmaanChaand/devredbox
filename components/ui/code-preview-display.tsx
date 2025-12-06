@@ -13,9 +13,10 @@ interface CodePreviewProps {
     preview?: boolean
     html?: boolean
     tsx?: boolean
+    tsx_jsx?: boolean
 }
 
-export function CodePreviewDisplay({ children, preview, html, tsx }: CodePreviewProps) {
+export function CodePreviewDisplay({ children, preview, html, tsx, tsx_jsx }: CodePreviewProps) {
 
     return (
         <Tabs defaultValue={"preview"} className="w-full bg-secondary/50 rounded-xl border gap-0 overflow-hidden my-5">
@@ -30,12 +31,13 @@ export function CodePreviewDisplay({ children, preview, html, tsx }: CodePreview
                         html && <TabsTrigger value="html" > <IconHtml5 /> HTML </TabsTrigger>
                     }
                     {
-                        tsx && <TabsTrigger value="tsx" > <IconReact /> TSX </TabsTrigger >
+                        (tsx || tsx_jsx) && <TabsTrigger value="tsx" > <IconReact /> TSX{tsx_jsx && "/JSX"} </TabsTrigger >
                     }
 
                 </TabsList>
             </div>
-            <ScrollArea className="h-96 bg-background overflow-auto w-full min-w-0 hide-scrollbar text-xs sm:text-base">
+            <ScrollArea className="h-96 bg-background overflow-auto w-full min-w-0 hide-scrollbar text-xs sm:text-base 
+            bg-[radial-gradient(color-mix(in_oklab,_var(--muted)_50%,_transparent)_1px,transparent_1px)] bg-[length:8px_8px]">
                 {children}
                 <ScrollBar orientation="horizontal" />
             </ScrollArea>

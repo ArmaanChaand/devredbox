@@ -1,4 +1,4 @@
-import { MarqueeAnimationOne } from "@/components/library/public/components/marquee-animation";
+import ComponentPreview from "@/components/library/component-preview";
 import { Button } from "@/components/ui/button";
 import { IconGitHub } from "@/components/ui/icons";
 import { DEVREDBOX_GITHUB, DEVREDBOX_LIBRARY_BANNER } from "@/lib/info";
@@ -72,7 +72,7 @@ export default function LibraryPage() {
         <rect width="100%" height="100%" fill="transparent" />
         <rect width="100%" height="100%" fill="#cccccc" filter="url(#nnnoise-filter)" />
       </svg>
-      <section className="w-full h-fit overflow-hidden">
+      <section className="w-full h-fit overflow-hidden ">
         <div className="mt-30 library-wrapper h-full flex flex-col justify-end items-start gap-7">
           <h1 className="">
             <span className="text-base block bg-clip-text text-transparent bg-linear-to-r from-foreground from-50% to-secondary to-100% font-bold md:ml-2 w-fit">Perhaps it’s time to </span>
@@ -107,7 +107,7 @@ export default function LibraryPage() {
       </section>
       <section className="library-wrapper mx-auto mb-20 flex flex-col justify-start items-center gap-2">
         <div className="max-w-3xl w-full py-10 sm:py-24 sm:px-10 border rounded-xl bg-background">
-          <MarqueeAnimationOne />
+          <ComponentPreview item="marquee-animation" />
         </div>
         <h2 className="text-xl font-bold mt-3">Marquee Animation</h2>
         <p className="w-full max-w-96 text-center">Built with TSX and Tailwind CSS (for React & NextJs). And HTML/CSS as well.</p>
@@ -123,11 +123,28 @@ export default function LibraryPage() {
             </Link>
 
           </Button>
-
         </div>
       </section>
+      <section className="library-wrapper mx-auto mb-20 flex flex-col justify-start items-center gap-2">
+        <div className="max-w-3xl h-96 w-full py-5 border rounded-xl bg-background overflow-hidden">
+          <ComponentPreview item="price-card" />
+        </div>
+        <h2 className="text-xl font-bold mt-3">Pricing Card</h2>
+        <p className="w-full max-w-96 text-center">Built with TSX and Tailwind CSS (for React & NextJs). And with shadcn/ui components</p>
+        <div className="flex justify-center items-center gap-5 mt-2">
+          <Button className="" asChild>
+            <Link href={"/library/ui/pricing-card"}>
+              Source Code
+            </Link>
+          </Button>
+          <Button variant={"outline"} asChild>
+            <Link href={"/library/ui"}>
+              More Components
+            </Link>
 
-
+          </Button>
+        </div>
+      </section>
     </>
   )
 }

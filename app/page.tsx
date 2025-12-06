@@ -42,3 +42,36 @@ export default function Home() {
   );
 }
 
+
+/*
+I've created a page to display pricing card ui component. And source code is available in tsx & tailwind css for react and nextjs.
+And other version using shadcn/ui components.
+Write a copy of this page using this rules:
+
+
+Logical flow:
+h1: which component and what versions
+p: Elaborate → tease → types of source code availability
+h2: non-shadcn (choose better word) version in tsx for react and nextjs
+[Component Preview and code display] → My Task (keep as it is)
+p: little bit of description about it. It's in tsx, jsx ... → tease of next version
+h2: shadcn (choose better word) version in tsx for react and nextjs
+[Component Preview and code display] → My Task (keep as it is)
+p: description 
+[Choose better html element]: shadcn components used
+
+
+Minimalist & Clear:
+Word count → Minimal
+Concise descriptions without marketing fluff
+Bullet points and short paragraphs
+Direct language ("Here's how...", "You can...")
+Step-by-step instructions
+
+Tone:
+Professional but approachable
+Instructional without being patronizing
+Assumes reader competence
+No hype or sales language
+
+ */
