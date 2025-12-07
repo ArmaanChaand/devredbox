@@ -36,7 +36,7 @@
     "lib/contents/**/*.mdx",
     "contents/blog/sample-blog.mdx",
     ".next/dev/types/**/*.ts"
-  ],
+, "next.config.ts"  ],
   "exclude": [
     "node_modules"
   ]
