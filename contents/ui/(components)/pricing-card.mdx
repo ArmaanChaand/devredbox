@@ -7,7 +7,7 @@ metakeywords: sdf
 
 # Pricing Card Component — Two Versions
 
-A pricing card component available in two implementations: a standalone version using pure Tailwind CSS, and an enhanced version built with shadcn/ui components. Both are provided in TypeScript with full source code for React and Next.js projects.
+A pricing card ui component available in two implementations: a standalone version using pure Tailwind CSS, and a shadcn/ui version built with shadcn/ui components. Both are provided in TypeScript (TSX/JSX) with full source code for React and Next.js projects.
 
 ## Pricing Card – Standalone Version
 
@@ -79,7 +79,7 @@ export function PriceCard() {
 </TabsContent>
 </CodePreviewDisplay>
 
-This version uses only Tailwind CSS utility classes—no external component dependencies. Works in any React or Next.js project with Tailwind configured. The TypeScript implementation includes proper typing for all props.
+This version uses only Tailwind CSS utility classes — no external component dependencies. Works in any React or Next.js project with Tailwind configured. This component doesn't rely on any props and has less type notations — can be used in both tsx or jsx projects.
 
 If you prefer shadcn/ui components, see the shadcn/ui version below.
 
@@ -171,13 +171,13 @@ export function PriceCardCn() {
 </TabsContent>
 </CodePreviewDisplay>
 
-This implementation leverages shadcn/ui's component primitives for enhanced accessibility and interaction patterns. Requires shadcn/ui installation in your project.
+This version of Pricing Card leverages shadcn/ui's component primitives and packages that comes with shadcn/ui. Requires [shadcn/ui installation](https://ui.shadcn.com/docs/installation) in your project.
 
 **shadcn/ui components and packages used:**
 
 | Component | Package | URL |
 | :---------------- | :--- | :-- |
-| Card | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/card) |
-| Button | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/button) |
-| Separator | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/separator) |
-| Check | lucide-react | [Docs](https://lucide.dev/guide/packages/lucide-react) |
+| `Card` | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/card) |
+| `Button` | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/button) |
+| `Separator` | shadcn/ui | [Docs](https://ui.shadcn.com/docs/components/separator) |
+| `Check` | lucide-react | [Docs](https://lucide.dev/guide/packages/lucide-react) |
