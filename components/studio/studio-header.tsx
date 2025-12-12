@@ -50,7 +50,7 @@ export default function StudioHeader() {
                         rel="noopener noreferrer"
                         aria-label="Open DevRedBox GitHub in new tab"
                     >
-                         <IconGitHub className="size-5" />
+                        <IconGitHub className="size-5" />
                     </a>
                 </nav>
                 <Button onClick={() => setOpen(v => !v)} variant="ghost" size="icon" className="ml-auto md:hidden relative z-0" >
@@ -129,59 +129,6 @@ export default function StudioHeader() {
                         }
                     }}
                 >FAQs</Link>
-
-                <motion.span
-                    className="text-sm font-semibold text-muted-foreground mt-5"
-                    animate={{
-                        translateY: open ? 0 : 20,
-                        opacity: open ? 1 : 0,
-                        transition: {
-                            delay: 0.3
-                        }
-                    }}
-
-                >Library</motion.span>
-                <Link
-                    className="text-xl" href="/library"
-                    animate={{
-                        translateY: open ? 0 : 20,
-                        opacity: open ? 1 : 0,
-                        transition: {
-                            delay: 0.4
-                        }
-                    }}
-                >Library Home</Link>
-                <Link
-                    className="text-xl" href="/library/templates"
-                    animate={{
-                        translateY: open ? 0 : 20,
-                        opacity: open ? 1 : 0,
-                        transition: {
-                            delay: 0.4
-                        }
-                    }}
-                >Templates</Link>
-                <Link
-                    className="text-xl" href="/library/ui"
-                    animate={{
-                        translateY: open ? 0 : 20,
-                        opacity: open ? 1 : 0,
-                        transition: {
-                            delay: 0.5
-                        }
-                    }}
-                >Components</Link>
-                <Link
-                    className="text-xl" href="/library/ui"
-                    animate={{
-                        translateY: open ? 0 : 20,
-                        opacity: open ? 1 : 0,
-                        transition: {
-                            delay: 0.6
-                        }
-                    }
-                    }
-                >Blocks</Link>
 
                 <motion.span
                     className="text-sm font-semibold text-muted-foreground mt-5"

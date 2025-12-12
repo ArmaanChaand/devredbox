@@ -1,27 +1,23 @@
-# DevRedBox Agency Website
+# DevRedBox Studio Website
 
-🚧 **Under Development** 🚧
-
-This is the official website for **DevRedBox** — a digital agency building high-performance web apps, a growing code library, and helpful resources for startups and entrepreneurs.
+This is the official website for **DevRedBox** — a web development studio helping early-stage startups and solo entrepreneurs build and launch SaaS MVPs
 
 We’re actively working on:
 
 - 🔧 Website design and content
-- 🧱 Reusable components library & code snippets
-- 📚 Blog and learning resources
-- 🧩 Open-source tools and experiments
+- 📚 Case studies of previous works
 
 > Expect frequent updates as we refine and improve everything.
 
 ---
 
 ### 🔗 Visit us
-Check out the live site here: [devredbox.vercel.app](https://devredbox.vercel.app) _(coming soon)_
+Check out the live site here: [devredbox.in](https://www.devredbox.in) 
 
 ### 📂 Tech Stack
-- Next.js
-- Tailwind CSS
-- Shadcn/UI
+- [Next.js](https://nextjs.org) 
+- [Tailwind CSS](https://tailwindcss.com) 
+- [shadcn/ui](https://ui.shadcn.com) 
 
 ### 📬 Contributions & Feedback
 While we’re not accepting outside contributions just yet, feel free to explore, star 🌟 the repo, or open an issue if you spot anything!

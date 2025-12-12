@@ -3,7 +3,7 @@ import { ArrowUpRight, Earth } from "lucide-react";
 import Link from "next/link";
 import { DevRedBoxLogo } from "@/components/ui/devredbox-logo";
 import { IconGitHub, IconLinkedIn, IconYouTube } from "@/components/ui/icons";
-import { MEETING_LINK } from "@/lib/info";
+import { ALLUITOOLS_ORIGIN, LIBRARY_ORIGIN, MEETING_LINK } from "@/lib/info";
 
 export default function FooterStudio() {
     return (
@@ -52,9 +52,8 @@ export default function FooterStudio() {
                     </nav>
                     <nav className="flex flex-col justify-start items-start gap-3">
                         <span className="text-muted-foreground font-semibold text-sm mb-2 underline underline-offset-4">Resources</span>
-                        <Link href="/library">Library</Link>
-                        <Link href="/articles">Articles</Link>
-                        <Link href="/library/templates">Templates</Link>
+                        <a href={LIBRARY_ORIGIN} target="_blank">Library</a>
+                        <a href={ALLUITOOLS_ORIGIN} target="_blank">Ui Tools</a>
                     </nav>
                 </div>
             </div>
