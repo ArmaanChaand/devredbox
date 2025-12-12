@@ -4,6 +4,8 @@ import { Outfit } from "next/font/google";
 import { GAID, JSON_LD_ORGANIZATION, SITE_ORIGIN } from "@/lib/info";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { JsonLd } from "@/components/ui/json-ld";
+import StudioHeader from "@/components/studio/studio-header";
+import FooterStudio from "@/components/studio/studio-footer";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -57,8 +59,11 @@ export default function RootLayout({
       <body
         className={"dark overflow-x-hidden" + " " + outfit.className} // Space at the end of string is required
       >
-
-        {children}
+        <StudioHeader />
+        <main>
+          {children}
+        </main>
+        <FooterStudio />
       </body>
       <GoogleAnalytics gaId={GAID} />
     </html>

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import AgencyFAQsHome from "@/components/studio/studio-faq-home";
-import StudioHeader from "@/components/studio/studio-header";
 import HeroStudio from "@/components/studio/studio-hero";
 import StudioPricing from "@/components/studio/studio-pricing";
 import HowWeWork from "@/components/studio/howwework-section";
@@ -11,7 +10,6 @@ import TheProblem from "@/components/studio/the-problems-section";
 import ForWhoSection from "@/components/studio/for-who-section";
 import WhyDevRedBox from "@/components/studio/why-devredbox";
 import FooterCTA from "@/components/studio/footer-cta";
-import FooterStudio from "@/components/studio/studio-footer";
 
 export const metadata: Metadata = generateStaticMetadata({
   title: "DevRedBox – SaaS MVP Development for Non-Tech Founders",
@@ -25,18 +23,14 @@ export const metadata: Metadata = generateStaticMetadata({
 export default function Home() {
   return (
     <>
-      <StudioHeader />
-      <main>
-        <HeroStudio meetingLink={MEETING_LINK} />
-        <TheProblem />
-        <HowWeWork />
-        <ForWhoSection />
-        <StudioPricing />
-        <WhyDevRedBox />
-        <AgencyFAQsHome />
-        <FooterCTA />
-        <FooterStudio />
-      </main>
+      <HeroStudio meetingLink={MEETING_LINK} />
+      <TheProblem />
+      <HowWeWork />
+      <ForWhoSection />
+      <StudioPricing />
+      <WhyDevRedBox />
+      <AgencyFAQsHome />
+      <FooterCTA />
       <WebSiteMicrodata />
     </>
   );

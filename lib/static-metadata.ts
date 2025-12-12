@@ -4,7 +4,7 @@ interface StaticMetadataProps {
     title: string
     description: string
     pagePath: string
-    keywords: string[]
+    keywords?: string[]
     og_image?: string
 }
 
@@ -21,7 +21,7 @@ export default function generateStaticMetadata({ title, description, pagePath, k
     return {
         title: title,
         description: description,
-        keywords: keywords,
+        ...(keywords && { keywords: keywords }),
         openGraph: {
             // Static
             locale: "en_US",

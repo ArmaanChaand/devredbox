@@ -1,4 +1,4 @@
-import { SITE_ORIGIN } from '@/lib/info'
+import { DEVREDBOX_LOGO_URL, SITE_ORIGIN } from '@/lib/info'
 import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -6,28 +6,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Studio
         {
             url: SITE_ORIGIN,
-            images: [
-                SITE_ORIGIN + "/devredbox.webp"
-            ]
+            images: [DEVREDBOX_LOGO_URL]
         },
         {
             url: SITE_ORIGIN + "/contact",
-        },
-        
-        // Library
-        {
-            url: SITE_ORIGIN + "/library",
-        },
-        {
-            url: SITE_ORIGIN + "/library/ui",
-        },
-
-        // Make this dynamic at some point. 
-        {
-            url: SITE_ORIGIN + "/library/ui/marquee-animation",
-        },
-        {
-            url: SITE_ORIGIN + "/library/ui/pricing-card",
         },
     ]
 }

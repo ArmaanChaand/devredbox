@@ -13,7 +13,6 @@ export const DEVREDBOX_GITHUB = process.env.DEVREDBOX_GITHUB || "https://github.
 // Images
 export const DEVREDBOX_LOGO_URL = process.env.DEVREDBOX_LOGO_URL || "https://www.devredbox.in/devredbox.webp"
 export const DEVREDBOX_BANNER = process.env.DEVREDBOX_BANNER || "https://www.devredbox.in/devredbox-banner.webp"
-export const DEVREDBOX_LIBRARY_BANNER = process.env.DEVREDBOX_LIBRARY_BANNER || "https://www.devredbox.in/devredbox-library-banner.webp"
 
 
 // Metadata Informations

@@ -153,8 +153,14 @@ Muted Foreground Dark = #C2BCBB
 
 /* Customizing TailwindCSS - END */
 
+
+
 @utility dual-col-p {
   @apply text-muted-foreground [&_span]:text-foreground
+}
+
+@utility dotted-bg {
+  @apply bg-[radial-gradient(color-mix(in_oklab,_var(--muted)_50%,_transparent)_1px,transparent_1px)] bg-[length:8px_8px]
 }
 
 @layer base {

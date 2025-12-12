@@ -36,7 +36,7 @@ export default function StudioHeader() {
 
             >
                 <Link href="/" >
-                    <DevRedBoxLogo variant="STUDIO" />
+                    <DevRedBoxLogo />
                 </Link>
                 <nav className="ml-auto hidden md:flex justify-center items-center gap-5 ">
                     <Link className="main-nav-item" href="/#pricing">Pricing</Link>
